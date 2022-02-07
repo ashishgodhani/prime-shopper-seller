@@ -1,0 +1,25 @@
+<div class="card card-statistics" style="height:440px">
+    <div class="card-header">
+      <h4 class="card-title">Statistics</h4>
+      <div class="d-flex align-items-center">
+        <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
+      </div>
+    </div>
+    <div class="card-body statistics-body">
+      <div class="row">
+        <div *ngFor="let data of StatisticsData" class="col-xl-3 mt-4 col-sm-6 col-12 mb-2 mb-xl-0">
+          <div class="d-flex flex-row">
+            <div class="avatar bg-light-primary mx-1 my-1">
+              <div class="avatar-content">
+                <i class={{data.iconClass}} aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="my-auto">
+              <h4 class="fw-bolder mb-0">{{data.price}}</h4>
+              <p class="card-text font-small-3 mb-0">{{data.StatisticsName}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

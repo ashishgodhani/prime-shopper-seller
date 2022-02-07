@@ -1,0 +1,129 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h2 class="content-header-title float-start mb-0">Customer Reports</h2>
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a>
+                        </li>
+                       
+                        <li class="breadcrumb-item active">Customer Reports
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-header-right  text-md-end cursor-pointer col-md-3   col-8 d-md-block " [routerLink]="['/reports/customerreports/add']"  >
+        <div class="card-body pt-md-0">
+            <button  class="btn btn-primary w-100 ">+ Add Customer Reports</button>
+        </div>
+    </div>
+  </div>
+
+  <div class="row" id="table-responsive">
+    <div class="col-12">
+      <div class="card">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <div class="card-header col-md-8 col-12">
+            <h4 class="card-title">Customer Reports</h4>
+          </div>
+          <div class="col-sm-12 mx-md-2 mx-1 col-11   col-md-3">
+            <div class="input-group    input-group-merge">
+              <span class="input-group-text" id="basic-addon-search2"><i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <input type="text" class="form-control" placeholder="Search..." aria-label="Search..."
+                aria-describedby="basic-addon-search2" />
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-nowrap">Name</th>
+                  <th scope="col" class="text-nowrap">Segment</th>
+                  <th scope="col" class="text-nowrap">Date From	</th>
+                  <th scope="col" class="text-nowrap">Date To	</th>
+                  <th scope="col" class="text-nowrap">Generated On	</th>
+                  <th scope="col" class="text-nowrap">Notes</th>
+                  
+                </tr>
+  
+              </thead>
+              <tbody>
+  
+                <!-- <tr *ngFor="let product of productData">
+                  <td>
+                    {{product.category}}
+                  </td>
+                  <td>
+                    {{product.seller}}
+                  </td>
+                  <td>
+                    {{product.title}}
+                  </td>
+                  <td class="px-1">
+                    <img height="85px" src={{product.banner}} />
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="fw-bolder me-1">68%</span>
+                    </div>
+                  </td>
+                  <td>
+                    $ {{product.price}}
+                  </td>
+                  <td>
+                    $ {{product.sellingPrice}}
+                  </td>
+                  <td>
+                    {{product.discount}}
+                  </td>
+                  <td>
+                    {{product.quantity}}
+                  </td>
+                  <td>
+                    {{product.discription}}
+                  </td>
+                  <td>
+                    {{product.feature}}
+                  </td>
+                  <td>
+                    {{product.status}}
+                  </td>
+                  <td>
+                    <div class="dropdown">
+                      <button type="button" class="btn    btn-sm dropdown-toggle hide-arrow py-0"
+                        data-bs-toggle="dropdown">
+                        <img height='17px' src="../../../assets/img/more.png" />
+  
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a [routerLink]="['/catalogue/product/edit',product._id]" class="dropdown-item" href="#">
+                          <i class="fa fa-pencil-square-o me-50 fa-lg" aria-hidden="true"></i>
+  
+                          <span>Edit</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-trash-o me-50 fa-lg" aria-hidden="true"></i>
+  
+                          <span>Delete</span>
+                        </a>
+                      </div>
+                    </div>
+  
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>

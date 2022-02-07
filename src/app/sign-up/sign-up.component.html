@@ -1,0 +1,117 @@
+<div class="app-content content m-0 pt-0 ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+      <div class="content-header row">
+      </div>
+      <div class="content-body"><div class="auth-wrapper auth-basic px-2">
+<div class="auth-inner my-2">
+  <!-- Register basic -->
+  <div class="card mb-0">
+    <div class="card-body">
+      <a href="index-2.html" class="brand-logo">
+        <a href="index-2.html" class="brand-logo">
+          <img width="100" src="../../assets/img/PS-logo.png"/>
+      </a>
+       
+      </a>
+
+      <h4 class="card-title mb-1">Adventure starts here</h4>
+      <p class="card-text mb-2">Make your app management easy and fun!</p>
+
+      <form class="auth-register-form mt-2"  #signUpFormData="ngForm" (ngSubmit)="doSignUp(signUpFormData)">
+        <div class="mb-1">
+          <label for="register-username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            ngModel
+            #name="ngModel"
+            placeholder="Enter Your User Name"
+            autofocus
+          />
+        </div>
+        <div class="mb-1">
+          <label for="register-email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            ngModel
+            #email="ngModel"
+            name="email"
+            placeholder="Enter Your Email"
+            
+          />
+        </div>
+
+        <div class="mb-1">
+          <label for="register-password" class="form-label">Password</label>
+
+          <div class="input-group input-group-merge form-password-toggle">
+            <input
+              type="password"
+              class="form-control form-control-merge"
+              name="password"
+              ngModel
+              #password="ngModel"
+              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+              
+            />
+            <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+          </div>
+        </div>
+        <div class="mb-1">
+          <label for="register-email" class="form-label">Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            ngModel
+            #phoneNumber="ngModel"
+            name="phoneNumber"
+            placeholder="Enter Your Phone Number"
+            
+          />
+        </div>
+        
+        <button class="btn btn-primary w-100" tabindex="5">Sign up</button>
+      </form>
+
+      <p class="text-center mt-2">
+        <span>Already have an account?</span>
+        <a [routerLink]="['/login']"  >
+          <span>Sign in instead</span>
+        </a>
+      </p>
+
+      <div class="divider my-2">
+        <div class="divider-text">or</div>
+      </div>
+
+      <div class="auth-footer-btn d-flex justify-content-center">
+        <a href="#" class="btn btn-facebook facebook-size ">
+            <i class="fa fa-facebook " aria-hidden="true"></i>
+
+        </a>
+        <a href="#" class="btn btn-twitter white">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+
+        </a>
+        <a href="#" class="btn btn-google">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+
+        </a>
+        <a href="#" class="btn btn-github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- /Register basic -->
+</div>
+</div>
+
+      </div>
+    </div>
+  </div>

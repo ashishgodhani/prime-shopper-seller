@@ -1,0 +1,364 @@
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-start pb-1">
+            <div>
+                <h4 class="card-title mb-25">Sales</h4>
+                <p class="card-text">Last 6 months</p>
+            </div>
+            <div class="dropdown chart-dropdown">
+                <i data-feather="more-vertical" class="font-medium-3 cursor-pointer" data-bs-toggle="dropdown"></i>
+
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="#">Last 28 Days</a>
+                    <a class="dropdown-item" href="#">Last Month</a>
+                    <a class="dropdown-item" href="#">Last Year</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body" style="position: relative;">
+            <div class="d-inline-block me-1">
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-circle font-small-3 text-primary me-50">
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    <h6 class="mb-0">Sales</h6>
+                </div>
+            </div>
+            <div class="d-inline-block">
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-circle font-small-3 text-info me-50">
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    <h6 class="mb-0">Visits</h6>
+                </div>
+            </div>
+            <div id="sales-visit-chart" class="mt-50" style="min-height: 315px;">
+                <div id="apexchartsibk6yuc9" class="apexcharts-canvas apexchartsibk6yuc9 apexcharts-theme-light"
+                    style="width: 322px; height: 300px;"><svg id="SvgjsSvg1920" width="322" height="300"
+                        xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS"
+                        transform="translate(0, 5)" style="background: transparent;">
+                        <g id="SvgjsG1922" class="apexcharts-inner apexcharts-graphical" transform="translate(12, 30)">
+                            <defs id="SvgjsDefs1921">
+                                <clipPath id="gridRectMaskibk6yuc9">
+                                    <rect id="SvgjsRect1925" width="292.265625" height="257" x="-2" y="0" rx="0" ry="0"
+                                        opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff">
+                                    </rect>
+                                </clipPath>
+                                <clipPath id="gridRectMarkerMaskibk6yuc9">
+                                    <rect id="SvgjsRect1926" width="292.265625" height="261" x="-2" y="-2" rx="0" ry="0"
+                                        opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff">
+                                    </rect>
+                                </clipPath>
+                                <linearGradient id="SvgjsLinearGradient1933" x1="0" y1="1" x2="1" y2="1">
+                                    <stop id="SvgjsStop1934" stop-opacity="1" stop-color="rgba(115,103,240,1)"
+                                        offset="0"></stop>
+                                    <stop id="SvgjsStop1935" stop-opacity="1" stop-color="rgba(115,103,240,1)"
+                                        offset="1"></stop>
+                                    <stop id="SvgjsStop1936" stop-opacity="1" stop-color="rgba(115,103,240,1)"
+                                        offset="1"></stop>
+                                    <stop id="SvgjsStop1937" stop-opacity="1" stop-color="rgba(115,103,240,1)"
+                                        offset="1"></stop>
+                                </linearGradient>
+                                <filter id="SvgjsFilter1939" width="200%" height="200%" x="-50%" y="-50%">
+                                    <feFlood id="SvgjsFeFlood1940" flood-color="#000000" flood-opacity="0.2"
+                                        result="SvgjsFeFlood1940Out" in="SourceGraphic"></feFlood>
+                                    <feComposite id="SvgjsFeComposite1941" in="SvgjsFeFlood1940Out" in2="SourceAlpha"
+                                        operator="in" result="SvgjsFeComposite1941Out"></feComposite>
+                                    <feOffset id="SvgjsFeOffset1942" dx="1" dy="1" result="SvgjsFeOffset1942Out"
+                                        in="SvgjsFeComposite1941Out"></feOffset>
+                                    <feGaussianBlur id="SvgjsFeGaussianBlur1943" stdDeviation="8 "
+                                        result="SvgjsFeGaussianBlur1943Out" in="SvgjsFeOffset1942Out"></feGaussianBlur>
+                                    <feMerge id="SvgjsFeMerge1944" result="SvgjsFeMerge1944Out" in="SourceGraphic">
+                                        <feMergeNode id="SvgjsFeMergeNode1945" in="SvgjsFeGaussianBlur1943Out">
+                                        </feMergeNode>
+                                        <feMergeNode id="SvgjsFeMergeNode1946" in="[object Arguments]"></feMergeNode>
+                                    </feMerge>
+                                    <feBlend id="SvgjsFeBlend1947" in="SourceGraphic" in2="SvgjsFeMerge1944Out"
+                                        mode="normal" result="SvgjsFeBlend1947Out"></feBlend>
+                                </filter>
+                                <linearGradient id="SvgjsLinearGradient1964" x1="0" y1="1" x2="1" y2="1">
+                                    <stop id="SvgjsStop1965" stop-opacity="1" stop-color="rgba(0,207,232,1)" offset="0">
+                                    </stop>
+                                    <stop id="SvgjsStop1966" stop-opacity="1" stop-color="rgba(0,207,232,1)" offset="1">
+                                    </stop>
+                                    <stop id="SvgjsStop1967" stop-opacity="1" stop-color="rgba(0,207,232,1)" offset="1">
+                                    </stop>
+                                    <stop id="SvgjsStop1968" stop-opacity="1" stop-color="rgba(0,207,232,1)" offset="1">
+                                    </stop>
+                                </linearGradient>
+                                <filter id="SvgjsFilter1970" width="200%" height="200%" x="-50%" y="-50%">
+                                    <feFlood id="SvgjsFeFlood1971" flood-color="#000000" flood-opacity="0.2"
+                                        result="SvgjsFeFlood1971Out" in="SourceGraphic"></feFlood>
+                                    <feComposite id="SvgjsFeComposite1972" in="SvgjsFeFlood1971Out" in2="SourceAlpha"
+                                        operator="in" result="SvgjsFeComposite1972Out"></feComposite>
+                                    <feOffset id="SvgjsFeOffset1973" dx="1" dy="1" result="SvgjsFeOffset1973Out"
+                                        in="SvgjsFeComposite1972Out"></feOffset>
+                                    <feGaussianBlur id="SvgjsFeGaussianBlur1974" stdDeviation="8 "
+                                        result="SvgjsFeGaussianBlur1974Out" in="SvgjsFeOffset1973Out"></feGaussianBlur>
+                                    <feMerge id="SvgjsFeMerge1975" result="SvgjsFeMerge1975Out" in="SourceGraphic">
+                                        <feMergeNode id="SvgjsFeMergeNode1976" in="SvgjsFeGaussianBlur1974Out">
+                                        </feMergeNode>
+                                        <feMergeNode id="SvgjsFeMergeNode1977" in="[object Arguments]"></feMergeNode>
+                                    </feMerge>
+                                    <feBlend id="SvgjsFeBlend1978" in="SourceGraphic" in2="SvgjsFeMerge1975Out"
+                                        mode="normal" result="SvgjsFeBlend1978Out"></feBlend>
+                                </filter>
+                            </defs>
+                            <g id="SvgjsG2009" class="apexcharts-grid">
+                                <g id="SvgjsG2010" class="apexcharts-gridlines-horizontal" style="display: none;">
+                                    <line id="SvgjsLine2012" x1="0" y1="0" x2="288.265625" y2="0" stroke="#e0e0e0"
+                                        stroke-dasharray="0" class="apexcharts-gridline"></line>
+                                    <line id="SvgjsLine2013" x1="0" y1="64.25" x2="288.265625" y2="64.25"
+                                        stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line>
+                                    <line id="SvgjsLine2014" x1="0" y1="128.5" x2="288.265625" y2="128.5"
+                                        stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line>
+                                    <line id="SvgjsLine2015" x1="0" y1="192.75" x2="288.265625" y2="192.75"
+                                        stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line>
+                                    <line id="SvgjsLine2016" x1="0" y1="257" x2="288.265625" y2="257" stroke="#e0e0e0"
+                                        stroke-dasharray="0" class="apexcharts-gridline"></line>
+                                </g>
+                                <g id="SvgjsG2011" class="apexcharts-gridlines-vertical" style="display: none;"></g>
+                                <line id="SvgjsLine2018" x1="0" y1="257" x2="288.265625" y2="257" stroke="transparent"
+                                    stroke-dasharray="0"></line>
+                                <line id="SvgjsLine2017" x1="0" y1="1" x2="0" y2="257" stroke="transparent"
+                                    stroke-dasharray="0"></line>
+                            </g>
+                            <g id="SvgjsG1927" class="apexcharts-radar-series apexcharts-plot-series"
+                                transform="translate(144.1328125, 128.5)">
+                                <polygon id="SvgjsPolygon1997"
+                                    points="0,-127.11309523809524 110.08316962986123,-63.556547619047635 110.08316962986125,63.55654761904759 1.55668645213046e-14,127.11309523809524 -110.08316962986122,63.55654761904768 -110.08316962986129,-63.556547619047535 "
+                                    fill="#ffffff" stroke="#ebe9f1" stroke-width="1"></polygon>
+                                <polygon id="SvgjsPolygon1998"
+                                    points="0,-95.33482142857143 82.56237722239592,-47.66741071428572 82.56237722239594,47.667410714285694 1.1675148390978451e-14,95.33482142857143 -82.56237722239591,47.66741071428576 -82.56237722239597,-47.66741071428565 "
+                                    fill="#ffffff" stroke="transparent" stroke-width="1"></polygon>
+                                <polygon id="SvgjsPolygon1999"
+                                    points="0,-63.55654761904762 55.041584814930616,-31.778273809523817 55.04158481493062,31.778273809523796 7.7834322606523e-15,63.55654761904762 -55.04158481493061,31.77827380952384 -55.041584814930644,-31.778273809523768 "
+                                    fill="#ffffff" stroke="transparent" stroke-width="1"></polygon>
+                                <polygon id="SvgjsPolygon2000"
+                                    points="0,-31.77827380952381 27.520792407465308,-15.889136904761909 27.52079240746531,15.889136904761898 3.89171613032615e-15,31.77827380952381 -27.520792407465304,15.88913690476192 -27.520792407465322,-15.889136904761884 "
+                                    fill="#ffffff" stroke="transparent" stroke-width="1"></polygon>
+                                <polygon id="SvgjsPolygon2001" points="0,0 0,0 0,0 0,0 0,0 0,0 " fill="#ffffff"
+                                    stroke="transparent" stroke-width="1"></polygon>
+                                <line id="SvgjsLine1991" x1="0" y1="-127.11309523809524" x2="0" y2="0"
+                                    stroke="transparent" stroke-dasharray="0"></line>
+                                <line id="SvgjsLine1992" x1="110.08316962986123" y1="-63.556547619047635" x2="0" y2="0"
+                                    stroke="transparent" stroke-dasharray="0"></line>
+                                <line id="SvgjsLine1993" x1="110.08316962986125" y1="63.55654761904759" x2="0" y2="0"
+                                    stroke="transparent" stroke-dasharray="0"></line>
+                                <line id="SvgjsLine1994" x1="1.55668645213046e-14" y1="127.11309523809524" x2="0" y2="0"
+                                    stroke="transparent" stroke-dasharray="0"></line>
+                                <line id="SvgjsLine1995" x1="-110.08316962986122" y1="63.55654761904768" x2="0" y2="0"
+                                    stroke="transparent" stroke-dasharray="0"></line>
+                                <line id="SvgjsLine1996" x1="-110.08316962986129" y1="-63.556547619047535" x2="0" y2="0"
+                                    stroke="transparent" stroke-dasharray="0"></line>
+                                <g id="SvgjsG2002" class="apexcharts-xaxis"><text id="SvgjsText2003"
+                                        font-family="Helvetica, Arial, sans-serif" x="0" y="-137.11309523809524"
+                                        text-anchor="middle" dominant-baseline="auto" font-size="11px" font-weight="400"
+                                        fill="#a8a8a8" class="apexcharts-datalabel" cx="0" cy="-137.11309523809524"
+                                        style="font-family: Helvetica, Arial, sans-serif;">Jan</text><text
+                                        id="SvgjsText2004" font-family="Helvetica, Arial, sans-serif"
+                                        x="120.08316962986123" y="-63.556547619047635" text-anchor="start"
+                                        dominant-baseline="auto" font-size="11px" font-weight="400" fill="#a8a8a8"
+                                        class="apexcharts-datalabel" cx="120.08316962986123" cy="-63.556547619047635"
+                                        style="font-family: Helvetica, Arial, sans-serif;">Feb</text><text
+                                        id="SvgjsText2005" font-family="Helvetica, Arial, sans-serif"
+                                        x="120.08316962986125" y="63.55654761904759" text-anchor="start"
+                                        dominant-baseline="auto" font-size="11px" font-weight="400" fill="#a8a8a8"
+                                        class="apexcharts-datalabel" cx="120.08316962986125" cy="63.55654761904759"
+                                        style="font-family: Helvetica, Arial, sans-serif;">Mar</text><text
+                                        id="SvgjsText2006" font-family="Helvetica, Arial, sans-serif"
+                                        x="1.55668645213046e-14" y="137.11309523809524" text-anchor="middle"
+                                        dominant-baseline="auto" font-size="11px" font-weight="400" fill="#a8a8a8"
+                                        class="apexcharts-datalabel" cx="1.55668645213046e-14" cy="137.11309523809524"
+                                        style="font-family: Helvetica, Arial, sans-serif;">Apr</text><text
+                                        id="SvgjsText2007" font-family="Helvetica, Arial, sans-serif"
+                                        x="-120.08316962986122" y="63.55654761904768" text-anchor="end"
+                                        dominant-baseline="auto" font-size="11px" font-weight="400" fill="#a8a8a8"
+                                        class="apexcharts-datalabel" cx="-120.08316962986122" cy="63.55654761904768"
+                                        style="font-family: Helvetica, Arial, sans-serif;">May</text><text
+                                        id="SvgjsText2008" font-family="Helvetica, Arial, sans-serif"
+                                        x="-120.08316962986129" y="-63.556547619047535" text-anchor="end"
+                                        dominant-baseline="auto" font-size="11px" font-weight="400" fill="#a8a8a8"
+                                        class="apexcharts-datalabel" cx="-120.08316962986129" cy="-63.556547619047535"
+                                        style="font-family: Helvetica, Arial, sans-serif;">Jun</text></g>
+                                <g id="SvgjsG1928" class="apexcharts-yaxis"></g>
+                                <g id="SvgjsG1929" class="apexcharts-series" data:longestSeries="true"
+                                    seriesName="Sales" rel="1" data:realIndex="0">
+                                    <path id="SvgjsPath1932"
+                                        d="M 0 -95.33482142857143L 0 -95.33482142857143L 45.86798734577551 -26.48189484126985L 78.89293823473389 45.548859126984105L 5.188954840434867e-15 42.37103174603175L -91.73597469155101 52.96378968253973L -18.347194938310214 -10.592757936507923Z"
+                                        fill="none" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt"
+                                        stroke-width="0" stroke-dasharray="0" class="apexcharts-radar" index="0"
+                                        pathTo="M 0 -95.33482142857143L 0 -95.33482142857143L 45.86798734577551 -26.48189484126985L 78.89293823473389 45.548859126984105L 5.188954840434867e-15 42.37103174603175L -91.73597469155101 52.96378968253973L -18.347194938310214 -10.592757936507923Z"
+                                        pathFrom="M 0 0"></path>
+                                    <path id="SvgjsPath1938"
+                                        d="M 0 -95.33482142857143L 0 -95.33482142857143L 45.86798734577551 -26.48189484126985L 78.89293823473389 45.548859126984105L 5.188954840434867e-15 42.37103174603175L -91.73597469155101 52.96378968253973L -18.347194938310214 -10.592757936507923Z"
+                                        fill="url(#SvgjsLinearGradient1933)" fill-opacity="1" stroke-opacity="1"
+                                        stroke-linecap="butt" stroke-width="0" stroke-dasharray="0"
+                                        class="apexcharts-radar" index="0"
+                                        pathTo="M 0 -95.33482142857143L 0 -95.33482142857143L 45.86798734577551 -26.48189484126985L 78.89293823473389 45.548859126984105L 5.188954840434867e-15 42.37103174603175L -91.73597469155101 52.96378968253973L -18.347194938310214 -10.592757936507923Z"
+                                        pathFrom="M 0 0" filter="url(#SvgjsFilter1939)"></path>
+                                    <g id="SvgjsG1930" class="apexcharts-series-markers-wrap">
+                                        <g id="SvgjsG1949" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1948" r="0" cx="0" cy="-95.33482142857143"
+                                                class="apexcharts-marker" stroke="#ffffff" fill="#7367f0"
+                                                fill-opacity="1" stroke-width="1" stroke-opacity="1" rel="0" j="0"
+                                                index="0" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1951" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1950" r="0" cx="45.86798734577551"
+                                                cy="-26.48189484126985" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#7367f0" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="1" j="1" index="0" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1953" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1952" r="0" cx="78.89293823473389"
+                                                cy="45.548859126984105" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#7367f0" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="2" j="2" index="0" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1955" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1954" r="0" cx="5.188954840434867e-15"
+                                                cy="42.37103174603175" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#7367f0" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="3" j="3" index="0" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1957" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1956" r="0" cx="-91.73597469155101"
+                                                cy="52.96378968253973" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#7367f0" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="4" j="4" index="0" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1959" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1958" r="0" cx="-18.347194938310214"
+                                                cy="-10.592757936507923" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#7367f0" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="5" j="5" index="0" default-marker-size="0"></circle>
+                                        </g>
+                                        <g class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle2024" r="0" cx="0" cy="0"
+                                                class="apexcharts-marker wh7d5zn6b" stroke="#ffffff" fill="#7367f0"
+                                                fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                default-marker-size="0"></circle>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="SvgjsG1960" class="apexcharts-series" data:longestSeries="true"
+                                    seriesName="Visit" rel="2" data:realIndex="1">
+                                    <path id="SvgjsPath1963"
+                                        d="M 0 -74.14930555555556L 0 -74.14930555555556L 68.80198101866326 -39.722842261904766L 64.21518228408573 37.074652777777764L 9.859014196826246e-15 80.50496031746032L -18.347194938310203 10.592757936507946L -77.97557848781842 -45.01922123015868Z"
+                                        fill="none" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt"
+                                        stroke-width="0" stroke-dasharray="0" class="apexcharts-radar" index="1"
+                                        pathTo="M 0 -74.14930555555556L 0 -74.14930555555556L 68.80198101866326 -39.722842261904766L 64.21518228408573 37.074652777777764L 9.859014196826246e-15 80.50496031746032L -18.347194938310203 10.592757936507946L -77.97557848781842 -45.01922123015868Z"
+                                        pathFrom="M 0 0"></path>
+                                    <path id="SvgjsPath1969"
+                                        d="M 0 -74.14930555555556L 0 -74.14930555555556L 68.80198101866326 -39.722842261904766L 64.21518228408573 37.074652777777764L 9.859014196826246e-15 80.50496031746032L -18.347194938310203 10.592757936507946L -77.97557848781842 -45.01922123015868Z"
+                                        fill="url(#SvgjsLinearGradient1964)" fill-opacity="1" stroke-opacity="1"
+                                        stroke-linecap="butt" stroke-width="0" stroke-dasharray="0"
+                                        class="apexcharts-radar" index="1"
+                                        pathTo="M 0 -74.14930555555556L 0 -74.14930555555556L 68.80198101866326 -39.722842261904766L 64.21518228408573 37.074652777777764L 9.859014196826246e-15 80.50496031746032L -18.347194938310203 10.592757936507946L -77.97557848781842 -45.01922123015868Z"
+                                        pathFrom="M 0 0" filter="url(#SvgjsFilter1970)"></path>
+                                    <g id="SvgjsG1961" class="apexcharts-series-markers-wrap">
+                                        <g id="SvgjsG1980" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1979" r="0" cx="0" cy="-74.14930555555556"
+                                                class="apexcharts-marker" stroke="#ffffff" fill="#00cfe8"
+                                                fill-opacity="1" stroke-width="1" stroke-opacity="1" rel="0" j="0"
+                                                index="1" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1982" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1981" r="0" cx="68.80198101866326"
+                                                cy="-39.722842261904766" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#00cfe8" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="1" j="1" index="1" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1984" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1983" r="0" cx="64.21518228408573"
+                                                cy="37.074652777777764" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#00cfe8" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="2" j="2" index="1" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1986" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1985" r="0" cx="9.859014196826246e-15"
+                                                cy="80.50496031746032" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#00cfe8" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="3" j="3" index="1" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1988" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1987" r="0" cx="-18.347194938310203"
+                                                cy="10.592757936507946" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#00cfe8" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="4" j="4" index="1" default-marker-size="0"></circle>
+                                        </g>
+                                        <g id="SvgjsG1990" class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle1989" r="0" cx="-77.97557848781842"
+                                                cy="-45.01922123015868" class="apexcharts-marker" stroke="#ffffff"
+                                                fill="#00cfe8" fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                rel="5" j="5" index="1" default-marker-size="0"></circle>
+                                        </g>
+                                        <g class="apexcharts-series-markers">
+                                            <circle id="SvgjsCircle2025" r="0" cx="0" cy="0"
+                                                class="apexcharts-marker wkfsx4c6e" stroke="#ffffff" fill="#00cfe8"
+                                                fill-opacity="1" stroke-width="1" stroke-opacity="1"
+                                                default-marker-size="0"></circle>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="SvgjsG1931" class="apexcharts-datalabels" data:realIndex="0"></g>
+                                <g id="SvgjsG1962" class="apexcharts-datalabels" data:realIndex="1"></g>
+                            </g>
+                            <line id="SvgjsLine2019" x1="0" y1="0" x2="288.265625" y2="0" stroke="#b6b6b6"
+                                stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line>
+                            <line id="SvgjsLine2020" x1="0" y1="0" x2="288.265625" y2="0" stroke-dasharray="0"
+                                stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line>
+                            <g id="SvgjsG2021" class="apexcharts-yaxis-annotations"></g>
+                            <g id="SvgjsG2022" class="apexcharts-xaxis-annotations"></g>
+                            <g id="SvgjsG2023" class="apexcharts-point-annotations"></g>
+                        </g>
+                        <g id="SvgjsG1923" class="apexcharts-annotations"></g>
+                    </svg>
+                    <div class="apexcharts-legend" style="max-height: 150px;"></div>
+                    <div class="apexcharts-tooltip apexcharts-theme-light">
+                        <div class="apexcharts-tooltip-title"
+                            style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div>
+                        <div class="apexcharts-tooltip-series-group" style="order: 1;"><span
+                                class="apexcharts-tooltip-marker" style="background-color: rgb(115, 103, 240);"></span>
+                            <div class="apexcharts-tooltip-text"
+                                style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
+                                <div class="apexcharts-tooltip-y-group"><span
+                                        class="apexcharts-tooltip-text-label"></span><span
+                                        class="apexcharts-tooltip-text-value"></span></div>
+                                <div class="apexcharts-tooltip-z-group"><span
+                                        class="apexcharts-tooltip-text-z-label"></span><span
+                                        class="apexcharts-tooltip-text-z-value"></span></div>
+                            </div>
+                        </div>
+                        <div class="apexcharts-tooltip-series-group" style="order: 2;"><span
+                                class="apexcharts-tooltip-marker" style="background-color: rgb(0, 207, 232);"></span>
+                            <div class="apexcharts-tooltip-text"
+                                style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
+                                <div class="apexcharts-tooltip-y-group"><span
+                                        class="apexcharts-tooltip-text-label"></span><span
+                                        class="apexcharts-tooltip-text-value"></span></div>
+                                <div class="apexcharts-tooltip-z-group"><span
+                                        class="apexcharts-tooltip-text-z-label"></span><span
+                                        class="apexcharts-tooltip-text-z-value"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="apexcharts-yaxistooltip apexcharts-yaxistooltip-0 apexcharts-yaxistooltip-left apexcharts-theme-light">
+                        <div class="apexcharts-yaxistooltip-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="resize-triggers">
+                <div class="expand-trigger">
+                    <div style="width: 365px; height: 419px;"></div>
+                </div>
+                <div class="contract-trigger"></div>
+            </div>
+        </div>
+    </div>

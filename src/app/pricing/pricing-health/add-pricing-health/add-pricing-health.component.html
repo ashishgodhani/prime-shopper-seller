@@ -1,0 +1,96 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Pricing Health Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/pricing/health']">Pricing Health</a>
+                            </li>
+                            <li class="breadcrumb-item active">Prdouct Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Pricing Health Create</h4>
+            </div>
+            <div class="card-body">
+                <form #priceHealthAddForm="ngForm" (ngSubmit)="postPriceHealth(priceHealthAddForm)" class="needs-validation">
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Product Name</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Product Name</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Pricing Health Issue</label>
+                        <input type="text" #pricingHealthIssue="ngModel" name="pricingHealthIssue" ngModel class="form-control"
+                            placeholder="Enter Pricing Health Issue" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Price</label>
+                        <input type="text" #price="ngModel" name="price" ngModel class="form-control"
+                            placeholder="Enter Price" />
+                    </div>
+
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Sale Price</label>
+                        <input type="text" #salePrice="ngModel" name="salePrice" ngModel class="form-control"
+                            placeholder="Enter Sale Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Selling Price</label>
+                        <input type="text" #sellingPrice="ngModel" name="sellingPrice" ngModel class="form-control"
+                            placeholder="Enter Selling Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Business Price</label>
+                        <input type="text" #businessPrice="ngModel" name="businessPrice" ngModel class="form-control"
+                            placeholder="Enter Business Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Reference Price</label>
+                        <input type="text" #referencePrice="ngModel" name="referencePrice" ngModel class="form-control"
+                            placeholder="Enter Reference Price" />
+                    </div>
+
+                   
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Your Minimum Price</label>
+                        <input type="text" #minimumPrice="ngModel" name="minimumPrice" ngModel class="form-control"
+                            placeholder="Enter Minimum Price" />
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Your Maximum Price</label>
+                        <input type="text" #maximumPrice="ngModel" name="maximumPrice" ngModel class="form-control"
+                            placeholder="Enter Maximum Price" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Pricing Health Create</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Cancel
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,103 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Fix Price Alerts Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/pricing/fixprice/alerts']">Fix Price
+                                    Alerts</a>
+                            </li>
+                            <li class="breadcrumb-item active">Fix Price Alerts Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Fix Price Alerts Create</h4>
+            </div>
+            <div class="card-body">
+                <form #fixPriceAlertsAddForm="ngForm" (ngSubmit)="postfixPriceAlerts(fixPriceAlertsAddForm)"
+                    class="needs-validation">
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Sku</label>
+                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                            placeholder="Enter Sku" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Status</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select menu</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Condition</label>
+                        <input type="text" #condition="ngModel" multiple name="condition" ngModel class="form-control"
+                            placeholder="Enter Condition" />
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Product Name</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Product Name</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Available</label>
+                        <input type="text" #available="ngModel"  name="available" ngModel class="form-control"
+                            placeholder="Enter available" />
+                    </div>
+                
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Price</label>
+                        <input type="text" #Price="ngModel" name="price" ngModel class="form-control"
+                            placeholder="Enter  Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Business Price </label>
+                        <input type="text" #BusinessPrice="ngModel" name="businessPrice" ngModel class="form-control"
+                            placeholder="Enter Business Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Your Minimum Price</label>
+                        <input type="text" #minimumPrice="ngModel" name="minimumPrice" ngModel class="form-control"
+                            placeholder="Enter Minimum Price" />
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Your Maximum Price</label>
+                        <input type="text" #maximumPrice="ngModel" name="maximumPrice" ngModel class="form-control"
+                            placeholder="Enter Maximum Price" />
+                    </div>
+                   
+                  
+
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Manage Inventory</button>
+                    <button (click)="goBack()" class="btn btn-danger mx-2">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>

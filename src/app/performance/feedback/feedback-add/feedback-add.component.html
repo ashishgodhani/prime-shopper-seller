@@ -1,0 +1,83 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Feedback Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/performance/feedback']">Feedback</a>
+                            </li>
+                            <li class="breadcrumb-item active">Feedback Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Feedback Create</h4>
+            </div>
+            <div class="card-body">
+                <form #feedbackAddForm="ngForm" (ngSubmit)="postFeedback(feedbackAddForm)" class="needs-validation">
+                    
+                  
+
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Rating</label>
+                        <input type="text" #rating="ngModel" name="rating" ngModel class="form-control"
+                            placeholder="Enter Rating" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Order Id </label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Order ID</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Date</label>
+                        <input type="date" #date="ngModel"  name="date" ngModel class="form-control"
+                            placeholder="Enter Date" />
+                    </div>
+                   
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Fee Preview</label>
+                        <input type="text" #feePriview="ngModel" name="feepriview" ngModel class="form-control"
+                            placeholder="Enter  Fee Priview" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Comments</label>
+                        <input type="text" #comments="ngModel" name="comments" ngModel class="form-control"
+                            placeholder="Enter  Comments" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Actions </label>
+                        <input type="text" #actions="ngModel" name="actions" ngModel class="form-control"
+                            placeholder="Enter Actions" />
+                    </div>
+                    
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Feedback</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Cancel
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
