@@ -31,14 +31,11 @@ export class LoginComponent implements OnInit {
           this.auth.setToken(login.token);
           this.auth.setUser(login);
           this.router.navigateByUrl('')
-          
         },
         (error)=>{
           this.dataService.showAlert('error','Error',error)
         }
       )
-    
-
   }
 
 }
