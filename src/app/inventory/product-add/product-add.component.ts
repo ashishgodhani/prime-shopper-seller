@@ -11,7 +11,7 @@ import { DataService } from '../../data.service';
 export class ProductAddComponent implements OnInit {
 
   constructor(
-    private dataService : DataService,
+    private http : DataService,
     private auth : AuthService,
     private router : Router
   ) { }
@@ -20,6 +20,19 @@ export class ProductAddComponent implements OnInit {
   }
 
   p_image = "";
+  b_image = "";
+
+  bannerImage(event:any)
+  { 
+    var length = event.target.files.length;
+
+      if(length>0)
+      {   
+        const file =  event.target.files[0];
+        this.b_image = file.name; 
+      }
+  
+  }
 
   productImg(event:any)
   { 
@@ -34,8 +47,13 @@ export class ProductAddComponent implements OnInit {
 
   addproduct(product_data:any)
   {
+    
     product_data.image = this.p_image;
-    console.warn(product_data);
+    product_data.banner = this.b_image;
+    console.warn(product_data)
+    this.http.add_product(product_data).subscribe((result:any) => {
+    console.warn(result)
+    })
   }
 
 }

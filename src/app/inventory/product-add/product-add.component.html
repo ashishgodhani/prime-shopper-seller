@@ -48,15 +48,10 @@
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Banner</label>
                         </div>
-                        <form action="#" class="dropzone dropzone-area" id="dpz-single-file" name="banner" ngModel>
-                              <div class="dz-message upload_banner">
-                                 <div>
-                                      Drop files here or click to upload.<br>
-                                      <i class="fa fa-download"></i>
-                                   </div>
-                              </div>
-                        </form>
-                    </div>  
+                      
+                            <input type="file" #b_image name="banner" class="dropzone dropzone-area" multiple ngModel (change)="bannerImage($event)">
+                    </div>
+ 
                     <div class="mb-2">
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Images</label>
@@ -66,17 +61,17 @@
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Price</label>
-                        <input type="text" #sku="ngModel" name="price" ngModel class="form-control"
+                        <input type="text" #price="ngModel" name="price" ngModel class="form-control"
                             placeholder="Price" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Selling Price</label>
-                        <input type="text" #sku="ngModel" name="sellingPrice" ngModel class="form-control"
+                        <input type="text" #sellingprice="ngModel" name="sellingPrice" ngModel class="form-control"
                             placeholder="Selling Price" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Discount</label>
-                        <input type="text" #sku="ngModel" name="discount" ngModel class="form-control"
+                        <input type="text" #discount="ngModel" name="discount" ngModel class="form-control"
                             placeholder="Discount" />
                     </div>
                     <div class="mb-1">
@@ -86,12 +81,12 @@
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Quantity</label>
-                        <input type="text" #sku="ngModel" name="quantity" ngModel class="form-control"
+                        <input type="text" #quntity="ngModel" name="quantity" ngModel class="form-control"
                             placeholder="Quantity" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Product Description</label>
-                         <textarea name="" class="form-control" id="" cols="30" rows="4" placeholder="Description" name="description" ngModel></textarea>
+                         <textarea name="description" class="form-control" id="" cols="30" rows="4" placeholder="Description" name="description" ngModel></textarea>
                     </div>
                     <div class="mb-1">
                          <label class="form-label" for="basic-addon-name">Features</label>
