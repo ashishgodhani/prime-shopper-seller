@@ -26,6 +26,7 @@ export class DataService {
 
   localUrl: string = 'http://192.168.1.3:8080/api/v1';
   liveUrl: string = 'http://134.209.70.91:8080/api/v1';
+  addproduct_url = "https://prime-shopper.herokuapp.com/api/v1/seller/product/add";
   // liveUrl: string = 'http://192.168.1.4:9090/api/v1/front';
   apiUrl: string = (window.location.origin.match('localhost') !== null ? this.localUrl : this.liveUrl);
 
@@ -129,20 +130,10 @@ export class DataService {
     return localStorage.getItem(key);
   }
 
-    
+  add_product(data:any)
+  {
+    return this._http.post(this.addproduct_url,data);
+  }
   
-
-
-  
-
-  
-
-
-  
-
- 
-
-  
-
 }
 

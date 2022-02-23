@@ -8,7 +8,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -56,6 +56,7 @@ import { StatisticsCardComponent } from './dashboard/statistics-card/statistics-
     FormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

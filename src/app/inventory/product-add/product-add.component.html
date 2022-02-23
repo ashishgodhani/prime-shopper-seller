@@ -25,30 +25,30 @@
                 <h4 class="card-title">Add Product</h4>
             </div>
             <div class="card-body">
-                <form #manageInventoryAddForm="ngForm" class="needs-validation">      
+                <form #manageInventoryAddForm="ngForm" class="needs-validation" #addproductForm="ngForm" (ngSubmit)="addproduct(addproductForm.value)">      
                     <div class="mb-1">
                          <label class="form-label" for="selectDefault">Category</label>
-                         <select class="form-select" id="selectDefault">
-                             <option selected>Select Category </option>
+                         <select class="form-select" id="selectDefault" name="category" ngModel>
+                             <option selected  >Select Category </option>
                              <option value="1">Active</option>
                              <option value="2">Inactive</option>
                          </select>
                      </div>  
                      <div class="mb-1">
                          <label class="form-label" for="basic-addon-name">Seller</label>
-                         <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                         <input type="text" ngModel name="seller"  class="form-control"
                              placeholder="Seller Name" />
                      </div>         
                      <div class="mb-1">
                          <label class="form-label" for="basic-addon-name">Title</label>
-                         <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                         <input type="text"  name="title" ngModel class="form-control"
                              placeholder="Product Title" />
                      </div>         
                     <div class="mb-2">
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Banner</label>
                         </div>
-                        <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
+                        <form action="#" class="dropzone dropzone-area" id="dpz-single-file" name="banner" ngModel>
                               <div class="dz-message upload_banner">
                                  <div>
                                       Drop files here or click to upload.<br>
@@ -56,64 +56,58 @@
                                    </div>
                               </div>
                         </form>
-                    </div>
+                    </div>  
                     <div class="mb-2">
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Images</label>
                         </div>
-                        <form action="#" class="dropzone dropzone-area" id="dpz-multiple-files">
-                              <div class="dz-message upload_banner">
-                                 <div>
-                                      Drop files here or click to upload.<br>
-                                      <i class="fa fa-download"></i>
-                                   </div>
-                              </div>
-                        </form>
+                        <input type="file" #p_image name="image" class="dropzone dropzone-area" multiple ngModel (change)="productImg($event)">
+                     
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Price</label>
-                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                        <input type="text" #sku="ngModel" name="price" ngModel class="form-control"
                             placeholder="Price" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Selling Price</label>
-                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                        <input type="text" #sku="ngModel" name="sellingPrice" ngModel class="form-control"
                             placeholder="Selling Price" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Discount</label>
-                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                        <input type="text" #sku="ngModel" name="discount" ngModel class="form-control"
                             placeholder="Discount" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Sku</label>
-                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                        <input type="text" #sku="ngModel" name="SKU" ngModel class="form-control"
                             placeholder="Enter Sku" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Quantity</label>
-                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                        <input type="text" #sku="ngModel" name="quantity" ngModel class="form-control"
                             placeholder="Quantity" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Product Description</label>
-                         <textarea name="" class="form-control" id="" cols="30" rows="4" placeholder="Description"></textarea>
+                         <textarea name="" class="form-control" id="" cols="30" rows="4" placeholder="Description" name="description" ngModel></textarea>
                     </div>
                     <div class="mb-1">
                          <label class="form-label" for="basic-addon-name">Features</label>
-                         <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                         <input type="text" #sku="ngModel" name="fecture" ngModel class="form-control"
                              placeholder="Features" />
                      </div>
                     <div class="mb-1">
                         <label class="form-label" for="selectDefault">Stocks Status</label>
-                        <select class="form-select" id="selectDefault">
+                        <select class="form-select" id="selectDefault" name="status">
                             <option selected>Select Stocks Status</option>
                             <option value="1">In Stocks</option>
                             <option value="2">Out of Stocks</option>
                         </select>
                     </div>
                     <div class="mb-1">
-                        <label class="form-label" for="selectDefault">Product Status</label>
+                        <label class="form-label" for="selectDefault" name="productStatus">Product Status</label>
                         <select class="form-select" id="selectDefault">
                             <option selected>Select Status</option>
                             <option value="1">Active</option>
@@ -122,14 +116,11 @@
                     </div>                    
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Slug</label>
-                        <input type="text" #available="ngModel"  name="available" ngModel class="form-control"
+                        <input type="text" #available="ngModel"  name="slug" ngModel class="form-control"
                             placeholder="Enter Slug" />
                     </div>
                     <div class="mb-1 text-center">
-                         <button type="submit" class="btn btn-primary">
-                              <i class="fa fa-check" aria-hidden="true"></i>
-                              Add Product
-                         </button>
+                         <input type="submit" class="btn btn-primary" value=" Add Product">
                          <button class="btn btn-danger mx-2">
                               <i class="fa fa-times" aria-hidden="true"></i>
                               Cancel
