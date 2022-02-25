@@ -49,14 +49,14 @@
                             <label class="form-label" for="basic-addon-name">Product Banner</label>
                         </div>
                       
-                            <input type="file" #b_image name="banner" class="dropzone dropzone-area" multiple ngModel (change)="bannerImage($event)">
+                            <input type="file" #b_image name="banner" class="dropzone dropzone-area" ngModel (change)="bannerImage($event)">
                     </div>
  
                     <div class="mb-2">
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Images</label>
                         </div>
-                        <input type="file" #p_image name="image" class="dropzone dropzone-area" multiple ngModel (change)="productImg($event)">
+                        <input type="file" #p_image name="images" class="dropzone dropzone-area" multiple ngModel (change)="productImg($event)">
                      
                     </div>
                     <div class="mb-1">
@@ -68,11 +68,6 @@
                         <label class="form-label" for="basic-addon-name">Selling Price</label>
                         <input type="text" #sellingprice="ngModel" name="sellingPrice" ngModel class="form-control"
                             placeholder="Selling Price" />
-                    </div>
-                    <div class="mb-1">
-                        <label class="form-label" for="basic-addon-name">Discount</label>
-                        <input type="text" #discount="ngModel" name="discount" ngModel class="form-control"
-                            placeholder="Discount" />
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Sku</label>
@@ -90,30 +85,17 @@
                     </div>
                     <div class="mb-1">
                          <label class="form-label" for="basic-addon-name">Features</label>
-                         <input type="text" #sku="ngModel" name="fecture" ngModel class="form-control"
+                         <input type="text" #sku="ngModel" name="features" ngModel class="form-control"
                              placeholder="Features" />
                      </div>
                     <div class="mb-1">
                         <label class="form-label" for="selectDefault">Stocks Status</label>
-                        <select class="form-select" id="selectDefault" name="status">
+                        <select class="form-select" id="selectDefault" name="status" ngModel>
                             <option selected>Select Stocks Status</option>
-                            <option value="1">In Stocks</option>
-                            <option value="2">Out of Stocks</option>
+                            <option value="In stock">In Stocks</option>
+                            <option value="Out of stock">Out of Stocks</option>
                         </select>
-                    </div>
-                    <div class="mb-1">
-                        <label class="form-label" for="selectDefault" name="productStatus">Product Status</label>
-                        <select class="form-select" id="selectDefault">
-                            <option selected>Select Status</option>
-                            <option value="1">Active</option>
-                            <option value="2">Inactive</option>
-                        </select>
-                    </div>                    
-                    <div class="mb-1">
-                        <label class="form-label" for="basic-addon-name">Slug</label>
-                        <input type="text" #available="ngModel"  name="slug" ngModel class="form-control"
-                            placeholder="Enter Slug" />
-                    </div>
+                    </div>  
                     <div class="mb-1 text-center">
                          <input type="submit" class="btn btn-primary" value=" Add Product">
                          <button class="btn btn-danger mx-2">

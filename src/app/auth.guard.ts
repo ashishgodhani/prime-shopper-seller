@@ -17,15 +17,11 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-
       if(localStorage.getItem('X-Authentication-token')){
         return true
       } else{
-        // this.router.navigateByUrl('/login')
-        return true;
+        return this.router.navigateByUrl('/login')
       }
-
-
   }
   
 }

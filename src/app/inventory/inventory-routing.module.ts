@@ -11,11 +11,13 @@ import { ManageInventoryComponent } from './manage-inventory/manage-inventory.co
 import { ProductAddComponent } from './product-add/product-add.component';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { UploadManageVideosComponent } from './upload-manage-videos/upload-manage-videos.component';
+import { AuthGuard } from '../auth.guard';
 
 const routes: Routes = [
   {
     path:'inventory',
     component:DefaultLayoutComponent,
+    canActivate: [AuthGuard],
     children:[
       {
         path:'manage/inventory',
