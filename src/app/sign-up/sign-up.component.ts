@@ -23,6 +23,7 @@ export class SignUpComponent implements OnInit {
     this.dataService.__post('/seller/register',signUpData.value)
     .subscribe(
       (signUp)=>{
+        console.warn(signUp)
         this.router.navigateByUrl('/login')
       },
       (error)=>{

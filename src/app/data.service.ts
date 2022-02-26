@@ -27,6 +27,7 @@ export class DataService {
   localUrl: string = 'http://192.168.1.3:8080/api/v1';
   liveUrl: string = 'https://prime-shopper-api.herokuapp.com/api/v1';
   addproduct_url = "https://prime-shopper.herokuapp.com/api/v1/seller/product/add";
+  updateproduct_url = "https://prime-shopper.herokuapp.com/api/v1/seller/product/update";
   // addproduct_url = "http://localhost:5000/api/v1/seller/product/add";
   // liveUrl: string = 'http://192.168.1.4:9090/api/v1/front';
   // apiUrl: string = (window.location.origin.match('localhost') !== null ? this.localUrl : this.liveUrl);
@@ -79,7 +80,6 @@ export class DataService {
 
     //   $(progressBarLine).attr('style', 'width:1%');
     // }
-
 
     return this._http.post(`${this.apiUrl}${url}`, data, options).pipe(
       map((response: any) => {
@@ -138,6 +138,11 @@ export class DataService {
   {
     let options : any = { headers: this._getHeaders() };
     return this._http.post(this.addproduct_url, data, options);
+  }
+
+  update_product(data:any)
+  {
+    return this._http.post(this.updateproduct_url,data);
   }
   
 }
