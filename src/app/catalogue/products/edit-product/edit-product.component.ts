@@ -18,18 +18,19 @@ export class EditProductComponent implements OnInit {
   ) { }
 
   id: any;
-  product: any;
+  data:any[]=[];
 
   ngOnInit(): void {
     this.dataService.setTitle('Product-Update');
     this.id = this._ActivatedRoute.snapshot.paramMap.get("id");
-    this.dataService.update_product(this.id).subscribe((data: any) => this.product = data)
-    console.warn(this.product);
+    this.data.push({product:this.id});
+    this.dataService.update_product(this.data).subscribe((result: any) => {
+      
+    });
+   
   }
 
   updateproduct(data: any) {
-
-
 
   }
 
