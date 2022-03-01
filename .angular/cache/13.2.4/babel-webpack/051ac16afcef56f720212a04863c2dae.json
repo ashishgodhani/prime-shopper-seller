@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Category {\n  constructor(init) {\n    this._id = init._id;\n    this.name = init.name;\n    this.image = init.image;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

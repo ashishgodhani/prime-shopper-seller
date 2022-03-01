@@ -44,7 +44,7 @@ ngx-dropzone{
     background: black; 
   }
   .card-body-sub.scroll{
-    overflow-Y: scroll;
+    overflow-y: scroll;
     max-height: 400px;
   
   }
