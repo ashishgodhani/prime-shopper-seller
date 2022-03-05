@@ -91,3 +91,19 @@
 .dark-layout .dropzone {
   background-color: #2e3750;
 }
+
+
+.dropzone{
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.upload_file{
+  opacity: 0;
+}
+.upload_title{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 10px;
+}

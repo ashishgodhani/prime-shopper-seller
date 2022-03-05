@@ -5,7 +5,7 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h2 class="content-header-title float-start mb-0">Manage Inventory Create</h2>
+                    <h2 class="content-header-title float-start mb-0">Add Product</h2>
                     <div class="breadcrumb-wrapper">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a >Home</a>
@@ -48,16 +48,20 @@
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Banner</label>
                         </div>
-                      
-                            <input type="file" #b_image name="banner" class="dropzone dropzone-area" ngModel (change)="bannerImage($event)">
+                        <label class="dropzone dropzone-area ">
+                            <input type="file" #b_image name="banner" class="upload_file" ngModel (change)="bannerImage($event)">
+                            <h2 class="upload_title">Select or Drop it, Image!</h2>
+                        </label>                      
                     </div>
  
                     <div class="mb-2">
                         <div class="form-label">
                             <label class="form-label" for="basic-addon-name">Product Images</label>
                         </div>
-                        <input type="file" #p_image name="images" class="dropzone dropzone-area" multiple ngModel (change)="productImg($event)">
-                     
+                        <label class="dropzone dropzone-area ">
+                            <input type="file" #p_image name="images" class="upload_file" multiple ngModel (change)="productImg($event)">
+                            <h2 class="upload_title">Select or Drop it, Image!</h2>
+                        </label>
                     </div>
                     <div class="mb-1">
                         <label class="form-label" for="basic-addon-name">Price</label>
