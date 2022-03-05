@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Seller {\n  constructor(init) {\n    this._id = init._id;\n    this.name = init.name;\n    this.email = init.email;\n    this.password = init.password;\n    this.phoneNumber = init.phoneNumber;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

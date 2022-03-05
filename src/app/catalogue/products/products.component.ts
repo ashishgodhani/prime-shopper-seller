@@ -13,7 +13,7 @@ import { DataService } from 'src/app/data.service';
 export class ProductsComponent implements OnInit {
 
 
-  products : Array<Products> = [];
+  products: Array<Products> = [];
 
   constructor(
     private dataService: DataService,
@@ -24,51 +24,50 @@ export class ProductsComponent implements OnInit {
     this.loadProducts();
   }
 
-  loadProducts(){
-    this.dataService.__post('/products',{})
-    .subscribe(
-      (products : Array<any>) => {
-        products.map( (product : any) => {
-          this.products.push( new Products({
-            _id: product._id,
-            productName : product.title,
-            description : product.description,
-            productPrice : product.price,
-            sellingPrice : product.sellingPrice,
-            producetImages : product.images,
-            bannerImage : product.banner,
-            discount: product.discount,
-            quantity: product.quantity,
-            feature: product.feature,
-            seller:new Seller({
-              _id: product.seller._id,
-              name: product.seller.name,
-              email: product.seller.email,
-              password: product.seller.password,
-              phoneNumber: product.seller.phoneNumber,
-            }),
-            category : new Category({
-              _id : product.category._id,
-              name : product.category.name,
-              image : product.category.banner
-            }),
-          }));
-        });
+  loadProducts() {
+    this.dataService.__post('/products', {})
+      .subscribe(
+        (products: Array<any>) => {
+          products.map((product: any) => {
+            this.products.push(new Products({
+              _id: product._id,
+              productName: product.title,
+              description: product.description,
+              productPrice: product.price,
+              sellingPrice: product.sellingPrice,
+              producetImages: product.images,
+              bannerImage: product.banner,
+              discount: product.discount,
+              quantity: product.quantity,
+              feature: product.feature,
+              seller: new Seller({
+                _id: product.seller._id,
+                name: product.seller.name,
+                email: product.seller.email,
+                password: product.seller.password,
+                phoneNumber: product.seller.phoneNumber,
+              }),
+              
+              category: new Category({
+                _id: product.category._id,
+                name: product.category.name,
+                image: product.category.banner
+              }),
+            }));
+          });
 
-      },
-      (error) => {
-        this.dataService.showAlert('error','Error',error)
+        },
+        (error) => {
+          this.dataService.showAlert('error', 'Error', error)
 
-      }
-    )
+        }
+      )
 
 
   }
+  onDelete(id: any) {
 
-
-  onDelete(id:any){
-    
   }
-  
+
 
 }

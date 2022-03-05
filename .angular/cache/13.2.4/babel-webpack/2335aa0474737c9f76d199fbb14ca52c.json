@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class PerformanceNotification {\n  constructor(init) {\n    this._id = init._id;\n    this.subject = init.subject;\n    this.date = init.date;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

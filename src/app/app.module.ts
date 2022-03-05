@@ -25,6 +25,7 @@ import { ReportsModule } from './reports/reports.module';
 import { PerformanceModule } from './performance/performance.module';
 import { DashboardSalesChartComponent } from './dashboard/dashboard-sales-chart/dashboard-sales-chart.component';
 import { StatisticsCardComponent } from './dashboard/statistics-card/statistics-card.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,7 @@ import { StatisticsCardComponent } from './dashboard/statistics-card/statistics-
     ToastrModule.forRoot(),
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

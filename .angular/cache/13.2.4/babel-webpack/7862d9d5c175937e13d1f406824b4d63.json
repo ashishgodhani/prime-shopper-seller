@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Feedback {\n  constructor(init) {\n    this._id = init._id;\n    this.date = init.date;\n    this.rating = init.rating;\n    this.orderId = init.orderId;\n    this.comments = init.comments;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class ListingQuality {\n  constructor(init) {\n    this._id = init._id;\n    this.product = init.product;\n    this.available = init.available;\n    this.sales = init.sales;\n    this.recommendations = init.recommendations;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
