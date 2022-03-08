@@ -3740,3 +3740,10 @@ tr.group {
   background-color: #b8c2cc !important;
   opacity: 1;
 }
+
+.profile_info td{
+  padding: 10px;
+}
+.profile_info.table > :not(:last-child) > :last-child > :focus{
+  border-bottom-color: #7367f0 !important;
+}
