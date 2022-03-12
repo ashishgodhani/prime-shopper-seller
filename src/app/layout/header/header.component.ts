@@ -9,10 +9,15 @@ import { DataService } from 'src/app/data.service';
 })
 export class HeaderComponent implements OnInit {
   userName: any;
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService , private dataservices:DataService) {}
 
+  userData:any;
   ngOnInit(): void {
-    this.userName = this.authService.getUser();
+
+    this.dataservices.getProfile().subscribe((result:any)=>{
+      this.userData = result;
+    })
+
   }
 
  

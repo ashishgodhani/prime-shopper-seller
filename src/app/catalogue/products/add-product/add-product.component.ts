@@ -125,8 +125,6 @@ console.log(productDetalis.value);
               this.dataService.showAlert('error', 'Error', error);
             }
           );
-          
-        
       }
     }
   }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { map, catchError } from 'rxjs/operators';
-import { throwError, Subject, Observable } from 'rxjs';
+import { observable } from 'rxjs';
+import { throwError, Subject } from 'rxjs';
 import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import * as $ from "jquery";
@@ -12,6 +13,9 @@ import { Products } from './classes/products';
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class DataService {
   
   productData:Array<Products> = []
@@ -28,6 +32,8 @@ export class DataService {
   liveUrl: string = 'https://prime-shopper-api.herokuapp.com/api/v1';
   addproduct_url = "https://prime-shopper-api.herokuapp.com/api/v1/seller/product/add";
   updateproduct_url = "https://prime-shopper-api.herokuapp.com/api/v1/seller/product/update";
+  updateDataUser = "https://prime-shopper-api.herokuapp.com/api/v1/seller/update/profile";
+  sellerProfile = "https://prime-shopper-api.herokuapp.com/api/v1/seller/profile";
   // addproduct_url = "http://localhost:5000/api/v1/seller/product/add";
   // liveUrl: string = 'http://192.168.1.4:9090/api/v1/front';
   // apiUrl: string = (window.location.origin.match('localhost') !== null ? this.localUrl : this.liveUrl);
@@ -35,8 +41,9 @@ export class DataService {
 
 
  
-  sellerID:any
-  userName = new Subject<any>() 
+  sellerID:any;
+  userName = new Subject<any>();
+  tokenAuth:any;
 
 
   setTitle(title: string = 'Home', main : string = '| PrimeShopper') {
@@ -143,6 +150,18 @@ export class DataService {
   update_product(data:any)
   {
     return this._http.post(this.updateproduct_url,data);
+  }
+
+  getProfile()
+  {
+    let options : any = { headers: this._getHeaders() };
+    return this._http.post(this.sellerProfile,'',options);
+  }
+
+  update_profile(data:any)
+  {
+    let options : any = { headers: this._getHeaders() };
+    return this._http.post(this.updateDataUser,data,options);
   }
   
 }

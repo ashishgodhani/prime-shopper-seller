@@ -10,9 +10,10 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a>
                         </li>
-                       
-                        <li class="breadcrumb-item active">My Account
+                        <li class="breadcrumb-item active"><a [routerLink]="['/profile/view']">My Account</a>
                         </li>
+                        <li class="breadcrumb-item active">Edit Profile
+                    </li>
                     </ol>
                 </div>
             </div>
@@ -36,36 +37,31 @@
         </div>
         <div class="card-body">
           <div class="table-responsive data-table">
+               <form #updateFormData="ngForm" (ngSubmit) = "updateUser(updateFormData.value)">
                <table class="table profile_info">
                     <tr>
                          <th>Name</th>
                          <td>
-                              <input type="text"  name="title" class="form-control" value="Ravi Jasoliya"/>
+                              <input type="text" #name  name="name" class="form-control"  ngModel="{{userData.data.name}}"/>
                          </td>
                     </tr>
                     <tr>
                          <th>Email</th>
                          <td>
-                              <input type="text"  name="title" class="form-control" value="Ravi Jasoliya"/>
-                         </td>
-                    </tr>
-                    <tr>
-                         <th>Password</th>
-                         <td>
-                              <input type="password"  name="title" class="form-control" value="Ravi Jasoliya"/>
+                              <input type="text" #email name="email" class="form-control" ngModel="{{userData.data.email}}" />
                          </td>
                     </tr>
                     <tr>
                          <th>Contact No.</th>
                          <td>
-                              <input type="text"  name="title" class="form-control" value="Ravi Jasoliya"/>
+                              <input type="text" #no  name="phoneNumber" class="form-control"  ngModel="{{userData.data.phoneNumber}}"/>
                          </td>
                     </tr>
                     <tr>
                          <td colspan="2">
                               <div class="mb-1 text-center">
-                                   <input type="submit" class="btn btn-primary" value="Save Profile">
-                                   <button class="btn btn-danger mx-2">
+                                   <button class="btn btn-primary" >save profile</button>
+                                   <button class="btn btn-danger mx-2" [routerLink]="['/profile/view']">
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                         Cancel
                                    </button>
@@ -73,6 +69,7 @@
                          </td>
                     </tr>
                </table>
+          </form>
           </div>
       </div>
     </div>

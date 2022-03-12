@@ -24,9 +24,7 @@ export class LoginComponent implements OnInit {
     
     this.dataService.__post('/seller/login',loginData.value)
       .subscribe(
-        
         (login)=>{
-          
           this.dataService.showAlert('','','Successfully Login')
           this.auth.setToken(login.token);
           this.auth.setUser(login);

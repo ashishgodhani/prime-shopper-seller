@@ -16,6 +16,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { MessageComponent } from './message/message/message.component';
+
 import { CatalogueModule } from './catalogue/catalogue.module';
 import { InventoryModule } from './inventory/inventory.module';
 import { PricingModule } from './pricing/pricing.module';
@@ -38,11 +39,13 @@ import { ProfileModule } from './profile/profile.module';
     DashboardComponent,
     SignUpComponent,
     ForgetPasswordComponent,
-   
+
     ResetPasswordComponent,
         MessageComponent,
         DashboardSalesChartComponent,
         StatisticsCardComponent,
+       
+        
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { ProfileModule } from './profile/profile.module';
     ToastrModule.forRoot(),
     ReactiveFormsModule,
     ProfileModule,
+    
     
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
