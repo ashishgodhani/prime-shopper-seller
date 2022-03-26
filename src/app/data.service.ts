@@ -34,6 +34,7 @@ export class DataService {
   updateproduct_url = "https://prime-shopper-api.herokuapp.com/api/v1/seller/product/update";
   updateDataUser = "https://prime-shopper-api.herokuapp.com/api/v1/seller/update/profile";
   sellerProfile = "https://prime-shopper-api.herokuapp.com/api/v1/seller/profile";
+  UpdatePassword = "https://prime-shopper-api.herokuapp.com/api/v1/seller/change/password";
   // addproduct_url = "http://localhost:5000/api/v1/seller/product/add";
   // liveUrl: string = 'http://192.168.1.4:9090/api/v1/front';
   // apiUrl: string = (window.location.origin.match('localhost') !== null ? this.localUrl : this.liveUrl);
@@ -162,6 +163,12 @@ export class DataService {
   {
     let options : any = { headers: this._getHeaders() };
     return this._http.post(this.updateDataUser,data,options);
+  }
+
+  updatepassword(data:any)
+  {
+    let options : any = { headers: this._getHeaders() };
+    return this._http.post(this.UpdatePassword,data,options);
   }
   
 }
