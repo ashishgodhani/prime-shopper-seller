@@ -789,10 +789,7 @@ textarea:-webkit-autofill {
   transition: 0.3s ease all, background 0s;
   z-index: 997;
 }
-.header-navbar.fixed-top,
-.header-navbar.floating-nav {
-  left: 0px;
-}
+
 .header-navbar[class*="bg-"] .navbar-nav .nav-item > a,
 .header-navbar[class*="bg-"] .navbar-nav .nav-item > a i,
 .header-navbar[class*="bg-"] .navbar-nav .nav-item > a span,
@@ -814,10 +811,9 @@ textarea:-webkit-autofill {
 }
 .header-navbar.floating-nav {
   position: fixed;
-  right: 0;
-  margin: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
-  border-radius: 0.428rem;
   z-index: 12;
 }
 .header-navbar.navbar-static-top {
@@ -867,7 +863,7 @@ textarea:-webkit-autofill {
 .header-navbar .navbar-container ul.navbar-nav li {
   line-height: 1.5;
 }
-.vertical-layout
+/* .vertical-layout
   .header-navbar
   .navbar-container
   ul.navbar-nav
@@ -875,7 +871,7 @@ textarea:-webkit-autofill {
   .dropdown-menu {
   top: 41px !important;
   right: 0;
-}
+} */
 .header-navbar
   .navbar-container
   ul.navbar-nav
@@ -1079,7 +1075,7 @@ textarea:-webkit-autofill {
 }
 .header-navbar .navbar-container ul.navbar-nav li.dropdown-user .dropdown-menu {
   width: 12rem;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .header-navbar
   .navbar-container
@@ -1217,9 +1213,9 @@ textarea:-webkit-autofill {
   display: none;
 }
 .navbar-floating .navbar-container:not(.main-menu-content) {
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem;
 }
-.navbar-floating .header-navbar-shadow {
+/* .navbar-floating .header-navbar-shadow {
   display: block;
   background: -webkit-linear-gradient(
     top,
@@ -1241,7 +1237,7 @@ textarea:-webkit-autofill {
   top: 0;
   left: 0;
   z-index: 11;
-}
+} */
 .navbar-light,
 .navbar-light.navbar-horizontal {
   background: #fff;
@@ -1308,9 +1304,9 @@ textarea:-webkit-autofill {
   }
 }
 @media (max-width: 1199.98px) {
-  .header-navbar.floating-nav {
+  /* .header-navbar.floating-nav {
     width: calc(100vw - (100vw - 100%) - calc(2rem * 2));
-  }
+  } */
   .header-navbar.navbar-static-top {
     left: 0;
     width: 100%;
@@ -3305,3 +3301,6 @@ a:hover {
 .pointer-events-none {
   pointer-events: none;
 }
+
+
+

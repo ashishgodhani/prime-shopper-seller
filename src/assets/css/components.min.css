@@ -22,9 +22,10 @@ html .content {
   transition: 0.3s ease all;
   backface-visibility: hidden;
   min-height: calc(100% - 3.35rem);
+  /* margin-left: 260px; */
 }
 html .content.app-content {
-  padding: calc(2rem + 4.45rem + 1.3rem) 2rem 0;
+  padding: calc(4rem + 4.45rem + 1.3rem) 2rem 0;
 }
 html .content.app-content.show-overlay .content-overlay {
   z-index: 10;
@@ -3739,3 +3740,18 @@ tr.group {
   background-color: #b8c2cc !important;
   opacity: 1;
 }
+
+.profile_info td{
+  padding: 10px;
+}
+.profile_info.table > :not(:last-child) > :last-child > :focus{
+  border-bottom-color: #7367f0 !important;
+}
+
+
+
+.app-content.content{
+  padding-top: 30px !important;
+}
+
+
