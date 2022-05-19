@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class CustomReport {\n  constructor(init) {\n    this._id = init._id;\n    this.name = init.name;\n    this.segment = init.segment;\n    this.dateFrom = init.dateFrom;\n    this.dateTo = init.dateTo;\n    this.generatedOn = init.generatedOn;\n    this.notes = init.notes;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

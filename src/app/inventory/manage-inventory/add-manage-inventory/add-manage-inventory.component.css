@@ -1,7 +1,0 @@
-.dropzone .dz-message:before{
-    display: none !important;
-}
-.dropzone{
-    padding:0px !important;
-    min-height: 100px !important;
-}
