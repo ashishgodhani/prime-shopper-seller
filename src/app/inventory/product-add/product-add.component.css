@@ -1,0 +1,69 @@
+.categoriesBoxView{
+    overflow: auto;
+}
+
+mat-card {
+  width: 18%;
+  height: 400px;
+  margin-right: 5px;
+  overflow-y: auto;
+  min-width: 180px;
+}
+mat-card ul li {
+  list-style: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.arrowSpan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 5px;
+  border-radius: 5px;
+}
+
+.arrowSpan:hover {
+  background-color: whitesmoke;
+}
+
+.arrowSpan .arrowIcon {
+  font-size: 18px;
+}
+
+.selectSpan {
+  width: 100%;
+  padding: 0.5rem 5px;
+  border-radius: 5px;
+}
+
+.selectSpan:hover {
+  background-color: whitesmoke;
+}
+
+.selectSpan.active {
+  color: #7367f0;
+  font-weight: 700;
+}
+
+.priceBox{
+  display: flex;
+}
+
+.priceBox > div{
+  width: 40%;
+  margin-right: 10px;
+}

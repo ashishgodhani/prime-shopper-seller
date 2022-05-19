@@ -1,0 +1,24 @@
+.productImage{
+    width: 80px;
+    height: 80px;
+}
+
+.productName{
+    max-width: 200px;
+}
+
+.titleLink{
+    color: black;
+}
+
+.titleLink:hover{
+    color: #7367f0;
+}
+
+.updateBtn{
+    background: #7367f0;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 4px;
+    border: none;
+}

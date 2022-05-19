@@ -1,0 +1,82 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Customer Report Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/reports/customerreports']">Customer Reports</a>
+                            </li>
+                            <li class="breadcrumb-item active">Customer Report Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Customer Report Create</h4>
+            </div>
+            <div class="card-body">
+                <form #customerReportsAddForm="ngForm" (ngSubmit)="postCustomerReports(customerReportsAddForm)" class="needs-validation">
+                    
+                  
+
+                   
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Name</label>
+                        <input type="text" #name="ngModel" name="name" ngModel class="form-control"
+                            placeholder="Enter Name" />
+                    </div>
+                   
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Segment</label>
+                        <input type="text" #segment="ngModel"  name="segment" ngModel class="form-control"
+                            placeholder="Enter Segment" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name"> Date Form </label>
+                        <input type="date" #formDate="ngModel" name="formDate" ngModel class="form-control"
+                            placeholder="Enter Form Date" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">To Date </label>
+                        <input type="date" #toDate="ngModel" name="toDate" ngModel class="form-control"
+                            placeholder="Enter To Date" />
+                    </div>
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name"> Generated On</label>
+                        <input type="text" #generated="ngModel" name="generated" ngModel class="form-control"
+                            placeholder="Enter  Fee Generated" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Notes</label>
+                        <input type="text" #notes="ngModel" name="notes" ngModel class="form-control"
+                            placeholder="Enter  Notes" />
+                    </div>
+                   
+                    
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Manage Inventory</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Cancel
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,308 @@
+<!-- <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+	<div class="navbar-header">
+		<ul class="nav navbar-nav flex-row">
+			<li class="nav-item me-auto"><a class="navbar-brand" href="#"><span class="brand-logo">
+						<a href="#" class="brand-logo">
+							<img width="150" src="../../assets/img/PS-logo.png" />
+						</a></span>
+				</a></li>
+			<li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
+						class="fa fa-close d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
+						class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc"
+						data-ticon="disc"></i></a></li>
+		</ul>
+	</div>
+	<div class="shadow-bottom"></div>
+	<div class="main-menu-content">
+		<ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+
+			<li class=" nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/']"><a class="d-flex align-items-center"><i class="fa fa-television" aria-hidden="true"></i>
+
+					<span class="menu-title text-truncate">Dashboard</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/message']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate">Message</span></a>
+			</li>
+
+			<li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Catalogue</span>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/catalogue/products']"><a
+					class="d-flex align-items-center"><i class="fa fa-cubes" aria-hidden="true"></i>
+
+					<span class="menu-title text-truncate"
+						data-i18n="Email"> Products
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/catalogue/drafts/complete']"><a
+					class="d-flex align-items-center"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+					<span
+						class="menu-title text-truncate" data-i18n="Chat"> Complete Your Drafts
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/catalogue/selling/application']"><a
+					class="d-flex align-items-center"><i class="fa fa-cogs" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Todo">View Selling
+						Applications
+					</span></a>
+			</li>
+
+
+
+
+			<li class=" navigation-header"><span data-i18n="User Interface">Inventory</span>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/manage/inventory']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-cube" aria-hidden="true"></i>
+
+					<span class="menu-title text-truncate"
+						data-i18n="Typography"> Manage Inventory
+					</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/improve/listing/quality']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+
+
+					<span class="menu-title text-truncate"
+						data-i18n="Feather"> Improve Listing Quality
+					</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/product/add']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-plus-square-o" aria-hidden="true"></i>
+
+
+					<span class="menu-title text-truncate"
+						data-i18n="Feather"> Add a Product
+
+					</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/productsviaupload/add']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-plus-square-o" aria-hidden="true"></i>
+
+
+					<span class="menu-title text-truncate"
+						data-i18n="Feather">Add Products via
+						Upload
+
+
+
+					</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/inventory/reports']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-exclamation" aria-hidden="true"></i>
+
+					<span class="menu-title text-truncate"
+						data-i18n="Feather"> Inventory Reports
+
+
+					</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/images/upload']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-file-image-o" aria-hidden="true"></i>
+
+					<span class="menu-title text-truncate"
+						data-i18n="Feather"> Upload Images
+
+					</span></a>
+			</li>
+			<li class=" nav-item" [routerLink]="['/inventory/upload/managevideos']" routerLinkActive="active"><a
+					class="d-flex align-items-center"><i class="fa fa-file-video-o" aria-hidden="true"></i>
+
+
+					<span class="menu-title text-truncate"
+						data-i18n="Feather"> Upload & Manage
+						Videos
+
+
+					</span></a>
+			</li>
+
+
+
+			<li class=" navigation-header"><span data-i18n="Forms &amp; Tables">Pricing
+				</span>
+			</li>
+
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/pricing/health']"><a
+					class="d-flex align-items-center"><i class="fa fa-money" aria-hidden="true"></i>
+					<span class="menu-title text-truncate"
+						data-i18n="Form Layout"> Pricing Health
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/pricing/manage']"><a
+					class="d-flex align-items-center"><i class="fa fa-usd" aria-hidden="true"></i>
+
+					<span
+						class="menu-title text-truncate" data-i18n="Form Wizard"> Manage Pricing
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/pricing/fixprice/alerts']"><a
+					class="d-flex align-items-center"><i class="fa fa-bell-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Form Validation"> Fix Price Alerts
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/pricing/fee/discount']"><a
+					class="d-flex align-items-center"><i class="fa fa-percent" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Form Repeater"> Fee Discounts
+					</span></a>
+			</li>
+
+			<li class=" navigation-header"><span data-i18n="Charts &amp; Maps">Orders
+				</span>
+			</li>
+
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/order/manage-orders']"><a
+					class="d-flex align-items-center"><i class="fa fa-cube" aria-hidden="true"></i>
+					<span class="menu-title text-truncate"
+						data-i18n="Leaflet Maps"> Manage Orders
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/order/reports']"><a
+					class="d-flex align-items-center"><i class="fa fa-registered" aria-hidden="true"></i><span class="menu-title text-truncate"
+						data-i18n="Leaflet Maps"> Order Reports
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/order/upload/file']"><a
+					class="d-flex align-items-center"><i class="fa fa-file-o" aria-hidden="true"></i>
+					<span class="menu-title text-truncate"
+						data-i18n="Leaflet Maps">Upload Order
+						Related Files
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/order/manage/returns']"><a
+					class="d-flex align-items-center"><i class="fa fa-tachometer"
+					aria-hidden="true"></i><span class="menu-title text-truncate"
+						data-i18n="Leaflet Maps"> Manage Returns
+
+
+					</span></a>
+			</li>
+			<li class=" navigation-header"><span data-i18n="Misc">Advertising
+				</span>
+			</li>
+
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/advertising/campaign/manager']"><a
+					class="d-flex align-items-center"><i class="fa fa-user-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Documentation"> Campaign Manager</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/advertising/content/manager']"><a
+					class="d-flex align-items-center"><i class="fa fa-id-card-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Documentation"> A+ Content
+						Manager</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/advertising/deals']"><a
+					class="d-flex align-items-center"><i class="fa fa-handshake-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Deals
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/advertising/primeexclusivediscounts']"><a
+					class="d-flex align-items-center"><i class="fa fa-percent" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Prime Exclusive
+						Discounts
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/advertising/promotions']"><a
+					class="d-flex align-items-center"><i class="fa fa-line-chart" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Promotions
+
+
+					</span></a>
+			</li>
+
+			<li class=" navigation-header"><span data-i18n="Misc">Reports
+				</span>
+
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/reports/payments']"><a
+					class="d-flex align-items-center"><i class="fa fa-credit-card" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Payments
+
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/reports/businessreports']"><a
+					class="d-flex align-items-center"><i class="fa fa-exclamation" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Business Reports
+
+
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/reports/retrunreports']"><a
+					class="d-flex align-items-center"><i class="fa fa-registered" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Return Reports
+
+
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/reports/customerreports']"><a
+					class="d-flex align-items-center"><i class="fa fa-question-circle-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Custom Reports
+
+
+
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/reports/tax/document/library']"><a
+					class="d-flex align-items-center"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Tax Document Library
+
+					</span></a>
+			</li>
+			<li class=" navigation-header"><span data-i18n="Misc">Performance
+				</span>
+			</li>
+
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/performance/account/health']"><a
+					class="d-flex align-items-center"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Account Health
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/performance/feedback']"><a
+					class="d-flex align-items-center"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Feedback
+
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/performance/notifications']"><a
+					class="d-flex align-items-center"><i class="fa fa-bell-o" aria-hidden="true"></i>
+
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Performance Notifications
+					</span></a>
+			</li>
+			<li class=" nav-item" routerLinkActive="active" [routerLink]="['/performance/customer']"><a
+					class="d-flex align-items-center"><i class="fa fa-user-o" aria-hidden="true"></i>
+
+					<span
+						class="menu-title text-truncate" data-i18n="Raise Support"> Voice of the Customer
+
+					</span></a>
+			</li>
+		</ul>
+	</div>
+</div> -->

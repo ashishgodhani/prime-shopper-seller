@@ -1,0 +1,83 @@
+<div class="app-content content m-0 pt-0 ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <div class="auth-wrapper auth-basic px-2">
+                <div class="auth-inner my-2">
+                    <!-- Login basic -->
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <a href="index-2.html" class="brand-logo">
+                                <img width="100" src="../../assets/img/PS-logo.png"/>
+                            </a>
+
+                            <h4 class="card-title mb-1">Welcome to Prime Shopper</h4>
+                            <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
+
+                            <form #loginFormData="ngForm" (ngSubmit)="dologin(loginFormData)"
+                                class="auth-login-form mt-2">
+                                <div class="mb-1">
+                                    <label for="login-email" class="form-label">Email</label>
+                                    <input type="email" #email="ngModel" ngModel required class="form-control" name="email"
+                                        placeholder="Enter Your Email" autofocus />
+                                </div>
+
+                                <div class="mb-1">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label" for="login-password">Password</label>
+                                        <a [routerLink]="['/forget/password']">
+                                            <small>Forgot Password?</small>
+                                        </a>
+                                    </div>
+                                    <div class="input-group input-group-merge form-password-toggle">
+                                        <input type="password" name="password" class="form-control form-control-merge"
+                                            #forgetpassword="ngModel" ngModel 
+                                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                            />
+                                        <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary w-100" tabindex="4">Sign in</button>
+                            </form>
+
+                            <p class="text-center mt-2">
+                                <span>New on our platform? </span>
+                                <a [routerLink]="['/registor']">
+                                    <span>Create an account</span>
+                                </a>
+                            </p>
+
+                            <div class="divider my-2">
+                                <div class="divider-text">or</div>
+                            </div>
+
+                            <div class="auth-footer-btn d-flex justify-content-center">
+                                <a href="#" class="btn btn-facebook facebook-size">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+
+                                </a>
+                                <a href="#" class="btn btn-twitter white">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                                </a>
+                                <a href="#" class="btn btn-google">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                                </a>
+                                <a href="#" class="btn btn-github">
+                                    <i class="fa fa-github" aria-hidden="true"></i>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

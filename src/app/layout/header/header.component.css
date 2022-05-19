@@ -1,0 +1,17 @@
+ul.navbar-nav{
+    display: flex;
+    column-gap: 10px;
+}
+
+ul.navbar-nav li a{
+    display: flex;
+    align-items: center;
+}
+
+ul.navbar-nav li a:hover{
+    color: #7367f0;
+}
+
+ul.navbar-nav li a i{
+    margin-left: 5px;
+}

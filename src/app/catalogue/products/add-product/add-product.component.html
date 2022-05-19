@@ -1,0 +1,264 @@
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Product Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/catalogue/products']">Products</a>
+                            </li>
+                            <li class="breadcrumb-item active">Prdouct Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div *ngIf="tabline==1 " class="card">
+            <div class="card-header">
+                <h4 class="card-title">Product Create</h4>
+            </div>
+            <div class="card-body">
+                <form #productAddForm="ngForm" (ngSubmit)="productCategoryAdd(productAddForm)" class="needs-validation">
+
+                    <div *ngIf="!productActive">
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Title</label>
+                            <input type="text" required #title="ngModel" name="title" ngModel class="form-control"
+                                placeholder="Enter  Title" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Price</label>
+                            <input type="text" required #price="ngModel" name="price" ngModel class="form-control"
+                                placeholder="Enter  Price" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Selling Price</label>
+                            <input type="text" required #sellingPrice="ngModel" name="sellingPrice" ngModel class="form-control"
+                                placeholder="Enter Selling Price" />
+                        </div>
+
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Quantity</label>
+                            <input type="text" #quantity="ngModel" name="quantity" ngModel class="form-control"
+                                placeholder="Enter Quantity" />
+                        </div>
+
+
+
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Discription</label>
+                            <input type="text" #discription="ngModel" name="discription" ngModel class="form-control"
+                                placeholder="Enter Discription" />
+                        </div>
+
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Feature</label>
+                            <input type="text" #feature="ngModel" name="feature" ngModel class="form-control"
+                                placeholder="Enter Feature" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Sku</label>
+                            <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                                placeholder="Enter Sku" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Product Type</label>
+                            <input type="text" #type="ngModel" name="type" ngModel class="form-control"
+                                placeholder="Enter Product Type" />
+                        </div>
+                    </div>
+                    <div *ngIf="productActive">
+                        <div class="mb-1">
+                            <div class="mb-1">
+                                <label class="form-label" for="basic-addon-name">Banner Image</label>
+                                <input type="text" #banner="ngModel" name="banner" ngModel class="form-control"
+                                    placeholder="Enter Product Type" />
+                            </div>
+                            <label class="form-label" for="basic-addon-name">Images</label>
+                            <ngx-dropzone (change)="onSelect($event)">
+                                <ngx-dropzone-label>Drop it, Images!</ngx-dropzone-label>
+                                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true"
+                                    (removed)="onRemove(f)">
+                                    <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                                </ngx-dropzone-preview>
+                            </ngx-dropzone>
+                        </div>
+                    </div>
+
+                    <div *ngIf="!productActive"  class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+
+                            Next</button>
+                    </div>
+                    <div *ngIf="productActive" class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            Next</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div *ngIf="tabline==4 " class="card">
+            <div class="card-header">
+                <h4 class="card-title">Product Create</h4>
+            </div>
+            <div class="card-body">
+                <form #productAddForm="ngForm" (ngSubmit)="productCategoryAdd(productAddForm)" class="needs-validation">
+
+                    <div *ngIf="!productActive">
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Title</label>
+                            <input type="text" required #title="ngModel" name="title" ngModel class="form-control"
+                                placeholder="Enter  Title" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Price</label>
+                            <input type="text" required #price="ngModel" name="price" ngModel class="form-control"
+                                placeholder="Enter  Price" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Selling Price</label>
+                            <input type="text" required #sellingPrice="ngModel" name="sellingPrice" ngModel class="form-control"
+                                placeholder="Enter Selling Price" />
+                        </div>
+
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Quantity</label>
+                            <input type="text" #quantity="ngModel" name="quantity" ngModel class="form-control"
+                                placeholder="Enter Quantity" />
+                        </div>
+
+
+
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Discription</label>
+                            <input type="text" #discription="ngModel" name="discription" ngModel class="form-control"
+                                placeholder="Enter Discription" />
+                        </div>
+
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Feature</label>
+                            <input type="text" #feature="ngModel" name="feature" ngModel class="form-control"
+                                placeholder="Enter Feature" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Sku</label>
+                            <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                                placeholder="Enter Sku" />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="basic-addon-name">Product Type</label>
+                            <input type="text" #type="ngModel" name="type" ngModel class="form-control"
+                                placeholder="Enter Product Type" />
+                        </div>
+                    </div>
+                    <div *ngIf="productActive">
+                        <div class="mb-1">
+                            <div class="mb-1">
+                                <label class="form-label" for="basic-addon-name">Banner Image</label>
+                                <input type="text" #banner="ngModel" name="banner" ngModel class="form-control"
+                                    placeholder="Enter Product Type" />
+                            </div>
+                            <label class="form-label" for="basic-addon-name">Images</label>
+                            <ngx-dropzone (change)="onSelect($event)">
+                                <ngx-dropzone-label>Drop it, Images!</ngx-dropzone-label>
+                                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true"
+                                    (removed)="onRemove(f)">
+                                    <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                                </ngx-dropzone-preview>
+                            </ngx-dropzone>
+                        </div>
+                    </div>
+
+                    <div *ngIf="!productActive"  class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                          Next</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+        <div *ngIf="tabline!==1" class="input-group mb-2">
+            <span class="input-group-text" id="basic-addon-search1"><i class="fa fa-search"
+                    aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="Search..." aria-label="Search..."
+                aria-describedby="basic-addon-search1" />
+        </div>
+        <div class="card-body-1">
+
+            <div *ngIf="tabline==2" class="card">
+
+                <div>
+                    <div class=" border-bottom main-category  ">
+                        <span class="form-label"> Select a category</span>
+                    </div>
+                    <div class="scroll card-body-sub">
+                        <div (click)="loadSubCategory(category)" *ngFor="let category of categories;"
+                            class=" border-bottom category ">
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <span class="form-label"> {{category.name}}</span>
+                                <i class="fa fa-chevron-right fa-xl" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <div *ngIf="tabline==3" class="card">
+            <div>
+                <div>
+
+                    <div class=" border-bottom main-category  ">
+                        <span class="form-label"> {{subcategoryName}}</span>
+                    </div>
+                    <div class="scroll card-body-sub">
+                        <div *ngFor="let subcategory of subCategorys;" class=" border-bottom category ">
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <span class="form-label"> {{subcategory.name}}</span>
+                                <i *ngIf="!subcategory.dean._id" class="fa fa-chevron-right fa-xl"
+                                    aria-hidden="true"></i>
+                                <div *ngIf="subcategory.dean._id">
+                                    <button (click)="OpenAddproductForm(subcategory)"
+                                        class="btn btn-primary btn-sm ">Select</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

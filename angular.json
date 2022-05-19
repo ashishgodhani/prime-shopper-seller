@@ -1,0 +1,144 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "2c36a965-19f7-4b12-965e-834070e40f74"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "primeShopper-seller": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/primeShopper-seller",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/custom-theme.scss",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/components.min.css",
+              "src/assets/css/bootstrap-extended.min.css",
+              
+              "src/assets/css/vendors.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/css/dropzone.min.css",
+              "src/assets/css/app-chat.min.css",
+              "src/styles.css",
+              "src/assets/css/apexcharts.css",
+              "src/assets/css/form-file-uploader.min.css",
+              "src/assets/css/bordered-layout.min.css",
+              "src/assets/css/chart-apex.min.css",
+              "src/assets/css/colors.min.css",
+              "src/assets/css/dark-layout.min.css",
+              "src/assets/css/dashboard-ecommerce.min.css",
+              "src/assets/css/semi-dark-layout.min.css",
+              "src/assets/css/vertical-menu.min.css",
+              "src/assets/css/authentication.css",
+               "src/assets/css/ext-component-toastr.min.css",
+              "src/assets/css/app-chat-list.min.css"
+             
+            ],
+            "scripts": [
+              "src/assets/js/jquery-3.2.1.min.js",
+              "src/assets/js/vendors.min.js",
+              "src/assets/js/dropzone.min.js" ,
+              "src/assets/js/form-file-uploader.min.js" ,
+              "src/assets/js/dashboard-ecommerce.min.js",
+              "src/assets/js/app-chat.min.js",
+              "src/assets/js/apexcharts.min.js",
+              "src/assets/js/app.min.js",
+              "src/assets/js/app-menu.min.js",
+               "src/assets/js/toastr.min.js",
+              "src/assets/js/customizer.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "10mb",
+                  "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "primeShopper-seller:build:production"
+            },
+            "development": {
+              "browserTarget": "primeShopper-seller:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "primeShopper-seller:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "primeShopper-seller"
+}

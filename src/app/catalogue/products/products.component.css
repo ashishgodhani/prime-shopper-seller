@@ -1,0 +1,8 @@
+button:focus-visible{
+    outline: none;
+    border: none;
+}
+.data-table{
+    height: 600px;
+    overflow: auto;
+}

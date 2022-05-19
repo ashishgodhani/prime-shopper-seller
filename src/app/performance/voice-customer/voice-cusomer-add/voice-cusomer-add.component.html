@@ -1,0 +1,104 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Voice Customer Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/performance/customer']">Voice Customer</a>
+                            </li>
+                            <li class="breadcrumb-item active">Voice Customer Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Voice Customer Create</h4>
+            </div>
+            <div class="card-body">
+                <form #voiceCustomerAddForm="ngForm" (ngSubmit)="postVoiceCustomer(voiceCustomerAddForm)" class="needs-validation">
+                    
+                  
+
+                    <div class="mb-2">
+                        <div class="form-label">
+                            <label class="form-label" for="basic-addon-name">Image</label>
+                        </div>
+                        <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
+                            <div class="dz-message">Drop files here or click to upload.</div>
+                        </form>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Sku</label>
+                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                            placeholder="Enter Sku" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Product Name</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this Product Name</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Fulfilled By</label>
+                        <input type="text" #fulfilled="ngModel"  name="fulfilled" ngModel class="form-control"
+                            placeholder="Enter Fulfilled" />
+                    </div>
+
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Seller Controllable Return Rate</label>
+                        <input type="text" #sellerReturnRate="ngModel" name="sellerReturnRate" ngModel class="form-control"
+                            placeholder="Enter  Seller Controllable Return Rate" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Seller Conrollable Return</label>
+                        <input type="text" #sellerReturnReturn="ngModel" name="sellerReturnReturn" ngModel class="form-control"
+                            placeholder="Enter  Seller Conrollable Return" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Top Return Reason </label>
+                        <input type="text" #topReturnReason="ngModel" name="topReturnReason" ngModel class="form-control"
+                            placeholder="Enter  Top Return Reason" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Last Updated </label>
+                        <input type="text" #lastUpdated="ngModel" name="lastUpdated" ngModel class="form-control"
+                            placeholder="Enter Last Updated " />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Status</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this Status</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Voice Customer</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Cancel
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>

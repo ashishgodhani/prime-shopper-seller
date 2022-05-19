@@ -1,0 +1,8 @@
+.ordersTable tr th,
+.ordersTable tr td{
+    max-width: 200px;
+}
+
+.ordersTable tr .addressColumn{
+    min-width: 300px;
+}

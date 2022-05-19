@@ -1,0 +1,77 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Product Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/inventory/improve/listing/quality']">Improve
+                                    Listing Quality</a>
+                            </li>
+                            <li class="breadcrumb-item active">Improve Listing Quality Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Product Create</h4>
+            </div>
+            <div class="card-body">
+                <form #improveListingQualityAddForm="ngForm"
+                    (ngSubmit)="postimproveListingQuality(improveListingQualityAddForm)" class="needs-validation">
+
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Product Name</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Product Name</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name"> Sales</label>
+                        <input type="text" #sales="ngModel" name="sales" ngModel class="form-control"
+                            placeholder="Enter Sales" />
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Available</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Name</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Recommendations</label>
+                        <input type="text" #recommendations="ngModel" name="recommendations" ngModel
+                            class="form-control" placeholder="Enter Recommendations" />
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Improve Listing Quality </button>
+                   
+                    <button (click)="goBack()" class="btn btn-danger mx-2">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>

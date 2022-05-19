@@ -1,0 +1,165 @@
+<div class="spinner" *ngIf="spinner">
+  <mat-spinner diameter="40"></mat-spinner>
+</div>
+<div class="mb-2 d-flex flex-row-reverse">
+  <a
+    class="btn btn-primary"
+    href="https://api.admincliq.com/csv/Add_Products.xlsx"
+    download
+    >DOWNLOAD</a
+  >
+</div>
+<!-- <div class="d-flex position-relative" #mainDiv>
+    <ul *ngIf="datas" class="m-0 p-0">
+        <app-product-item *ngFor="let data of datas" [data]="data"></app-product-item>
+    </ul>
+</div> -->
+<!-- <div #mainDiv>
+    <ul>
+        <li *ngFor="let data of datas">
+            <span> {{data.data.name}}</span>
+            <span *ngIf="data.children" class="buttonC" (click)="showChild(data.id)">></span>
+        </li>
+    </ul>
+</div> -->
+<div>
+    <!-- <input id="serachInput" type="text" name="serachInput" class="form-control" [(ngModel)]="serachInput" 
+    (input)="onSearchChange($event.target.value)"> -->
+    <!-- <input type="text" name="search" id="search" placeholder="Search..." ngModel (input)="onSearchChange($event)" /> -->
+</div>
+<div class="d-flex">
+  <mat-card>
+    <ul class="p-0">
+      <li
+        *ngFor="let data of datas; let i = index"
+        class="d-flex justify-content-between"
+      >
+        <ng-container *ngIf="data.children.length">
+          <span class="arrowSpan" (click)="viewChild(i, data.id)">
+            <span>{{ data.data.name }}</span>
+            <span *ngIf="data.children.length" class="btn p-0 arrowIcon"
+              >></span
+            >
+          </span>
+        </ng-container>
+
+        <ng-container *ngIf="!data.children.length">
+          <span [ngClass]="data.id == selectedId ? 'selectSpan active' : 'selectSpan'" (click)="addData(data.id, data, 0)">{{
+            data.data.name
+          }}</span>
+        </ng-container>
+      </li>
+    </ul>
+  </mat-card>
+  <mat-card *ngIf="viewList">
+    <ul class="p-0">
+      <li
+        *ngFor="let data of newData; let i = index"
+        class="d-flex justify-content-between"
+      >
+        <ng-container *ngIf="data.children.length">
+          <span class="arrowSpan" (click)="viewChild1(i, data.id)">
+            <span>{{ data.data.name }}</span>
+            <span *ngIf="data.children.length" class="btn p-0">></span>
+          </span>
+        </ng-container>
+
+        <ng-container *ngIf="!data.children.length">
+          <span [ngClass]="data.id == selectedId ? 'selectSpan active' : 'selectSpan'" (click)="addData(data.id, data, 1)">{{ data.data.name }}</span>
+        </ng-container>
+      </li>
+    </ul>
+  </mat-card>
+  <mat-card *ngIf="viewList1">
+    <ul class="p-0">
+      <li
+        *ngFor="let data of newData1; let i = index"
+        class="d-flex justify-content-between"
+      >
+        <ng-container *ngIf="data.children.length">
+          <span class="arrowSpan" (click)="viewChild2(i, data.id)">
+            <span>{{ data.data.name }}</span>
+            <span *ngIf="data.children.length" class="btn p-0">></span>
+          </span>
+        </ng-container>
+
+        <ng-container *ngIf="!data.children.length">
+          <span [ngClass]="data.id == selectedId ? 'selectSpan active' : 'selectSpan'" (click)="addData(data.id, data, 2)">{{ data.data.name }}</span>
+        </ng-container>
+      </li>
+    </ul>
+  </mat-card>
+  <mat-card *ngIf="viewList2">
+    <ul class="p-0">
+      <li
+        *ngFor="let data of newData2; let i = index"
+        class="d-flex justify-content-between"
+      >
+        <ng-container *ngIf="data.children.length">
+          <span class="arrowSpan" (click)="viewChild3(i, data.id)">
+            <span>{{ data.data.name }}</span>
+            <span *ngIf="data.children.length" class="btn p-0">></span>
+          </span>
+        </ng-container>
+
+        <ng-container *ngIf="!data.children.length">
+          <span [ngClass]="data.id == selectedId ? 'selectSpan active' : 'selectSpan'" (click)="addData(data.id, data, 3)">{{ data.data.name }}</span>
+        </ng-container>
+      </li>
+    </ul>
+  </mat-card>
+  <mat-card *ngIf="viewList3">
+    <ul class="p-0">
+      <li
+        *ngFor="let data of newData3; let i = index"
+        class="d-flex justify-content-between"
+      >
+        <ng-container *ngIf="data.children.length">
+            <span class="arrowSpan" (click)="viewChild4(i, data.id)">
+                <span>{{ data.data.name }}</span>
+                <span
+                  *ngIf="data.children.length"
+                  class="btn p-0" >></span
+                >
+            </span>
+        </ng-container>
+
+        <ng-container *ngIf="!data.children.length">
+          <span [ngClass]="data.id == selectedId ? 'selectSpan active' : 'selectSpan'" (click)="addData(data.id, data, 4)">{{ data.data.name }}</span>
+        </ng-container>
+      </li>
+    </ul>
+  </mat-card>
+  <mat-card *ngIf="viewList4">
+    <ul class="p-0">
+      <li
+        *ngFor="let data of newData4; let i = index"
+        class="d-flex justify-content-between"
+      >
+        <ng-container>
+          <span [ngClass]="data.id == selectedId ? 'selectSpan active' : 'selectSpan'" (click)="addData(data.id, data, 5)">{{ data.data.name }}</span>
+        </ng-container>
+      </li>
+      <!-- <li
+        *ngFor="let data of newData4; let i = index"
+        class="d-flex justify-content-between py-1"
+      >
+        <span (click)="addData(data.id, data)">{{ data.data.name }}</span>
+        <span *ngIf="data.children.length" (click)="viewChild3(i,data.id)" class="btn p-0">></span>
+      </li> -->
+    </ul>
+  </mat-card>
+</div>
+<mat-card class="mt-2 w-25" *ngIf="selectedId">
+  <p>
+    Add file to: <b>{{ selectedName }}</b>
+  </p>
+  <input #fileDiv type="file" (change)="addFile($event)" />
+  <button
+    class="btn btn-primary btn-sm mt-1"
+    (click)="submitData()"
+    [disabled]="uplodedFile == undefined"
+  >
+    SUBMIT
+  </button>
+</mat-card>

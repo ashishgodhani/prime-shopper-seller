@@ -1,0 +1,140 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+      <div class="row breadcrumbs-top">
+        <div class="col-12">
+          <h2 class="content-header-title float-start mb-0">Orders</h2>
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+
+              <li class="breadcrumb-item active">Orders</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="table-responsive">
+    <div class="col-12">
+      <div class="card">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <div class="card-header col-md-8 col-12">
+            <h4 class="card-title">Orders</h4>
+          </div>
+          <div class="col-sm-12 mx-md-2 mx-1 col-11 col-md-3">
+            <div class="input-group input-group-merge">
+              <span class="input-group-text" id="basic-addon-search2"
+                ><i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search..."
+                aria-label="Search..."
+                aria-describedby="basic-addon-search2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table mb-0 ordersTable">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-nowrap">Order Id</th>
+                  <th scope="col" class="text-nowrap">Payment Id</th>
+                  <th scope="col" class="text-nowrap">Product Id</th>
+                  <th scope="col" class="text-nowrap">Product Name</th>
+                  <th scope="col" class="text-nowrap">Quantity</th>
+                  <th scope="col" class="text-nowrap">Selling Price</th>
+                  <th scope="col" class="text-nowrap">Amount</th>
+                  <th scope="col" class="text-nowrap">Selling Amount</th>
+                  <th scope="col" class="text-nowrap addressColumn">Address</th>
+                  <th scope="col" class="text-nowrap">Order Date</th>
+                  <th scope="col" class="text-nowrap">Status</th>
+                  <th scope="col" class="text-nowrap">Courior Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let order of ordersdata">
+                  <td>
+                    {{ order._id }}
+                  </td>
+                  <td>
+                    {{ order.payment_id }}
+                  </td>
+                  <td>
+                    {{ order.product.product.id }}
+                  </td>
+                  <td>
+                    {{ order.product.product.title }}
+                  </td>
+                  <td>
+                    {{ order.product.quantity }}
+                  </td>
+                  <td>
+                    {{ order.product.price }}
+                  </td>
+                  <td>
+                    {{ order.total }}
+                  </td>
+                  <td>
+                    {{ order.sellingAmount }}
+                  </td>
+                  <td>
+                    {{ order.shippingAddress.address_line1 }}
+                    {{ order.shippingAddress.address_line2 }}<br />
+                    {{ order.shippingAddress.address_city }},
+                    {{ order.shippingAddress.address_country }},
+                    {{ order.shippingAddress.address_state }},
+                    {{ order.shippingAddress.address_zip }}
+                  </td>
+                  <td>
+                    {{ order.createdAt }}
+                  </td>
+                  <td>
+                    {{ order.status }}
+                  </td>
+                  <td>
+                    <ng-container
+                      *ngIf="order.status == 'Pending'; else orderDetails"
+                    >
+                      <form
+                        #couriorSelectForm="ngForm"
+                        (ngSubmit)="updateOrderCourior(couriorSelectForm, order._id)"
+                        class="needs-validation"
+                      >
+                        <label
+                          >Select Couriour:
+                          <select required id="id" #id="ngModel" name="id" ngModel>
+                            <option value="">Select Courior</option>
+                            <ng-container *ngFor="let courior of couriors">
+                              <option value="{{courior._id}}">{{courior.name}}</option>
+                            </ng-container>
+                          </select>
+                        </label>
+                        <label class="mt-1">Tracking Id:
+                          <input type="text" required #trackingId="ngModel" name="trackingId" ngModel class="form-control" placeholder="Enter Title" />
+                        </label>
+                        <button type="submit" class="mt-1">Submit</button>
+                      </form>
+                    </ng-container>
+                    <ng-template #orderDetails>
+                      <b>Tracking Id:</b> {{order.courier.trackingId}} <br>
+                      <b>Courior Name:</b> {{order.courier.id.name}}
+                    </ng-template>
+                    <!-- {{order.createdAt}} -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

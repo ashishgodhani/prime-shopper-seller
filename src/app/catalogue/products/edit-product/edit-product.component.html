@@ -1,0 +1,101 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Product Update</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/catalogue/products']">Products</a>
+                            </li>
+                            <li class="breadcrumb-item active">Prdouct Update
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Product Update</h4>
+            </div>
+            <div class="card-body">
+                <form #productUpdateForm="ngForm" (ngSubmit)="updateproduct(productUpdateForm)"
+                    class="needs-validation">
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Id</label>
+                        <input type="text" name="_id" class="form-control" placeholder="Enter Category Name" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Category Name</label>
+                        <input type="text" name="category" class="form-control" placeholder="Enter Category Name" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Seller Name</label>
+                        <input type="text" name="seller" class="form-control" placeholder="Enter Seller Name" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Title</label>
+                        <input type="text" name="title" class="form-control" placeholder="Enter Title" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Banner</label>
+                        <input type="file" name="banner" class="form-control" placeholder="Enter Banner Picture" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Images</label>
+                        <input type="file" multiple name="images" class="form-control" placeholder="Enter Images" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Price</label>
+                        <input type="text" name="price" class="form-control" placeholder="Enter  Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Selling Price</label>
+                        <input type="text" name="sellingPrice" class="form-control" placeholder="Enter Selling Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Discount</label>
+                        <input type="text" name="discount" class="form-control" placeholder="Enter Discount" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Quantity</label>
+                        <input type="text" name="quantity" class="form-control" placeholder="Enter Quantity" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Discription</label>
+                        <input type="text" name="discription" class="form-control" placeholder="Enter Discription" />
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Feature</label>
+                        <input type="text" name="feature" class="form-control" placeholder="Enter Feature" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Status</label>
+                        <input type="text" name="status" class="form-control" placeholder="Enter Status" />
+                    </div>
+                    
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+
+                            Update Product</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+
+                            Cancel
+                        </button>
+                    
+
+                </form>
+            </div>
+        </div>
+    </div>

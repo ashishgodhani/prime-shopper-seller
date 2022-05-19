@@ -1,0 +1,89 @@
+{
+    "_id": {
+        "$oid": "62678677467a18bc2fdb44e3"
+    },
+    "category": {
+        "$oid": "6255400e338d5c409433b12d"
+    },
+    "parentId": {
+        "$oid": "62554000338d5c409433b128"
+    },
+    "seller": {
+        "$oid": "6222eb1e9ddcf0cb0f03b61e"
+    },
+    "title": "Durex Extra Time Condoms for Men - 10 Count | Performa Lubricant for Long Lasting Climax Delay | Suitable for use with lubes & toys",
+    "sku": "Durex Big",
+    "description": "Enhance the intimacy of your special moments with the Durex Extra Time condoms. These condoms contain special climax-control lubricant, benzocaine, that helps him last longer while providing the same level of reassurance and protection as a regular condom. The condoms also smell better which helps avoid unpleasant distractions and you can relax and enjoy to the fullest. Each Durex condom is dermatologically tested to ensure strength and a high level of protection. No method of contraception can give you 1% protection against pregnancy, HIV or sexually transmitted infections. Please read the instructions, especially when using condoms for anal or oral sex. Try different Durex condoms or indulge in Durex’s Play range of lubricants and ring to make love-making comfortable and exciting!",
+    "status": "In stock",
+    "productStatus": "Active",
+    "slug": "durex-extra-time-condoms-for-men-10-count-or-performa-lubricant-for-long-lasting-climax-delay-or-suitable-for-use-with-lubes-and-toys",
+    "productOtherDetails": [],
+    "brand_name": "Durex",
+    "external_product_id": "8901396704409",
+    "external_product_id_type": "EAN",
+    "part_number": "803690",
+    "bullet_point": ["LUBRICATED WITH CLIMAX DELAY GEL – Special Performa lubricant contains benzocaine to help him last longer", "1 LUBRICATED & STRAIGHT WALLED CONDOMS – Transparent, natural latex condoms shaped with a teat end to be easier to put on and provide a better fit during sex.\\r\\n", "SIZE - All condoms have a length of 18mm and a width of 53mm.\\r\\n", "DISCREET DELIVERY – Condom box delivered in discreet packaging with no branding or indication of parcel contents.\\r\\n\"", "DUREX QUALITY – With over 9 years of experience manufacturing condoms, Durex is the world’s No.1 brand. All our condoms use only fine quality raw materials and every single one is electronically tested for holes and imperfections.\\r\\n"],
+    "max_shelf_life": "6 Month",
+    "material_type_free": ["Paraben Free", "Chemical Free", "Coal Tar Free"],
+    "material_composition": "Material Composition Test",
+    "is_waterproof": false,
+    "manufacturer": "Reckitt Benckiser, Reckitt Benckiser India pvt. Ltd. | ESI Ring Road, Sipcot Ph. I, Hosur, Tamil Nadu 635126 | B96 Eldeco SIDCUL Industial Park, Sitarganj, Uttarakhand 262405 | Phone: 1800 102 7245",
+    "packer_details": "Reckitt Benckiser, Reckitt Benckiser India pvt. Ltd. | ESI Ring Road, Sipcot Ph. I, Hosur, Tamil Nadu 635126 | B96 Eldeco SIDCUL Industial Park, Sitarganj, Uttarakhand 262405 | Phone: 1800 102 7245",
+    "number_of_boxes": "10",
+    "country_of_origin": "India",
+    "product_information": "33049990",
+    "fulfillment_latency": "2",
+    "max_order_quantity": "2",
+    "safety_information": "Safety Information Test",
+    "indications": "Indication test",
+    "directions": "Directions",
+    "legal_disclaimer": "Legal Disclaimer",
+    "variations1": {
+        "var_type": "Variation",
+        "var_theme_type": "PPU Count",
+        "data": ["10"]
+    },
+    "variations2": {
+        "var_type": "",
+        "var_theme_type": "",
+        "data": []
+    },
+    "variations": [{
+        "banner": "https://ucd70ad981b597bb7e204c682727.previews.dropboxusercontent.com/p/thumb/ABjpbViLxAnugOvJbOUQyPrux22P3Ug6tVQODpkhszZEtX5VQ8N8N8EEYx3YUk2qGVI03AZqXNlMshXhAZH7jxTtGkIi4UiK-Embd-PV47XQW6mDBOBE87McJ7cueHacHsZzV_Xxq5znK-aTRiycMRxNkz0WZ2ut5sCQwH5nxQ7eXvx-AHbCYcrfuJH5ORdXUTD4RvaD-A4pqsvNSd6RAQId-a1GNOQjKazoGKwW1j5nzCjX9MshYjdVAYO4os6UjDkIRNrSbFQGz4uKrVCyVllYWHm4_qvrISPo3YAGrTESAjYbJos5BDqdzdRra_EEbybGb9EgAzMTOrjEPEq6sAhRdsqBGtede5KZ-wYy-pnJO8-pCuxav_OpHLFrV9FxF_Dm0b0Va56VY9ziF3xXwovNW8Z-MclzzRhVTEFQKeMqcQ/p.jpeg?size=1600x1200&size_mode=3",
+        "variation1": {
+            "var_title": "PPU Count",
+            "value": "10"
+        },
+        "variation2": {
+            "var_title": "",
+            "value": ""
+        },
+        "quantity": 0,
+        "images": ["https://www.dropbox.com/s/i27guyotaq3b1av/61F9sMaym7L._SL1000_.jpg?dl=0"],
+        "dimensions": {
+            "item_length": "10",
+            "item_width": "4",
+            "item_height": "10",
+            "item_weight": "40"
+        },
+        "price": {
+            "price_in_india": 228
+        },
+        "sellingPrice": {
+            "selling_price_in_india": 149
+        },
+        "discount": {
+            "discount_price_in_india": 35
+        },
+        "_id": {
+            "$oid": "62678677467a18bc2fdb44e4"
+        }
+    }],
+    "createdAt": {
+        "$date": "2022-04-26T05:43:15.344Z"
+    },
+    "UpdatedAt": {
+        "$date": "2022-04-26T05:43:15.344Z"
+    },
+    "__v": 0
+}

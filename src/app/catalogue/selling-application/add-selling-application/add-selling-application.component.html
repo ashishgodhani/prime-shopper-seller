@@ -1,0 +1,69 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Selling Application Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/catalogue/selling/application']">Selling Application</a>
+                            </li>
+                            <li class="breadcrumb-item active">Prdouct Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title" >Selling Application Create</h4>
+            </div>
+            <div class="card-body">
+                <form #applicationAddForm="ngForm" (ngSubmit)="postApplication(applicationAddForm)"
+                    class="needs-validation">
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Application Name</label>
+                        <input #applicationName="ngModel" ngModel type="text" name="applicationName"
+                            class="form-control" placeholder="Enter Application Names" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Status</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Status</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Application Type</label>
+                        <input #applicationType="ngModel" ngModel type="text" name="category" class="form-control"
+                            placeholder="Enter Application Type" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Changed</label>
+                        <input type="text" #changed="ngModel" name="seller" ngModel class="form-control"
+                            placeholder="Enter Changed" />
+                    </div>
+                    
+
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Selling Application</button>
+                    <button (click)="goBack()" class="btn btn-danger mx-2">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>

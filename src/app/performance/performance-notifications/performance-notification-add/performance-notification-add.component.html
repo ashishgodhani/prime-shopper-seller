@@ -1,0 +1,58 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Performance Notification Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/performance/notifications']">Performance Notification</a>
+                            </li>
+                            <li class="breadcrumb-item active">Performance Notification Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Performance Notification Create</h4>
+            </div>
+            <div class="card-body">
+                <form #performanceNotificationAddForm="ngForm" (ngSubmit)="postPerformanceNotifincation(performanceNotificationAddForm)" class="needs-validation">
+                    
+                  
+
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Subject</label>
+                        <input type="text" #subject="ngModel" name="subject" ngModel class="form-control"
+                            placeholder="Enter Subject" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Date </label>
+                        <input type="date" #lowestPrice="ngModel" name="date" ngModel class="form-control"
+                            placeholder="Enter Lowest Price" />
+                    </div>
+                    
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Performance Notification</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Cancel
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>

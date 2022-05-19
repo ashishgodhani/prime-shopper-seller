@@ -1,0 +1,181 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+      <div class="row breadcrumbs-top">
+        <div class="col-12">
+          <h2 class="content-header-title float-start mb-0">
+            Manage Inventory
+          </h2>
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+              <li class="breadcrumb-item active">Manage Inventory</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="content-header-right text-md-end cursor-pointer col-md-3 col-8 d-md-block"
+      [routerLink]="['/inventory/manage/inventory/add']"
+    >
+      <div class="card-body pt-md-0">
+        <button class="btn btn-primary w-100">+ Add Manage Inventory</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="table-responsive">
+    <div class="col-12">
+      <div class="card">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <div class="card-header col-md-8 col-12">
+            <h4 class="card-title">Manage Inventory</h4>
+          </div>
+          <div class="col-sm-12 mx-md-2 mx-1 col-11 col-md-3">
+            <div class="input-group input-group-merge">
+              <span class="input-group-text" id="basic-addon-search2"
+                ><i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search..."
+                aria-label="Search..."
+                aria-describedby="basic-addon-search2"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-nowrap">Product Image</th>
+                  <th scope="col" class="text-nowrap productName">Product Name</th>
+                  <th scope="col" class="text-nowrap">SKU</th>
+                  <th scope="col" class="text-nowrap">Brand Name</th>
+                  <th scope="col" class="text-nowrap">Product Status</th>
+                  <th scope="col" class="text-nowrap">Country of Origin</th>
+                  <th scope="col" class="text-nowrap">Created At</th>
+                  <th scope="col" class="text-nowrap">External Product Id</th>
+                  <th scope="col" class="text-nowrap">
+                    External Product Id Type
+                  </th>
+                  <th scope="col" class="text-nowrap">Importer Details</th>
+                  <th scope="col" class="text-nowrap">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+                <ng-container *ngFor="let product of manageInventorys">
+                  <tr *ngFor="let variation of product.variations">
+                    <td>
+                      <img class="productImage" src="{{ variation.banner }}" alt="">
+                    </td>
+                    <td class="productName">
+                      <a class="titleLink" target="_blank" href="{{redirectUrl(product.id,variation.variation1.value, variation.variation2.value)}}">
+                        {{ product.title }}
+                      </a>
+                    </td>
+                    <td>
+                      {{ product.sku }}
+                    </td>
+                    <td>
+                      {{ product.brand_name }}
+                    </td>
+                    <td>
+                      {{ product.productStatus }}
+                    </td>
+                    <td>
+                      {{ product.country_of_origin }}
+                    </td>
+                    <td>
+                      {{ product.createdAt }}
+                    </td>
+                    <td>
+                      {{ product.external_product_id }}
+                    </td>
+                    <td>
+                      {{ product.external_product_id_type }}
+                    </td>
+                    <td>
+                      {{ product.importer_details }}
+                    </td>
+                    <td>
+                      <button class="updateBtn" (click)="updateUrl(product.id,variation.variation1.value, variation.variation2.value)">
+                        Update Product
+                      </button>
+                    </td>
+                    <!-- <td>
+                    {{product.category}}
+                  </td>
+                  <td>
+                    {{product.seller}}
+                  </td>
+                  <td>
+                    {{product.title}}
+                  </td>
+                  <td class="px-1">
+                    <img height="85px" src={{product.banner}} />
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="fw-bolder me-1">68%</span>
+                    </div>
+                  </td>
+                  <td>
+                    $ {{product.price}}
+                  </td>
+                  <td>
+                    $ {{product.sellingPrice}}
+                  </td>
+                  <td>
+                    {{product.discount}}
+                  </td>
+                  <td>
+                    {{product.quantity}}
+                  </td>
+                  <td>
+                    {{product.discription}}
+                  </td>
+                  <td>
+                    {{product.feature}}
+                  </td>
+                  <td>
+                    {{product.status}}
+                  </td>
+                  <td>
+                    <div class="dropdown">
+                      <button type="button" class="btn    btn-sm dropdown-toggle hide-arrow py-0" data-bs-toggle="dropdown">
+                        <img height='17px' src="../../../assets/img/more.png" />
+    
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a [routerLink]="['/catalogue/product/edit',product._id]" class="dropdown-item" href="#">
+                          <i class="fa fa-pencil-square-o me-50 fa-lg" aria-hidden="true"></i>
+    
+                          <span>Edit</span>
+                        </a>
+                        <a (click)="onDelete(product._id)" class="dropdown-item" href="#">
+                          <i class="fa fa-trash-o me-50 fa-lg" aria-hidden="true"></i>
+    
+                          <span>Delete</span>
+                        </a>
+                      </div>
+                    </div>
+    
+                  </td> -->
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

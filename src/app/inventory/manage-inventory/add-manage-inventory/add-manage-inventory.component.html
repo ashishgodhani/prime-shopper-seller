@@ -1,0 +1,102 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Manage Inventory Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/inventory/manage/inventory']">Manage Inventory</a>
+                            </li>
+                            <li class="breadcrumb-item active">Manage Inventory Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Manage Inventory Create</h4>
+            </div>
+            <div class="card-body">
+                <form #manageInventoryAddForm="ngForm" (ngSubmit)="postManageInventory(manageInventoryAddForm)" class="needs-validation">
+                    
+                  
+
+                    <div class="mb-2">
+                        <div class="form-label">
+                            <label class="form-label" for="basic-addon-name">Images</label>
+                        </div>
+                        <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
+                            <div class="dz-message">Drop files here or click to upload.</div>
+                        </form>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Sku</label>
+                        <input type="text" #sku="ngModel" name="sku" ngModel class="form-control"
+                            placeholder="Enter Sku" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Status</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select menu</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Available</label>
+                        <input type="text" #available="ngModel"  name="available" ngModel class="form-control"
+                            placeholder="Enter available" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Product Name</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Product Name</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Fee Preview</label>
+                        <input type="text" #feePriview="ngModel" name="feepriview" ngModel class="form-control"
+                            placeholder="Enter  Fee Priview" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Price</label>
+                        <input type="text" #Price="ngModel" name="price" ngModel class="form-control"
+                            placeholder="Enter  Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Business Price </label>
+                        <input type="text" #BusinessPrice="ngModel" name="businessPrice" ngModel class="form-control"
+                            placeholder="Enter Business Price" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Lowest Price </label>
+                        <input type="text" #lowestPrice="ngModel" name="lowestPrice" ngModel class="form-control"
+                            placeholder="Enter Lowest Price" />
+                    </div>
+                    
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Manage Inventory</button>
+                        <button (click)="goBack()" class="btn btn-danger mx-2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Cancel
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>

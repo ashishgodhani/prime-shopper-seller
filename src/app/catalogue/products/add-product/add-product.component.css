@@ -1,0 +1,50 @@
+.dropzone .dz-message:before{
+    display: none !important;
+}
+.dropzone{
+    padding:0px !important;
+    min-height: 100px !important;
+}
+
+ngx-dropzone{
+    height:100px !important;
+    color:#d8d6de;
+    border-radius: 0.357rem;
+    border: 2px dashed #d8d6de;
+}
+
+.form-label{
+    font-size:16px !important;
+}
+.main-category{
+    padding:12px
+}
+.category{
+    padding:12px ;
+    cursor:pointer
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2b2f3a; 
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+  .card-body-sub.scroll{
+    overflow-y: scroll;
+    max-height: 400px;
+  
+  }

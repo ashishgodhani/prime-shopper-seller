@@ -1,0 +1,82 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper container-xxl p-0">
+    <div class="content-header row ">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">Fee Discount Create</h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a routerLink="/">Home</a>
+                            </li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/pricing/fee/discount']">Fee Discount</a>
+                            </li>
+                            <li class="breadcrumb-item active">Fee Discount Create
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 offset-md-3 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Fee Discount Create</h4>
+            </div>
+            <div class="card-body">
+                <form #feeDiscountAddForm="ngForm" (ngSubmit)="postfeeDiscount(feeDiscountAddForm)"
+                    class="needs-validation">
+                   
+                   
+                    <div class="mb-1">
+                        <label class="form-label" for="selectDefault">Category</label>
+                        <select class="form-select" id="selectDefault">
+                            <option selected>Open this select Category</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Brand</label>
+                        <input type="text" #brand="ngModel"  name="brand" ngModel class="form-control"
+                            placeholder="Enter Brand" />
+                    </div>
+                    
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">STD.Referral Fee</label>
+                        <input type="text" #referralFee="ngModel" name="referralFee" ngModel class="form-control"
+                            placeholder="Enter  STD.Referral Fee" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Promotional Referral Fee</label>
+                        <input type="text" #promotionalReferralFee="ngModel" name="promotionalReferralFee" ngModel class="form-control"
+                            placeholder="Enter  Promotional Referral Fee" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">Form Date </label>
+                        <input type="date" #formDate="ngModel" name="formDate" ngModel class="form-control"
+                            placeholder="Enter Form Date" />
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="basic-addon-name">To Date </label>
+                        <input type="date" #toDate="ngModel" name="toDate" ngModel class="form-control"
+                            placeholder="Enter To Date" />
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+
+                        Create Manage Inventory</button>
+                    <button (click)="goBack()" class="btn btn-danger mx-2">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
