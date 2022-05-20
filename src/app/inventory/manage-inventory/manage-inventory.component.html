@@ -77,7 +77,7 @@
                       <img class="productImage" src="{{ variation.banner }}" alt="">
                     </td>
                     <td class="productName">
-                      <a class="titleLink" target="_blank" href="{{redirectUrl(product.id,variation.variation1.value, variation.variation2.value)}}">
+                      <a class="titleLink" target="_blank" href="{{redirectUrl(product.id,variation.variation1, variation.variation2)}}">
                         {{ product.title }}
                       </a>
                     </td>
@@ -106,69 +106,10 @@
                       {{ product.importer_details }}
                     </td>
                     <td>
-                      <button class="updateBtn" (click)="updateUrl(product.id,variation.variation1.value, variation.variation2.value)">
+                      <button class="updateBtn" (click)="updateUrl(product.id,variation.variation1, variation.variation2)">
                         Update Product
                       </button>
                     </td>
-                    <!-- <td>
-                    {{product.category}}
-                  </td>
-                  <td>
-                    {{product.seller}}
-                  </td>
-                  <td>
-                    {{product.title}}
-                  </td>
-                  <td class="px-1">
-                    <img height="85px" src={{product.banner}} />
-                  </td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="fw-bolder me-1">68%</span>
-                    </div>
-                  </td>
-                  <td>
-                    $ {{product.price}}
-                  </td>
-                  <td>
-                    $ {{product.sellingPrice}}
-                  </td>
-                  <td>
-                    {{product.discount}}
-                  </td>
-                  <td>
-                    {{product.quantity}}
-                  </td>
-                  <td>
-                    {{product.discription}}
-                  </td>
-                  <td>
-                    {{product.feature}}
-                  </td>
-                  <td>
-                    {{product.status}}
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button type="button" class="btn    btn-sm dropdown-toggle hide-arrow py-0" data-bs-toggle="dropdown">
-                        <img height='17px' src="../../../assets/img/more.png" />
-    
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-end">
-                        <a [routerLink]="['/catalogue/product/edit',product._id]" class="dropdown-item" href="#">
-                          <i class="fa fa-pencil-square-o me-50 fa-lg" aria-hidden="true"></i>
-    
-                          <span>Edit</span>
-                        </a>
-                        <a (click)="onDelete(product._id)" class="dropdown-item" href="#">
-                          <i class="fa fa-trash-o me-50 fa-lg" aria-hidden="true"></i>
-    
-                          <span>Delete</span>
-                        </a>
-                      </div>
-                    </div>
-    
-                  </td> -->
                   </tr>
                 </ng-container>
               </tbody>

@@ -191,8 +191,6 @@ export class ProductAddComponent implements OnInit {
               mergeProduct.variations = checkItem;
               this.updateProductData = mergeProduct;
               console.log("mergeProduct", mergeProduct);
-              
-              
             }
           }
 
@@ -512,5 +510,10 @@ export class ProductAddComponent implements OnInit {
   checkValue(data: any) {
     let checkdata = `${data}` ? `${data}` : "";
     return checkdata;
+  }
+
+  checkMaterialFreeType (data: any, index: number){
+    let value = data && data.length && data[index] ? data[index] : ""
+    return value;
   }
 }

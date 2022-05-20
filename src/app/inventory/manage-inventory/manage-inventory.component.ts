@@ -34,9 +34,11 @@ export class ManageInventoryComponent implements OnInit {
     )
   }
 
-  redirectUrl(id: any, var1: any, var2: any){
-    let var1val = var1 ? var1 : null
-    let var2val = var2 ? var2 : null
+  redirectUrl(id: any, variation1: any, variation2: any){
+    // console.log(var1, var2);
+    
+    let var1val = variation1 && variation1.value ? variation1.value : null
+    let var2val = variation2 && variation2.value ? variation2.value : null
     return 'https://justcliq.co.in/product/'+ id + '/' + var1val + '/' + var2val
   }
 
@@ -46,9 +48,9 @@ export class ManageInventoryComponent implements OnInit {
   //   return '/inventory/product/add?id='+ id + '&var1=' + var1val + '&var2=' + var2val;
   // }
 
-  updateUrl(id: any, var1: any, var2: any) {
-    let var1val = var1 ? var1 : null
-    let var2val = var2 ? var2 : null
+  updateUrl(id: any, variation1: any, variation2: any) {
+    let var1val = variation1 && variation1.value ? variation1.value : null
+    let var2val = variation2 && variation2.value ? variation2.value : null
     this.router.navigate(['inventory/product/add'], { queryParams: { id, var1val, var2val} });
   }
 }

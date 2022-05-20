@@ -192,19 +192,12 @@
                       >
                     </ng-container>
                   </li>
-                  <!-- <li
-                         *ngFor="let data of newData4; let i = index"
-                         class="d-flex justify-content-between py-1"
-                         >
-                         <span (click)="addData(data.id, data)">{{ data.data.name }}</span>
-                         <span *ngIf="data.children.length" (click)="viewChild3(i,data.id)" class="btn p-0">></span>
-                         </li> -->
                 </ul>
               </mat-card>
             </div>
           </ng-container>
           <ng-container
-            *ngIf="updateProductData.category && updateProductData.parentId.id"
+            *ngIf="updateProductData.category && updateProductData.parentId && updateProductData.parentId.id"
           >
             <h4>Category Name:- {{ updateProductData.parentId.data.name }}</h4>
           </ng-container>
@@ -482,60 +475,145 @@
             <label class="form-label" for="material_type_free1"
               >Material Type FREE
             </label>
-            <select
-              class="form-select mb-1"
-              id="material_type_free1"
-              name="material_type_free1"
-              [(ngModel)]="updateProductData.material_type_free[0]"
+            <ng-container
+              *ngIf="
+                updateProductData.material_type_free &&
+                  updateProductData.material_type_free.length &&
+                  updateProductData.material_type_free[0];
+                else materialType1
+              "
             >
-              <option value="" selected>Material Type FREE 1</option>
-              <option value="Alcohol Free">Alcohol Free</option>
-              <option value="Aluminium Free">Aluminium Frees</option>
-              <option value="Bismuth Oxychloride Free">
-                Bismuth Oxychloride Free
-              </option>
-              <option value="Butylene Glycol Free">
-                Butylene Glycol Frees
-              </option>
-              <option value="Butylparaben Free">Butylparaben Frees</option>
-              <option value="Chemical Free">Chemical Free</option>
-            </select>
-            <select
-              class="form-select mb-1"
-              id="material_type_free2"
-              name="material_type_free2"
-              [(ngModel)]="updateProductData.material_type_free[1]"
+              <select
+                class="form-select mb-1"
+                id="material_type_free1"
+                name="material_type_free1"
+                [(ngModel)]="updateProductData.material_type_free[0]"
+              >
+                <option value="" selected>Material Type FREE 1</option>
+                <option value="Alcohol Free">Alcohol Free</option>
+                <option value="Aluminium Free">Aluminium Frees</option>
+                <option value="Bismuth Oxychloride Free">
+                  Bismuth Oxychloride Free
+                </option>
+                <option value="Butylene Glycol Free">
+                  Butylene Glycol Frees
+                </option>
+                <option value="Butylparaben Free">Butylparaben Frees</option>
+                <option value="Chemical Free">Chemical Free</option>
+              </select>
+            </ng-container>
+            <ng-template #materialType1>
+              <select
+                class="form-select mb-1"
+                id="material_type_free1"
+                name="material_type_free1"
+              >
+                <option value="" selected>Material Type FREE 1</option>
+                <option value="Alcohol Free">Alcohol Free</option>
+                <option value="Aluminium Free">Aluminium Frees</option>
+                <option value="Bismuth Oxychloride Free">
+                  Bismuth Oxychloride Free
+                </option>
+                <option value="Butylene Glycol Free">
+                  Butylene Glycol Frees
+                </option>
+                <option value="Butylparaben Free">Butylparaben Frees</option>
+                <option value="Chemical Free">Chemical Free</option>
+              </select>
+            </ng-template>
+            <ng-container
+              *ngIf="
+                updateProductData.material_type_free &&
+                  updateProductData.material_type_free.length &&
+                  updateProductData.material_type_free[0];
+                else materialType2
+              "
             >
-              <option value="" selected>Material Type FREE 2</option>
-              <option value="Alcohol Free">Alcohol Free</option>
-              <option value="Aluminium Free">Aluminium Frees</option>
-              <option value="Bismuth Oxychloride Free">
-                Bismuth Oxychloride Free
-              </option>
-              <option value="Butylene Glycol Free">
-                Butylene Glycol Frees
-              </option>
-              <option value="Butylparaben Free">Butylparaben Frees</option>
-              <option value="Chemical Free">Chemical Free</option>
-            </select>
-            <select
-              class="form-select mb-1"
-              id="material_type_free3"
-              name="material_type_free3"
-              [(ngModel)]="updateProductData.material_type_free[2]"
+              <select
+                class="form-select mb-1"
+                id="material_type_free2"
+                name="material_type_free2"
+                [(ngModel)]="updateProductData.material_type_free[1]"
+              >
+                <option value="" selected>Material Type FREE 2</option>
+                <option value="Alcohol Free">Alcohol Free</option>
+                <option value="Aluminium Free">Aluminium Frees</option>
+                <option value="Bismuth Oxychloride Free">
+                  Bismuth Oxychloride Free
+                </option>
+                <option value="Butylene Glycol Free">
+                  Butylene Glycol Frees
+                </option>
+                <option value="Butylparaben Free">Butylparaben Frees</option>
+                <option value="Chemical Free">Chemical Free</option>
+              </select>
+            </ng-container>
+            <ng-template #materialType2>
+              <select
+                class="form-select mb-1"
+                id="material_type_free2"
+                name="material_type_free2"
+              >
+                <option value="" selected>Material Type FREE 2</option>
+                <option value="Alcohol Free">Alcohol Free</option>
+                <option value="Aluminium Free">Aluminium Frees</option>
+                <option value="Bismuth Oxychloride Free">
+                  Bismuth Oxychloride Free
+                </option>
+                <option value="Butylene Glycol Free">
+                  Butylene Glycol Frees
+                </option>
+                <option value="Butylparaben Free">Butylparaben Frees</option>
+                <option value="Chemical Free">Chemical Free</option>
+              </select>
+            </ng-template>
+            <ng-container
+              *ngIf="
+                updateProductData.material_type_free &&
+                  updateProductData.material_type_free.length &&
+                  updateProductData.material_type_free[0];
+                else materialType3
+              "
             >
-              <option value="" selected>Material Type FREE 3</option>
-              <option value="Alcohol Free">Alcohol Free</option>
-              <option value="Aluminium Free">Aluminium Frees</option>
-              <option value="Bismuth Oxychloride Free">
-                Bismuth Oxychloride Free
-              </option>
-              <option value="Butylene Glycol Free">
-                Butylene Glycol Frees
-              </option>
-              <option value="Butylparaben Free">Butylparaben Frees</option>
-              <option value="Chemical Free">Chemical Free</option>
-            </select>
+              <select
+                class="form-select mb-1"
+                id="material_type_free3"
+                name="material_type_free3"
+                [(ngModel)]="updateProductData.material_type_free[2]"
+              >
+                <option value="" selected>Material Type FREE 3</option>
+                <option value="Alcohol Free">Alcohol Free</option>
+                <option value="Aluminium Free">Aluminium Frees</option>
+                <option value="Bismuth Oxychloride Free">
+                  Bismuth Oxychloride Free
+                </option>
+                <option value="Butylene Glycol Free">
+                  Butylene Glycol Frees
+                </option>
+                <option value="Butylparaben Free">Butylparaben Frees</option>
+                <option value="Chemical Free">Chemical Free</option>
+              </select>
+            </ng-container>
+            <ng-template #materialType3>
+              <select
+                class="form-select mb-1"
+                id="material_type_free3"
+                name="material_type_free3"
+                [(ngModel)]="updateProductData.material_type_free[2]"
+              >
+                <option value="" selected>Material Type FREE 3</option>
+                <option value="Alcohol Free">Alcohol Free</option>
+                <option value="Aluminium Free">Aluminium Frees</option>
+                <option value="Bismuth Oxychloride Free">
+                  Bismuth Oxychloride Free
+                </option>
+                <option value="Butylene Glycol Free">
+                  Butylene Glycol Frees
+                </option>
+                <option value="Butylparaben Free">Butylparaben Frees</option>
+                <option value="Chemical Free">Chemical Free</option>
+              </select>
+            </ng-template>
           </div>
           <div class="mb-1">
             <label class="form-label" for="basic-addon-name">
@@ -565,22 +643,14 @@
             </select>
           </div>
           <div class="mb-1">
-            <label class="form-label">Relationship Type 1</label>
-            <ng-container *ngIf="!updateProductData.category">
-              <select
-                class="form-select mb-1"
-                name="relationship_type1"
-                [(ngModel)]="updateProductData.variations1.var_type"
-              >
+            <ng-container *ngIf="!updateProductData.category; else updatedata1">
+              <label class="form-label">Relationship Type 1</label>
+              <select class="form-select mb-1" name="relationship_type1">
                 <option value="" selected>Select Relationship Type</option>
                 <option value="Accessory">Accessory</option>
                 <option value="Variation">Variations</option>
               </select>
-              <select
-                class="form-select mb-1"
-                name="variation_theme1"
-                [(ngModel)]="updateProductData.variations.variation1.var_title"
-              >
+              <select class="form-select mb-1" name="variation_theme1">
                 <option value="" selected>Variation Theme 1</option>
                 <option value="PPU Count">PPU Count</option>
                 <option value="Model Number">Model Numbers</option>
@@ -590,74 +660,96 @@
                   Lens Addition Powers
                 </option>
               </select>
+              <input
+                type="text"
+                name="variation_Value1"
+                class="form-control mb-1"
+                placeholder="Variation Value1"
+              />
             </ng-container>
-            <ng-container
-              *ngIf="
-                updateProductData.category &&
-                updateProductData.variations1.var_type
-              "
-            >
-            <br>
-              <b>
-                Relationship Type 1:- {{ updateProductData.variations1.var_type }}
-              </b>
-              <br>
-              <b>
-                Variation Theme 1 :- {{ updateProductData.variations.variation1.var_title }}
-              </b>
-              <select
-                class="form-select mb-1"
-                name="relationship_type1"
-                [(ngModel)]="updateProductData.variations1.var_type"
-                hidden
+            <ng-template #updatedata1>
+              <ng-container
+                *ngIf="
+                  updateProductData.variations1 &&
+                  updateProductData.variations1.var_type &&
+                  updateProductData.variations.variation1 &&
+                  updateProductData.variations.variation1.var_title
+                "
               >
-                <option value="" selected>Select Relationship Type</option>
-                <option value="Accessory">Accessory</option>
-                <option value="Variation">Variations</option>
-              </select>
-              <select
-                class="form-select mb-1"
-                name="variation_theme1"
-                [(ngModel)]="updateProductData.variations.variation1.var_title"
-                hidden
-              >
-                <option value="" selected>Variation Theme 1</option>
-                <option value="PPU Count">PPU Count</option>
-                <option value="Model Number">Model Numbers</option>
-                <option value="Ring Size">Ring Sizes</option>
-                <option value="Size Per Pearl">Size Per Pearls</option>
-                <option value="Lens Addition Power">
-                  Lens Addition Powers
-                </option>
-              </select>
-            </ng-container>
-
-            <input
-              type="text"
-              name="variation_Value1"
-              [(ngModel)]="updateProductData.variations.variation1.value"
-              class="form-control mb-1"
-              placeholder="Variation Value1"
-            />
+                <label class="form-label">Relationship Type 1</label>
+                <br />
+                <b>
+                  Relationship Type 1:-
+                  {{ updateProductData.variations1.var_type }}
+                </b>
+                <br />
+                <b>
+                  Variation Theme 1 :-
+                  {{ updateProductData.variations.variation1.var_title }}
+                </b>
+                <select
+                  class="form-select mb-1"
+                  name="relationship_type1"
+                  [(ngModel)]="updateProductData.variations1.var_type"
+                  hidden
+                >
+                  <option value="" selected>Select Relationship Type</option>
+                  <option value="Accessory">Accessory</option>
+                  <option value="Variation">Variations</option>
+                </select>
+                <select
+                  class="form-select mb-1"
+                  name="variation_theme1"
+                  [(ngModel)]="
+                    updateProductData.variations.variation1.var_title
+                  "
+                  hidden
+                >
+                  <option value="" selected>Variation Theme 1</option>
+                  <option value="PPU Count">PPU Count</option>
+                  <option value="Model Number">Model Numbers</option>
+                  <option value="Ring Size">Ring Sizes</option>
+                  <option value="Size Per Pearl">Size Per Pearls</option>
+                  <option value="Lens Addition Power">
+                    Lens Addition Powers
+                  </option>
+                </select>
+                <ng-container
+                  *ngIf="
+                    updateProductData.variations.variation1 &&
+                      updateProductData.variations.variation1.value;
+                    else emptyInputvalue
+                  "
+                >
+                  <input
+                    type="text"
+                    name="variation_Value1"
+                    [(ngModel)]="updateProductData.variations.variation1.value"
+                    class="form-control mb-1"
+                    placeholder="Variation Value1"
+                  />
+                </ng-container>
+                <ng-template #emptyInputvalue>
+                  <input
+                    type="text"
+                    name="variation_Value1"
+                    class="form-control mb-1"
+                    placeholder="Variation Value1"
+                  />
+                </ng-template>
+              </ng-container>
+            </ng-template>
           </div>
           <div class="mb-1">
-            <label class="form-label">Relationship Type 2</label>
-            <ng-container *ngIf="!updateProductData.category">
-              <select
-                class="form-select mb-1"
-                name="relationship_type2"
-                [(ngModel)]="updateProductData.variations2.var_type"
-              >
+            <ng-container *ngIf="!updateProductData.category; else updatedata2">
+              <label class="form-label">Relationship Type 2</label>
+              <select class="form-select mb-1" name="relationship_type2">
                 <option value="" selected>Select Relationship Type</option>
                 <option value="Accessory">Accessory</option>
                 <option value="Variation">Variations</option>
               </select>
-              <select
-                class="form-select mb-1"
-                name="variation_theme2"
-                [(ngModel)]="updateProductData.variations.variation2.var_title"
-              >
-                <option value="" selected>Variation Theme 1</option>
+              <select class="form-select mb-1" name="variation_theme2">
+                <option value="" selected>Variation Theme 2</option>
                 <option value="PPU Count">PPU Count</option>
                 <option value="Model Number">Model Numbers</option>
                 <option value="Ring Size">Ring Sizes</option>
@@ -666,55 +758,85 @@
                   Lens Addition Powers
                 </option>
               </select>
+              <input
+                type="text"
+                name="variation_Value2"
+                class="form-control mb-1"
+                placeholder="Variation Value 2"
+              />
             </ng-container>
-            <ng-container
-              *ngIf="
-                updateProductData.category &&
-                updateProductData.variations2.var_type
-              "
-            >
-            <br>
-              <b>
-                Relationship Type 2:- {{ updateProductData.variations2.var_type }}
-              </b>
-              <br>
-              <b>
-                Variation Theme 2 :- {{ updateProductData.variations.variation2.var_title }}
-              </b>
-              <select
-                class="form-select mb-1"
-                name="relationship_type2"
-                [(ngModel)]="updateProductData.variations2.var_type"
-                hidden
+            <ng-template #updatedata2>
+              <ng-container
+                *ngIf="
+                  updateProductData.variations2 &&
+                  updateProductData.variations2.var_type &&
+                  updateProductData.variations.variation2 &&
+                  updateProductData.variations.variation2.var_title
+                "
               >
-                <option value="" selected>Select Relationship Type</option>
-                <option value="Accessory">Accessory</option>
-                <option value="Variation">Variations</option>
-              </select>
-              <select
-                class="form-select mb-1"
-                name="variation_theme2"
-                [(ngModel)]="updateProductData.variations.variation2.var_title"
-                hidden
-              >
-                <option value="" selected>Variation Theme 1</option>
-                <option value="PPU Count">PPU Count</option>
-                <option value="Model Number">Model Numbers</option>
-                <option value="Ring Size">Ring Sizes</option>
-                <option value="Size Per Pearl">Size Per Pearls</option>
-                <option value="Lens Addition Power">
-                  Lens Addition Powers
-                </option>
-              </select>
-            </ng-container>
-
-            <input
-              type="text"
-              name="variation_Value1"
-              [(ngModel)]="updateProductData.variations.variation2.value"
-              class="form-control mb-1"
-              placeholder="Variation Value1"
-            />
+                <label class="form-label">Relationship Type 2</label>
+                <br />
+                <b>
+                  Relationship Type 2:-
+                  {{ updateProductData.variations2.var_type }}
+                </b>
+                <br />
+                <b>
+                  Variation Theme 2 :-
+                  {{ updateProductData.variations.variation2.var_title }}
+                </b>
+                <select
+                  class="form-select mb-1"
+                  name="relationship_type2"
+                  [(ngModel)]="updateProductData.variations2.var_type"
+                  hidden
+                >
+                  <option value="" selected>Select Relationship Type</option>
+                  <option value="Accessory">Accessory</option>
+                  <option value="Variation">Variations</option>
+                </select>
+                <select
+                  class="form-select mb-1"
+                  name="variation_theme2"
+                  [(ngModel)]="
+                    updateProductData.variations.variation2.var_title
+                  "
+                  hidden
+                >
+                  <option value="" selected>Variation Theme 2</option>
+                  <option value="PPU Count">PPU Count</option>
+                  <option value="Model Number">Model Numbers</option>
+                  <option value="Ring Size">Ring Sizes</option>
+                  <option value="Size Per Pearl">Size Per Pearls</option>
+                  <option value="Lens Addition Power">
+                    Lens Addition Powers
+                  </option>
+                </select>
+                <ng-container
+                  *ngIf="
+                    updateProductData.variations.variations2 &&
+                      updateProductData.variations.variation2.value;
+                    else emptyInputvalue
+                  "
+                >
+                  <input
+                    type="text"
+                    name="variation_Value2"
+                    [(ngModel)]="updateProductData.variations.variation2.value"
+                    class="form-control mb-1"
+                    placeholder="Variation Value 2"
+                  />
+                </ng-container>
+                <ng-template #emptyInputvalue>
+                  <input
+                    type="text"
+                    name="variation_Value2"
+                    class="form-control mb-1"
+                    placeholder="Variation Value2"
+                  />
+                </ng-template>
+              </ng-container>
+            </ng-template>
           </div>
           <div class="mb-2">
             <div class="form-label">
@@ -1132,12 +1254,22 @@
             />
           </div>
           <div class="mb-1 text-center">
-            <input type="submit" class="btn btn-primary" value=" Update Product" *ngIf="updateProductData.category" />
-            <input type="submit" class="btn btn-primary" value=" Add Product" *ngIf="!updateProductData.category" />
-            <button class="btn btn-danger mx-2">
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value=" Update Product"
+              *ngIf="updateProductData.category"
+            />
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value=" Add Product"
+              *ngIf="!updateProductData.category"
+            />
+            <a type="button" class="btn btn-danger mx-2" *ngIf="updateProductData.category"  [routerLink]="['/inventory/manage/inventory']">
               <i class="fa fa-times" aria-hidden="true"></i>
               Cancel
-            </button>
+            </a>
           </div>
         </form>
       </div>
