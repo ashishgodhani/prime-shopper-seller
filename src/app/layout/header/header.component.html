@@ -264,8 +264,6 @@
           </a>
           <a class="dropdown-item" (click)="logout()">Log Out
           </a>
-
-
         </div>
       </li>
     </ul>
@@ -334,7 +332,8 @@
           <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
         </div>
       </div>
-    </a></li>
+    </a>
+  </li>
   <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
       href="app-user-view-account.html">
       <div class="d-flex align-items-center">
@@ -380,33 +379,25 @@
 <nav class="header-navbar navbar-expand-xxl align-items-center navbar-light">
   <div class="navbar-container content p-0">
     <div class="bookmark-wrapper">
-      
       <div class="row align-items-center position-relative bg-white top_header">
-        <!-- <div class="col-sm-2 col-4">
-            <a class="nav-link" href="#">
-              
-            </a>
-        </div> -->
         <div class="col-sm-12 col-12 top_nav">
           <nav class="navbar navbar-expand-xl py-0 bottom_navigation">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                [routerLink]="['/']">
                 <img src="../../../assets/img/just-cliq-seller.svg" alt="">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
               </button>
-              <div class="collapse navbar-collapse nav_menu justify-content-end" id="navbarNav">
+              <div class="collapse navbar-collapse nav_menu justify-content-between" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
-                  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                    [routerLink]="['/']"><a class="d-flex align-items-center">
-                      <span class="menu-title text-truncate">Dashboard</span></a>
-                  </li>
-                  <li class=" nav-item" [routerLink]="['/message']" routerLinkActive="active"><a
+                  <!-- <li class=" nav-item" [routerLink]="['/message']" routerLinkActive="active"><a
                       class="d-flex align-items-center">
                       <span class="menu-title text-truncate">Message</span></a>
-                  </li>
+                  </li> -->
+                 
                   <li class="nav-item dropdown">
                     <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
                       <span class="menu-title text-truncate">Catalogue</span>
@@ -415,13 +406,13 @@
                     <ul class="dropdown-menu">
                       <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/catalogue/products']"><a
                           class="d-flex align-items-center">
-    
+
                           <span class="menu-title text-truncate" data-i18n="Email"> Products
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/catalogue/drafts/complete']"><a
-                          class="d-flex align-items-center">
-    
+                      <li class=" dropdown-item" routerLinkActive="active"
+                        [routerLink]="['/catalogue/drafts/complete']"><a class="d-flex align-items-center">
+
                           <span class="menu-title text-truncate" data-i18n="Chat"> Complete Your Drafts
                           </span></a>
                       </li>
@@ -433,15 +424,15 @@
                       </li>
                     </ul>
                   </li>
-    
+
                   <li class="nav-item dropdown">
                     <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
                       <span class="menu-title text-truncate">Inventory</span>
                       <i class="fa fa-chevron-down menu_icon"></i>
                     </a>
                     <ul class="dropdown-menu">
-                      <li class=" dropdown-item" [routerLink]="['/inventory/manage/inventory']" routerLinkActive="active"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" [routerLink]="['/inventory/manage/inventory']"
+                        routerLinkActive="active"><a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Typography"> Manage Inventory
                           </span></a>
                       </li>
@@ -462,13 +453,14 @@
                             Upload
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" [routerLink]="['/inventory/inventory/reports']" routerLinkActive="active">
+                      <li class=" dropdown-item" [routerLink]="['/inventory/inventory/reports']"
+                        routerLinkActive="active">
                         <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Feather"> Inventory Reports
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" [routerLink]="['/inventory/images/upload']" routerLinkActive="active"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" [routerLink]="['/inventory/images/upload']" routerLinkActive="active">
+                        <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Feather"> Upload Images
                           </span></a>
                       </li>
@@ -480,8 +472,7 @@
                       </li>
                     </ul>
                   </li>
-    
-    
+
                   <li class="nav-item dropdown">
                     <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
                       <span class="menu-title text-truncate">Pricing</span>
@@ -495,12 +486,12 @@
                       </li>
                       <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/pricing/manage']"><a
                           class="d-flex align-items-center">
-    
+
                           <span class="menu-title text-truncate" data-i18n="Form Wizard"> Manage Pricing
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/pricing/fixprice/alerts']"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/pricing/fixprice/alerts']">
+                        <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Form Validation"> Fix Price Alerts
                           </span></a>
                       </li>
@@ -511,8 +502,7 @@
                       </li>
                     </ul>
                   </li>
-    
-    
+
                   <li class="nav-item dropdown">
                     <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
                       <span class="menu-title text-truncate">Orders</span>
@@ -525,7 +515,8 @@
                           </span></a>
                       </li>
                       <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/order/reports']"><a
-                          class="d-flex align-items-center"><span class="menu-title text-truncate" data-i18n="Leaflet Maps">
+                          class="d-flex align-items-center"><span class="menu-title text-truncate"
+                            data-i18n="Leaflet Maps">
                             Order Reports
                           </span></a>
                       </li>
@@ -536,25 +527,27 @@
                           </span></a>
                       </li>
                       <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/order/manage/returns']"><a
-                          class="d-flex align-items-center"><span class="menu-title text-truncate" data-i18n="Leaflet Maps">
+                          class="d-flex align-items-center"><span class="menu-title text-truncate"
+                            data-i18n="Leaflet Maps">
                             Manage Returns
                           </span></a>
                       </li>
                     </ul>
                   </li>
-    
-    
+
                   <li class="nav-item dropdown">
                     <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
                       <span class="menu-title text-truncate">Advertising</span>
                       <i class="fa fa-chevron-down menu_icon"></i>
                     </a>
                     <ul class="dropdown-menu">
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/advertising/campaign/manager']">
+                      <li class=" dropdown-item" routerLinkActive="active"
+                        [routerLink]="['/advertising/campaign/manager']">
                         <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Documentation"> Campaign Manager</span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/advertising/content/manager']">
+                      <li class=" dropdown-item" routerLinkActive="active"
+                        [routerLink]="['/advertising/content/manager']">
                         <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Documentation"> A+ Content
                             Manager</span></a>
@@ -575,10 +568,10 @@
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Promotions
                           </span></a>
                       </li>
-    
+
                     </ul>
                   </li>
-    
+
                   <li class="nav-item dropdown">
                     <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
                       <span class="menu-title text-truncate">Reports</span>
@@ -590,8 +583,8 @@
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Payments
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/reports/businessreports']"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/reports/businessreports']">
+                        <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Business Reports
                           </span></a>
                       </li>
@@ -600,28 +593,29 @@
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Return Reports
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/reports/customerreports']"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/reports/customerreports']">
+                        <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Custom Reports
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/reports/tax/document/library']">
+                      <li class=" dropdown-item" routerLinkActive="active"
+                        [routerLink]="['/reports/tax/document/library']">
                         <a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Tax Document Library
                           </span></a>
                       </li>
                     </ul>
                   </li>
-    
-    
+
                   <li class="nav-item dropdown">
-                    <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" data-bs-offset="0,50" data-bs-reference="parent">
+                    <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown"
+                      data-bs-reference="parent">
                       <span class="menu-title text-truncate">Performance</span>
                       <i class="fa fa-chevron-down menu_icon"></i>
                     </a>
                     <ul class="dropdown-menu">
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/performance/account/health']"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" routerLinkActive="active"
+                        [routerLink]="['/performance/account/health']"><a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Account Health
                           </span></a>
                       </li>
@@ -630,8 +624,8 @@
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Feedback
                           </span></a>
                       </li>
-                      <li class=" dropdown-item" routerLinkActive="active" [routerLink]="['/performance/notifications']"><a
-                          class="d-flex align-items-center">
+                      <li class=" dropdown-item" routerLinkActive="active"
+                        [routerLink]="['/performance/notifications']"><a class="d-flex align-items-center">
                           <span class="menu-title text-truncate" data-i18n="Raise Support"> Performance Notifications
                           </span></a>
                       </li>
@@ -641,10 +635,143 @@
                           </span></a>
                       </li>
                     </ul>
+                  </li>                  
+                </ul>
+                <ul class="navbar-nav align-items-center right_nav">
+                  <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link nav-link-style"><i class="fa fa-lg fa-moon-o"
+                    aria-hidden="true"></i>
+                    </a>
                   </li>
-    
+
+                  <li class="nav-item dropdown nav-search">
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-text" id="basic-addon-search2"><i class="fa fa-search" aria-hidden="true"></i>
+                      </span>
+                      <input type="text" class="form-control" placeholder="Search..." aria-label="Search..."
+                        aria-describedby="basic-addon-search2" />
+                    </div>
+                    <!-- <a class="d-flex nav-link-search align-items-center dropdown-toggle" data-bs-toggle="dropdown">
+                      <i class="fa fa-lg fa-search" aria-hidden="true"></i>
+                    </a> -->
+                    <!-- <div class="dropdown-menu search_dropmenu dropdown-menu-end">
+                      <div class="input-group input-group-merge">
+                        <span class="input-group-text" id="basic-addon-search2"><i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="Search..."
+                          aria-describedby="basic-addon-search2" />
+                      </div>
+                    </div> -->
+                    <!-- <div class="search-input">
+                      <div class="search-input-icon"><i data-feather="search"></i></div>
+                      <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1"
+                        data-search="search">
+                      <div class="search-input-close"><i data-feather="x"></i></div>
+                      <ul class="search-list search-list-main"></ul>
+                    </div> -->
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-notification me-25">
+                    <a class="nav-link" href="#"                      data-bs-toggle="dropdown">
+                      <i class="fa fa-bell-o fa-lg" aria-hidden="true"></i>
+                      <span class="badge rounded-pill bg-danger badge-up">5</span></a>
+                      <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                          <div class="dropdown-header d-flex">
+                            <h4 class="notification-title mb-0 me-auto">Notifications</h4>
+                            <div class="badge rounded-pill badge-light-primary">6 New</div>
+                          </div>
+                        </li>
+                        <li class="scrollable-container media-list"><a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                              <div class="me-1">
+                                <div class="avatar"><img
+                                    src="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/portrait/small/avatar-s-15.jpg"
+                                    alt="avatar" width="32" height="32"></div>
+                              </div>
+                              <div class="list-item-body flex-grow-1">
+                                <p class="media-heading"><span class="fw-bolder">Congratulation Sam 🎉</span>winner!</p>
+                                <small class="notification-text"> Won the monthly best seller badge.</small>
+                              </div>
+                            </div>
+                          </a><a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                              <div class="me-1">
+                                <div class="avatar"><img
+                                    src="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/portrait/small/avatar-s-3.jpg"
+                                    alt="avatar" width="32" height="32"></div>
+                              </div>
+                              <div class="list-item-body flex-grow-1">
+                                <p class="media-heading"><span class="fw-bolder">New message</span>&nbsp;received</p>
+                                <small class="notification-text"> You have 10 unread messages</small>
+                              </div>
+                            </div>
+                          </a><a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                              <div class="me-1">
+                                <div class="avatar bg-light-danger">
+                                  <div class="avatar-content">MD</div>
+                                </div>
+                              </div>
+                              <div class="list-item-body flex-grow-1">
+                                <p class="media-heading"><span class="fw-bolder">Revised Order </span>&nbsp;checkout</p>
+                                <small class="notification-text"> MD Inc. order updated</small>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="list-item d-flex align-items-center">
+                            <h6 class="fw-bolder me-auto mb-0">System Notifications</h6>
+                            <div class="form-check form-check-primary form-switch">
+                              <input class="form-check-input" id="systemNotification" type="checkbox" checked="">
+                              <label class="form-check-label" for="systemNotification"></label>
+                            </div>
+                          </div><a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                              <div class="me-1">
+                                <div class="avatar bg-light-danger">
+                                  <div class="avatar-content"><i class="avatar-icon" data-feather="x"></i></div>
+                                </div>
+                              </div>
+                              <div class="list-item-body flex-grow-1">
+                                <p class="media-heading"><span class="fw-bolder">Server down</span>&nbsp;registered</p>
+                                <small class="notification-text"> USA Server is down due to high CPU usage</small>
+                              </div>
+                            </div>
+                          </a><a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                              <div class="me-1">
+                                <div class="avatar bg-light-success">
+                                  <div class="avatar-content"><i class="avatar-icon" data-feather="check"></i></div>
+                                </div>
+                              </div>
+                              <div class="list-item-body flex-grow-1">
+                                <p class="media-heading"><span class="fw-bolder">Sales report</span>&nbsp;generated</p>
+                                <small class="notification-text"> Last month sales report generated</small>
+                              </div>
+                            </div>
+                          </a><a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                              <div class="me-1">
+                                <div class="avatar bg-light-warning">
+                                  <div class="avatar-content"><i class="avatar-icon" data-feather="alert-triangle"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="list-item-body flex-grow-1">
+                                <p class="media-heading"><span class="fw-bolder">High memory</span>&nbsp;usage</p><small
+                                  class="notification-text"> BLR Server using high memory</small>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Read all
+                            notifications</a></li>
+                      </ul>
+                  </li>
+
                   <li class="nav-item dropdown">
-                    <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" data-bs-offset="0,50" data-bs-reference="parent">
+                    <a class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" data-bs-offset="0,50"
+                      data-bs-reference="parent">
                       <div class="user-nav d-sm-flex align-items-center">
                         <span class="user-name text-truncate fw-bolder me-1">{{userData.data.name}}</span>
                         <!-- <span class="user-status">{{userData.data.email}}</span> -->
@@ -653,15 +780,17 @@
                         <img class="round"
                           src="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/portrait/small/avatar-s-11.jpg"
                           alt="avatar" height="40" width="40">
-                          <span class="avatar-status-online"></span>
+                        <span class="avatar-status-online"></span>
                       </span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end user-drop-menu">
                       <li class="dropdown-item">
-                        <a routerLinkActive="active" [routerLink]="['/profile/view']"> <span class="menu-title text-truncate">Account Info</span></a>
+                        <a routerLinkActive="active" [routerLink]="['/profile/view']"> <span
+                            class="menu-title text-truncate">Account Info</span></a>
                       </li>
                       <li class="dropdown-item">
-                        <a [routerLink]="['/profile/changepass']"><span class="menu-title text-truncate">Change Password</span></a>
+                        <a [routerLink]="['/profile/changepass']"><span class="menu-title text-truncate">Change
+                            Password</span></a>
                       </li>
                       <li class="dropdown-item">
                         <a href="#"> <span class="menu-title text-truncate">Login Settings</span></a>
@@ -690,13 +819,13 @@
               </div>
             </div>
           </nav>
-        </div>        
+        </div>
       </div>
- 
     </div>
-    
   </div>
 </nav>
+
+
 <!-- <ul class="nav navbar-nav d-xl-none">
         <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="fa fa-bars" aria-hidden="true"></i>
           </a></li>
@@ -845,9 +974,11 @@
                 <ul class="search-list search-list-main"></ul>
               </div>
             </li>
-            <li class="nav-item dropdown dropdown-cart me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i
-                  class="fa fa-lg fa-shopping-cart" aria-hidden="true"></i>
-                <span class="badge rounded-pill bg-primary badge-up cart-item-count">6</span></a>
+            <li class="nav-item dropdown dropdown-cart me-25">
+              <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                <i class="fa fa-lg fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge rounded-pill bg-primary badge-up cart-item-count">6</span>
+              </a>
               <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
                 <li class="dropdown-menu-header">
                   <div class="dropdown-header d-flex">

@@ -8,14 +8,23 @@
     width: auto !important;
 }
 
+
 ul.navbar-nav li.dropdown .dropdown-menu{
     top: auto !important;
+}
+ul.navbar-nav li.dropdown .dropdown-menu.search_dropmenu{
+     top: 100% !important;
+     width: 250px;
+     right: 0;
+}
+.input-group:not(.bootstrap-touchspin):focus-within{
+     box-shadow: none;
 }
 .user-name{
     max-width: 100px;
     text-transform: capitalize;
 }
-.bottom_navigation .nav-item:last-child > a{
+.bottom_navigation .right_nav .nav-item:last-child > a{
     padding: 10px 5px;
 }
 .user-drop-menu{
@@ -23,10 +32,11 @@ ul.navbar-nav li.dropdown .dropdown-menu{
 }
 .bottom_navigation .nav-item > a{
     display: inline-block;
-    padding: 20px 5px;
+    padding: 20px 10px;
 }
 .bottom_navigation .nav-item > a > .menu_icon
 {
+     display: none;
     font-size: 10px;
     margin-left: 5px;
 }
@@ -113,3 +123,4 @@ ul.navbar-nav li.dropdown .dropdown-menu{
     }
     
 }
+
