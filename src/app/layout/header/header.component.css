@@ -25,7 +25,8 @@ ul.navbar-nav li.dropdown .dropdown-menu.search_dropmenu{
     text-transform: capitalize;
 }
 .bottom_navigation .right_nav .nav-item:last-child > a{
-    padding: 10px 5px;
+    padding: 10px 15px;
+    border-top: 1px #f5f5f5 solid;
 }
 .user-drop-menu{
     right: 0 !important;
@@ -82,8 +83,13 @@ ul.navbar-nav li.dropdown .dropdown-menu.search_dropmenu{
          display: block !important;
          float: none !important;
     }
+    .navbar-collapse.collapse .right_nav .nav-item:nth-child(1),
+    .navbar-collapse.collapse .right_nav .nav-item:nth-child(2),
+    .navbar-collapse.collapse .right_nav .nav-item:nth-child(3){
+         display: none !important;
+    }
     .navbar-collapse.collapse .nav-item > a{
-         padding: 10px 50px;
+         padding: 10px 20px;
          border-bottom: 1px #f5f5f5 solid;
     }
     .navbar-collapse.collapse .nav-item.dropdown>a{
