@@ -255,10 +255,10 @@
   > a {
   text-overflow: inherit;
 }
-.vertical-layout.vertical-menu-modern.menu-collapsed .app-content,
+/* .vertical-layout.vertical-menu-modern.menu-collapsed .app-content,
 .vertical-layout.vertical-menu-modern.menu-collapsed .footer {
   margin-left: 80px;
-}
+} */
 .vertical-layout.vertical-menu-modern.menu-collapsed
   .header-navbar.floating-nav {
   width: calc(100vw - (100vw - 100%) - 4.4rem - 74px);

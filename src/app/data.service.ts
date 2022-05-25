@@ -34,6 +34,8 @@ export class DataService {
   couriers_url = `${this.currentLiveUrl}/api/v1/seller/couriers`;
   getsproduct = `${this.currentLiveUrl}/api/v1/product`;
   sellerProfile = `${this.currentLiveUrl}/api/v1/seller/profile`;
+  updateDataUser = `${this.currentLiveUrl}/api/v1/seller/update/profile`;
+  UpdatePassword = `${this.currentLiveUrl}/api/v1/seller/change/password`;
 
   sellerID: any;
   userName = new Subject<any>();
@@ -182,6 +184,18 @@ export class DataService {
   product(data: any) {
     let product_id = { product: data ? data : "unAuth" };
     return this._http.post(this.getsproduct, product_id);
+  }
+
+  update_profile(data:any)
+  {
+    let options : any = { headers: this._getHeaders() };
+    return this._http.post(this.updateDataUser,data,options);
+  }
+
+  updatepassword(data:any)
+  {
+    let options : any = { headers: this._getHeaders() };
+    return this._http.post(this.UpdatePassword,data,options);
   }
 
   getProfile()
