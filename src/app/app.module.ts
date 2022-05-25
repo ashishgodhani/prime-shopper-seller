@@ -26,6 +26,7 @@ import { PerformanceModule } from './performance/performance.module';
 import { DashboardSalesChartComponent } from './dashboard/dashboard-sales-chart/dashboard-sales-chart.component';
 import { StatisticsCardComponent } from './dashboard/statistics-card/statistics-card.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ProfileModule } from './profile/profile.module';
 
 
 
@@ -60,6 +61,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HttpClientModule,
     ToastrModule.forRoot(),
     ReactiveFormsModule,
+    ProfileModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

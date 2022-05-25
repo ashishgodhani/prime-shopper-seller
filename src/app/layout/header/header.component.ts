@@ -15,6 +15,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.userName = this.authService.getUser();
     this.dataservices.getProfile().subscribe((result:any)=>{
+      console.log(result);
+      
       this.userData = result;
     })
   }

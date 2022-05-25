@@ -57,7 +57,6 @@ export class ProductAddComponent implements OnInit {
     external_product_id: "",
     external_product_id_type: "",
     part_number: "",
-    features: "",
     bullet_point: [],
     max_shelf_life: "",
     material_type_free: [],
@@ -361,6 +360,7 @@ export class ProductAddComponent implements OnInit {
   }
 
   addproduct(product_data: any) {
+    console.log("check::", product_data.material_type_free1)
     const send_data = new FormData();
     send_data.append("brand_name", product_data.brand_name ? product_data.brand_name : "");
     send_data.append("title", product_data.title ? product_data.title : "");
@@ -368,7 +368,6 @@ export class ProductAddComponent implements OnInit {
     send_data.append("sku", product_data.sku ? product_data.sku : "");
     send_data.append("quantity", product_data.quantity ? product_data.quantity : "");
     send_data.append("description", product_data.description ? product_data.description : "");
-    send_data.append("features", product_data.features ? product_data.features : "");
     send_data.append("status", product_data.status ? product_data.status : "");
     send_data.append("external_product_id", product_data.external_product_id ? product_data.external_product_id : "");
     send_data.append(
@@ -391,6 +390,7 @@ export class ProductAddComponent implements OnInit {
     send_data.append("is_waterproof", product_data.is_waterproof ? product_data.is_waterproof : "");
     send_data.append("manufacturer", product_data.manufacturer ? product_data.manufacturer : "");
     send_data.append("packer_details", product_data.packer_details ? product_data.packer_details : "");
+    send_data.append("importer_details", product_data.importer_details ? product_data.importer_details : "");
     send_data.append("number_of_boxes", product_data.number_of_boxes ? product_data.number_of_boxes : "");
     send_data.append("country_of_origin", product_data.country_of_origin ? product_data.country_of_origin : "");
     send_data.append("product_information", product_data.product_information ? product_data.product_information : "");

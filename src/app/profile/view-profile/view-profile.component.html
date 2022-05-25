@@ -1,0 +1,61 @@
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h2 class="content-header-title float-start mb-0">My Account</h2>
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a>
+                        </li>
+                       
+                        <li class="breadcrumb-item active">My Account
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-header-right  text-md-end cursor-pointer col-md-3   col-8 d-md-block " [routerLink]="['/profile/edit']"  >
+        <div class="card-body pt-md-0">
+            <button  class="btn btn-primary w-100 "><i class="fa fa-edit"></i> Edit Profile</button>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="row" id="table-responsive">
+    <div class="col-12 mx-auto">
+      <div class="card">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <div class="card-header col-md-8 col-12">
+            <h4 class="card-title">Account Info</h4>
+          </div>          
+        </div>
+        <div class="card-body">
+          <div class="table-responsive data-table">
+               <table class="table profile_info">
+                    <tr>
+                         <th>Name</th>
+                         <td>
+                              <input type="text"  name="name" class="form-control" value="{{userData.data.name}}"  disabled/>
+                         </td>
+                    </tr>
+                    <tr>
+                         <th>Email</th>
+                         <td>
+                              <input type="text"  name="email" class="form-control" value="{{userData.data.email}}" disabled/>
+                         </td>
+                    </tr>
+                    <tr>
+                         <th>Contact No.</th>
+                         <td>
+                              <input type="text"  name="phoneNumber" class="form-control" value="{{userData.data.phoneNumber}}"  disabled/>
+                         </td>
+                    </tr>
+               </table>
+          </div>
+      </div>
+    </div>

@@ -3751,7 +3751,10 @@ tr.group {
 
 
 .app-content.content{
-  padding-top: 30px !important;
+  padding-top: 20px !important;
+}
+.breadcrumb{
+  padding: 0.5rem 0 0.3rem;
 }
 
 

@@ -1923,7 +1923,7 @@ textarea:-webkit-autofill {
 }
 .badge.badge-up {
   position: absolute;
-  top: -11px;
+  top: 10px;
   right: -9px;
   min-width: 1.429rem;
   min-height: 1.429rem;
