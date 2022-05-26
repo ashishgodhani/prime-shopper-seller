@@ -131,6 +131,8 @@ export class ProductAddComponent implements OnInit {
     this.spinner = true;
     this.http.uploded_product_list_data().subscribe(
       (result: any) => {
+        console.log("datas", result.data);
+        
         this.datas = result.data;
         this.spinner = false;
       },

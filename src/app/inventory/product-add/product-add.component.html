@@ -197,7 +197,11 @@
             </div>
           </ng-container>
           <ng-container
-            *ngIf="updateProductData.category && updateProductData.parentId && updateProductData.parentId.id"
+            *ngIf="
+              updateProductData.category &&
+              updateProductData.parentId &&
+              updateProductData.parentId.id
+            "
           >
             <h4>Category Name:- {{ updateProductData.parentId.data.name }}</h4>
           </ng-container>
@@ -241,7 +245,9 @@
               class="form-select mb-1"
               id="external_product_id_type"
               name="external_product_id_type"
-              [(ngModel)]="updateProductData.variations.external_product_id_type"
+              [(ngModel)]="
+                updateProductData.variations.external_product_id_type
+              "
             >
               <option value="" selected>Product ID Type</option>
               <option value="GTIN">GTIN</option>
@@ -359,60 +365,118 @@
               placeholder="Max Order Quantity"
             />
           </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >Bullet Point
-            </label>
-            <input
-              type="text"
-              name="bullet_point1"
-              [(ngModel)]="updateProductData.variations.bullet_point[0]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 1"
-            />
-            <input
-              type="text"
-              name="bullet_point2"
-              [(ngModel)]="updateProductData.variations.bullet_point[1]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 2"
-            />
-            <input
-              type="text"
-              name="bullet_point3"
-              [(ngModel)]="updateProductData.variations.bullet_point[2]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 3"
-            />
-            <input
-              type="text"
-              name="bullet_point4"
-              [(ngModel)]="updateProductData.variations.bullet_point[3]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 4"
-            />
-            <input
-              type="text"
-              name="bullet_point5"
-              [(ngModel)]="updateProductData.variations.bullet_point[4]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 5"
-            />
-            <input
-              type="text"
-              name="bullet_point6"
-              [(ngModel)]="updateProductData.variations.bullet_point[5]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 6"
-            />
-            <input
-              type="text"
-              name="bullet_point7"
-              [(ngModel)]="updateProductData.variations.bullet_point[6]"
-              class="form-control mb-1"
-              placeholder="Bullet Point 7"
-            />
-          </div>
+          <ng-container
+            *ngIf="
+              updateProductData.variations &&
+                updateProductData.variations.bullet_point &&
+                updateProductData.variations.bullet_point.length;
+              else BulletPoints
+            "
+          >
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >Bullet Point
+              </label>
+              <input
+                type="text"
+                name="bullet_point1"
+                [(ngModel)]="updateProductData.variations.bullet_point[0]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 1"
+              />
+              <input
+                type="text"
+                name="bullet_point2"
+                [(ngModel)]="updateProductData.variations.bullet_point[1]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 2"
+              />
+              <input
+                type="text"
+                name="bullet_point3"
+                [(ngModel)]="updateProductData.variations.bullet_point[2]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 3"
+              />
+              <input
+                type="text"
+                name="bullet_point4"
+                [(ngModel)]="updateProductData.variations.bullet_point[3]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 4"
+              />
+              <input
+                type="text"
+                name="bullet_point5"
+                [(ngModel)]="updateProductData.variations.bullet_point[4]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 5"
+              />
+              <input
+                type="text"
+                name="bullet_point6"
+                [(ngModel)]="updateProductData.variations.bullet_point[5]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 6"
+              />
+              <input
+                type="text"
+                name="bullet_point7"
+                [(ngModel)]="updateProductData.variations.bullet_point[6]"
+                class="form-control mb-1"
+                placeholder="Bullet Point 7"
+              />
+            </div>
+          </ng-container>
+          <ng-template #BulletPoints>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >Bullet Point
+              </label>
+              <input
+                type="text"
+                name="bullet_point1"
+                class="form-control mb-1"
+                placeholder="Bullet Point 1"
+              />
+              <input
+                type="text"
+                name="bullet_point2"
+                class="form-control mb-1"
+                placeholder="Bullet Point 2"
+              />
+              <input
+                type="text"
+                name="bullet_point3"
+                class="form-control mb-1"
+                placeholder="Bullet Point 3"
+              />
+              <input
+                type="text"
+                name="bullet_point4"
+                class="form-control mb-1"
+                placeholder="Bullet Point 4"
+              />
+              <input
+                type="text"
+                name="bullet_point5"
+                class="form-control mb-1"
+                placeholder="Bullet Point 5"
+              />
+              <input
+                type="text"
+                name="bullet_point6"
+                class="form-control mb-1"
+                placeholder="Bullet Point 6"
+              />
+              <input
+                type="text"
+                name="bullet_point7"
+                class="form-control mb-1"
+                placeholder="Bullet Point 7"
+              />
+            </div>
+          </ng-template>
           <div class="mb-1">
             <label class="form-label" for="basic-addon-name"
               >Maximum Shelf Life
@@ -438,9 +502,7 @@
             />
           </div>
           <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >Indications
-            </label>
+            <label class="form-label" for="basic-addon-name">Indications</label>
             <input
               type="text"
               name="indications"
@@ -641,7 +703,11 @@
           <div class="mb-1">
             <ng-container *ngIf="!updateProductData.category; else updatedata1">
               <label class="form-label">Relationship Type 1</label>
-              <select class="form-select mb-1" name="relationship_type1" ngModel>
+              <select
+                class="form-select mb-1"
+                name="relationship_type1"
+                ngModel
+              >
                 <option value="" selected>Select Relationship Type</option>
                 <option value="Accessory">Accessory</option>
                 <option value="Variation">Variations</option>
@@ -741,7 +807,11 @@
           <div class="mb-1">
             <ng-container *ngIf="!updateProductData.category; else updatedata2">
               <label class="form-label">Relationship Type 2</label>
-              <select class="form-select mb-1" name="relationship_type2" ngModel>
+              <select
+                class="form-select mb-1"
+                name="relationship_type2"
+                ngModel
+              >
                 <option value="" selected>Select Relationship Type</option>
                 <option value="Accessory">Accessory</option>
                 <option value="Variation">Variations</option>
@@ -1256,7 +1326,12 @@
               value=" Add Product"
               *ngIf="!updateProductData.category"
             />
-            <a type="button" class="btn btn-danger mx-2" *ngIf="updateProductData.category"  [routerLink]="['/inventory/manage/inventory']">
+            <a
+              type="button"
+              class="btn btn-danger mx-2"
+              *ngIf="updateProductData.category"
+              [routerLink]="['/inventory/manage/inventory']"
+            >
               <i class="fa fa-times" aria-hidden="true"></i>
               Cancel
             </a>
