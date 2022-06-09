@@ -28,9 +28,23 @@ export class ManageOrdersComponent implements OnInit {
 
     this.http.get_orders().subscribe(
       (result: any) => {
-        this.ordersdata = result.data;
+        let alldata = result.data;
 
-        console.log("data from server", this.ordersdata);
+        if(alldata && alldata.length){
+          
+          alldata.map((el: any) => {
+            console.log("ok::", el.product.variation && el.product.product.variations.length);
+            
+            if(el.product.variation && el.product.product.variations.length){
+              let currentProduct = el.product.product.variations.find((item: any) => item._id == el.product.variation);
+              el['currentProduct'] = currentProduct
+            }
+          })
+
+          this.ordersdata = alldata;
+          
+        }
+        console.log("data from server", alldata);
         this.spinner = false;
       },
       (error) => {

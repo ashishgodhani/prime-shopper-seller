@@ -45,16 +45,10 @@
             <table class="table mb-0 ordersTable table-sm">
               <thead>
                 <tr>
-                  <th scope="col" class="text-nowrap">Order Id</th>
-                  <th scope="col" class="text-nowrap">Payment Id</th>
-                  <th scope="col" class="text-nowrap">Product Id</th>
-                  <!-- <th scope="col" class="text-nowrap">Product Name</th> -->
-                  <th scope="col" class="text-nowrap">Quantity</th>
-                  <th scope="col" class="text-nowrap">Selling Price</th>
-                  <th scope="col" class="text-nowrap">Amount</th>
-                  <th scope="col" class="text-nowrap">Selling Amount</th>
-                  <th scope="col" class="text-nowrap addressColumn">Address</th>
                   <th scope="col" class="text-nowrap">Order Date</th>
+                  <th scope="col" class="text-nowrap">Order Details</th>
+                  <th scope="col" class="text-nowrap">Image</th>
+                  <th scope="col" class="text-nowrap">Product name</th>
                   <th scope="col" class="text-nowrap">Status</th>
                   <th scope="col" class="text-nowrap">Courior Details</th>
                 </tr>
@@ -62,39 +56,22 @@
               <tbody>
                 <tr *ngFor="let order of ordersdata">
                   <td>
-                    {{ order._id }}
-                  </td>
-                  <td>
-                    {{ order.payment_id }}
-                  </td>
-                  <td>
-                    {{ order.product.product.id }}
-                  </td>
-                  <!-- <td>
-                    {{ order.product.product.title }}
-                  </td> -->
-                  <td>
-                    {{ order.product.quantity }}
-                  </td>
-                  <td>
-                    {{ order.product.price }}
-                  </td>
-                  <td>
-                    {{ order.total }}
-                  </td>
-                  <td>
-                    {{ order.sellingAmount }}
-                  </td>
-                  <td>
-                    {{ order.shippingAddress.address_line1 }}
-                    {{ order.shippingAddress.address_line2 }}<br />
-                    {{ order.shippingAddress.address_city }},
-                    {{ order.shippingAddress.address_country }},
-                    {{ order.shippingAddress.address_state }},
-                    {{ order.shippingAddress.address_zip }}
-                  </td>
-                  <td>
                     {{ order.createdAt }}
+                  </td>
+                  <td>
+                    {{ order._id }}
+                    <br />
+                    <b>Buyer name:</b> {{ order.user.name }} <br>
+                    <b>Payment Id:</b> {{ order.payment_id }}
+                  </td>
+                  <td>
+                    <img src="{{order.currentProduct.banner}}" alt="" width="100">
+                  </td>
+                  <td>
+                    {{ order.currentProduct.title }}
+                    <b>SKU: </b>{{order.currentProduct.sku}} <br>
+                    <b>Quantity: </b>{{ order.product.quantity }} <br>
+                    <b>Total: </b>₹ {{ order.sellingAmount }}
                   </td>
                   <td>
                     {{ order.status }}
@@ -105,27 +82,46 @@
                     >
                       <form
                         #couriorSelectForm="ngForm"
-                        (ngSubmit)="updateOrderCourior(couriorSelectForm, order._id)"
+                        (ngSubmit)="
+                          updateOrderCourior(couriorSelectForm, order._id)
+                        "
                         class="needs-validation"
                       >
                         <label
                           >Select Couriour:
-                          <select required id="id" #id="ngModel" name="id" ngModel>
+                          <select
+                            required
+                            id="id"
+                            #id="ngModel"
+                            name="id"
+                            ngModel
+                          >
                             <option value="">Select Courior</option>
                             <ng-container *ngFor="let courior of couriors">
-                              <option value="{{courior._id}}">{{courior.name}}</option>
+                              <option value="{{ courior._id }}">
+                                {{ courior.name }}
+                              </option>
                             </ng-container>
                           </select>
                         </label>
-                        <label class="mt-1">Tracking Id:
-                          <input type="text" required #trackingId="ngModel" name="trackingId" ngModel class="form-control" placeholder="Enter Title" />
+                        <label class="mt-1"
+                          >Tracking Id:
+                          <input
+                            type="text"
+                            required
+                            #trackingId="ngModel"
+                            name="trackingId"
+                            ngModel
+                            class="form-control"
+                            placeholder="Enter Title"
+                          />
                         </label>
                         <button type="submit" class="mt-1">Submit</button>
                       </form>
                     </ng-container>
                     <ng-template #orderDetails>
-                      <b>Tracking Id:</b> {{order.courier.trackingId}} <br>
-                      <b>Courior Name:</b> {{order.courier.id.name}}
+                      <b>Tracking Id:</b> {{ order.courier.trackingId }} <br />
+                      <b>Courior Name:</b> {{ order.courier.id.name }}
                     </ng-template>
                     <!-- {{order.createdAt}} -->
                   </td>
