@@ -31,8 +31,34 @@
     <div class="col-12">
       <div class="card">
         <div class="d-md-flex justify-content-between align-items-center">
-          <div class="card-header col-md-8 col-12">
-            <h4 class="card-title">Manage Inventory</h4>
+          <div class="card-header col-md-8 col-12">            
+            <form action="" class="d-flex">
+              <span class="me-1">Listing Status : </span>
+              <div class="form-check me-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  All
+                </label>
+              </div> 
+              <div class="form-check me-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Active
+                </label>
+              </div> 
+              <div class="form-check me-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Inactive
+                </label>
+              </div> 
+              <div class="form-check me-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Listing Remove
+                </label>
+              </div> 
+            </form>
           </div>
           <div class="col-sm-12 mx-md-2 mx-1 col-11 col-md-3">
             <div class="input-group input-group-merge">
@@ -49,19 +75,22 @@
             </div>
           </div>
         </div>
-        <div class="card-body">
+        <div class="card-body pt-0">
           <div class="table-responsive">
-            <table class="table mb-0 table-sm">
+            <table class="table mb-0 table-sm manage_inventory">
               <thead>
                 <tr>
+                  <th scope="col" class="text-nowrap">
+                    <input type="checkbox" name="" id="">
+                  </th>
                   <th scope="col" class="text-nowrap">Status</th>
                   <th scope="col" class="text-nowrap">Product Image</th>
-                  <th scope="col" class="text-nowrap">SKU</th>
-                  <th scope="col" class="text-nowrap productName">Product Name</th>
+                  <th scope="col" class="text-nowrap productName">Product Name<hr class="my-0">SKU</th>
                   <th scope="col" class="text-nowrap">Created At</th>
                   <th scope="col" class="text-nowrap">Available</th>
-                  <th scope="col" class="text-nowrap">Country of Origin</th>
-                  <th scope="col" class="text-nowrap">Importer Details</th>
+                  <th scope="col" class="text-nowrap text-center">Pricing</th>
+                  <!-- <th scope="col" class="text-nowrap">Country of Origin</th> -->
+                  <!-- <th scope="col" class="text-nowrap">Importer Details</th> -->
                   <th scope="col" class="text-nowrap">Action</th>
                 </tr>
               </thead>
@@ -70,31 +99,39 @@
                 <ng-container *ngFor="let product of manageInventorys">
                   <tr *ngFor="let variation of product.variations">
                     <td>
+                      <input type="checkbox" name="" id="">
+                    </td>
+                    <td>
                       {{ variation.status }}
                     </td>
                     <td>
                       <img class="productImage" src="{{ variation.banner }}" alt="">
                     </td>
-                    <td>
-                      {{ variation.sku }}
-                    </td>
                     <td class="productName">
                       <a class="titleLink" target="_blank" href="{{redirectUrl(product.id,variation.variation1, variation.variation2)}}">
                         {{ variation.title }}
                       </a>
+                      <hr class="my-0">
+                      <p>
+                        {{ variation.sku }}
+                      </p>
                     </td>
                     <td>
                       {{ product.createdAt }}
                     </td>
-                    <td>
-                      {{ variation.quantity }}
+                    <td class="text-center">
+                      <input type="text" name="" value="{{ variation.quantity }}" class="form-control" id="" size="5">
+                      
                     </td>
                     <td>
+                      <input type="text" name="" class="form-control" id="" size="10">
+                    </td>
+                    <!-- <td>
                       {{ variation.country_of_origin }}
-                    </td>
-                    <td>
+                    </td> -->
+                    <!-- <td>
                       {{ variation.importer_details }}
-                    </td>
+                    </td> -->
                     <td>
                       <button class="updateBtn" (click)="updateUrl(product.id,variation.variation1, variation.variation2)">
                         Edit

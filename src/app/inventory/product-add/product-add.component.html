@@ -205,569 +205,515 @@
           >
             <h4>Category Name:- {{ updateProductData.parentId.data.name }}</h4>
           </ng-container>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Title</label>
-            <input
-              type="text"
-              name="title"
-              [(ngModel)]="updateProductData.variations.title"
-              class="form-control"
-              placeholder="Product Title"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Brand Name</label>
-            <input
-              type="text"
-              name="brand_name"
-              [(ngModel)]="updateProductData.brand_name"
-              class="form-control"
-              placeholder="Brand Name"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >External Product Id</label
-            >
-            <input
-              type="text"
-              name="external_product_id"
-              [(ngModel)]="updateProductData.variations.external_product_id"
-              class="form-control"
-              placeholder="External Product Id"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >Product ID Type</label
-            >
-            <select
-              class="form-select mb-1"
-              id="external_product_id_type"
-              name="external_product_id_type"
-              [(ngModel)]="
-                updateProductData.variations.external_product_id_type
-              "
-            >
-              <option value="" selected>Product ID Type</option>
-              <option value="GTIN">GTIN</option>
-              <option value="EAN">EANs</option>
-              <option value="PZN">PZNs</option>
-              <option value="GCID">GCIDs</option>
-              <option value="ISBN">ISBNs</option>
-              <option value="UPC">UPCs</option>
-            </select>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Manufacturer Part Number
-            </label>
-            <input
-              type="text"
-              name="part_number"
-              [(ngModel)]="updateProductData.variations.part_number"
-              class="form-control"
-              placeholder="Manufacturer Part Number"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Packer Details
-            </label>
-            <input
-              type="text"
-              name="packer_details"
-              [(ngModel)]="updateProductData.variations.packer_details"
-              class="form-control"
-              placeholder="Packer Details"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Importer Details
-            </label>
-            <input
-              type="text"
-              name="importer_details"
-              [(ngModel)]="updateProductData.variations.importer_details"
-              class="form-control"
-              placeholder="Importer Details"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Number of Boxes
-            </label>
-            <input
-              type="text"
-              name="number_of_boxes"
-              [(ngModel)]="updateProductData.variations.number_of_boxes"
-              class="form-control"
-              placeholder="Number of Boxes"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="country_of_origin">
-              Country Of Origin
-            </label>
-            <select
-              class="form-select mb-1"
-              id="country_of_origin"
-              name="country_of_origin"
-              [(ngModel)]="updateProductData.variations.country_of_origin"
-            >
-              <option value="" selected>Country Of Origin</option>
-              <option value="India">India</option>
-              <option value="China">China</option>
-              <option value="United States">United States</option>
-              <option value="Afghanistan">Afghanistans</option>
-              <option value="Algeria">Algerias</option>
-              <option value="South Africa">South Africa</option>
-            </select>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"> HSN Code </label>
-            <input
-              type="text"
-              name="product_information"
-              [(ngModel)]="updateProductData.variations.product_information"
-              class="form-control"
-              placeholder="HSN Code"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="fulfillment_latency">
-              Handling Time
-            </label>
-            <select
-              class="form-select mb-1"
-              id="fulfillment_latency"
-              name="fulfillment_latency"
-              [(ngModel)]="updateProductData.variations.fulfillment_latency"
-            >
-              <option value="" selected>Select Handling Time</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Max Order Quantity
-            </label>
-            <input
-              type="text"
-              name="max_order_quantity"
-              [(ngModel)]="updateProductData.variations.max_order_quantity"
-              class="form-control"
-              placeholder="Max Order Quantity"
-            />
-          </div>
-          <ng-container
-            *ngIf="
-              updateProductData.variations &&
-                updateProductData.variations.bullet_point &&
-                updateProductData.variations.bullet_point.length;
-              else BulletPoints
-            "
-          >
-            <div class="mb-1">
-              <label class="form-label" for="basic-addon-name"
-                >Bullet Point
-              </label>
+          <div class="row">
+            <div class="col-12 mb-1">
+              <label class="form-label" for="basic-addon-name">Title</label>
               <input
                 type="text"
-                name="bullet_point1"
-                [(ngModel)]="updateProductData.variations.bullet_point[0]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 1"
-              />
-              <input
-                type="text"
-                name="bullet_point2"
-                [(ngModel)]="updateProductData.variations.bullet_point[1]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 2"
-              />
-              <input
-                type="text"
-                name="bullet_point3"
-                [(ngModel)]="updateProductData.variations.bullet_point[2]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 3"
-              />
-              <input
-                type="text"
-                name="bullet_point4"
-                [(ngModel)]="updateProductData.variations.bullet_point[3]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 4"
-              />
-              <input
-                type="text"
-                name="bullet_point5"
-                [(ngModel)]="updateProductData.variations.bullet_point[4]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 5"
-              />
-              <input
-                type="text"
-                name="bullet_point6"
-                [(ngModel)]="updateProductData.variations.bullet_point[5]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 6"
-              />
-              <input
-                type="text"
-                name="bullet_point7"
-                [(ngModel)]="updateProductData.variations.bullet_point[6]"
-                class="form-control mb-1"
-                placeholder="Bullet Point 7"
+                name="title"
+                [(ngModel)]="updateProductData.variations.title"
+                class="form-control"
+                placeholder="Product Title"
               />
             </div>
-          </ng-container>
-          <ng-template #BulletPoints>
-            <div class="mb-1">
-              <label class="form-label" for="basic-addon-name"
-                >Bullet Point
-              </label>
+            <div class="col-12 mb-1">
+              <label class="form-label" for="basic-addon-name">Brand Name</label>
               <input
                 type="text"
-                name="bullet_point1"
-                class="form-control mb-1"
-                placeholder="Bullet Point 1"
-              />
-              <input
-                type="text"
-                name="bullet_point2"
-                class="form-control mb-1"
-                placeholder="Bullet Point 2"
-              />
-              <input
-                type="text"
-                name="bullet_point3"
-                class="form-control mb-1"
-                placeholder="Bullet Point 3"
-              />
-              <input
-                type="text"
-                name="bullet_point4"
-                class="form-control mb-1"
-                placeholder="Bullet Point 4"
-              />
-              <input
-                type="text"
-                name="bullet_point5"
-                class="form-control mb-1"
-                placeholder="Bullet Point 5"
-              />
-              <input
-                type="text"
-                name="bullet_point6"
-                class="form-control mb-1"
-                placeholder="Bullet Point 6"
-              />
-              <input
-                type="text"
-                name="bullet_point7"
-                class="form-control mb-1"
-                placeholder="Bullet Point 7"
+                name="brand_name"
+                [(ngModel)]="updateProductData.brand_name"
+                class="form-control"
+                placeholder="Brand Name"
               />
             </div>
-          </ng-template>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >Maximum Shelf Life
-            </label>
-            <input
-              type="text"
-              name="max_shelf_life"
-              [(ngModel)]="updateProductData.variations.max_shelf_life"
-              class="form-control"
-              placeholder="Maximum Shelf Life"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Safety Information
-            </label>
-            <input
-              type="text"
-              name="safety_information"
-              [(ngModel)]="updateProductData.variations.safety_information"
-              class="form-control"
-              placeholder="Safety Information"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Indications</label>
-            <input
-              type="text"
-              name="indications"
-              [(ngModel)]="updateProductData.variations.indications"
-              class="form-control"
-              placeholder="Indications"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Directions </label>
-            <input
-              type="text"
-              name="directions"
-              [(ngModel)]="updateProductData.variations.directions"
-              class="form-control"
-              placeholder="Directions"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >Legal Disclaimer
-            </label>
-            <input
-              type="text"
-              name="legal_disclaimer"
-              [(ngModel)]="updateProductData.variations.legal_disclaimer"
-              class="form-control"
-              placeholder="Legal Disclaimer"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="material_type_free1"
-              >Material Type FREE
-            </label>
-            <ng-container
-              *ngIf="
-                updateProductData.variations.material_type_free &&
-                  updateProductData.variations.material_type_free.length &&
-                  updateProductData.variations.material_type_free[0];
-                else materialType1
-              "
-            >
-              <select
-                class="form-select mb-1"
-                name="material_type_free1"
-                [(ngModel)]="updateProductData.variations.material_type_free[0]"
+            <div class="col-6 mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >External Product Id</label
               >
-                <option value="" selected>Material Type FREE 1</option>
-                <option value="Alcohol Free">Alcohol Free</option>
-                <option value="Aluminium Free">Aluminium Frees</option>
-                <option value="Bismuth Oxychloride Free">
-                  Bismuth Oxychloride Free
-                </option>
-                <option value="Butylene Glycol Free">
-                  Butylene Glycol Frees
-                </option>
-                <option value="Butylparaben Free">Butylparaben Frees</option>
-                <option value="Chemical Free">Chemical Free</option>
-              </select>
-            </ng-container>
-            <ng-template #materialType1>
-              <select
-                class="form-select mb-1"
-                name="material_type_free1"
-                ngModel
-              >
-                <option value="" selected>Material Type FREE 1</option>
-                <option value="Alcohol Free">Alcohol Free</option>
-                <option value="Aluminium Free">Aluminium Frees</option>
-                <option value="Bismuth Oxychloride Free">
-                  Bismuth Oxychloride Free
-                </option>
-                <option value="Butylene Glycol Free">
-                  Butylene Glycol Frees
-                </option>
-                <option value="Butylparaben Free">Butylparaben Frees</option>
-                <option value="Chemical Free">Chemical Free</option>
-              </select>
-            </ng-template>
-            <ng-container
-              *ngIf="
-                updateProductData.variations.material_type_free &&
-                  updateProductData.variations.material_type_free.length &&
-                  updateProductData.variations.material_type_free[0];
-                else materialType2
-              "
-            >
-              <select
-                class="form-select mb-1"
-                name="material_type_free2"
-                [(ngModel)]="updateProductData.variations.material_type_free[1]"
-              >
-                <option value="" selected>Material Type FREE 2</option>
-                <option value="Alcohol Free">Alcohol Free</option>
-                <option value="Aluminium Free">Aluminium Frees</option>
-                <option value="Bismuth Oxychloride Free">
-                  Bismuth Oxychloride Free
-                </option>
-                <option value="Butylene Glycol Free">
-                  Butylene Glycol Frees
-                </option>
-                <option value="Butylparaben Free">Butylparaben Frees</option>
-                <option value="Chemical Free">Chemical Free</option>
-              </select>
-            </ng-container>
-            <ng-template #materialType2>
-              <select
-                class="form-select mb-1"
-                name="material_type_free2"
-                ngModel
-              >
-                <option value="" selected>Material Type FREE 2</option>
-                <option value="Alcohol Free">Alcohol Free</option>
-                <option value="Aluminium Free">Aluminium Frees</option>
-                <option value="Bismuth Oxychloride Free">
-                  Bismuth Oxychloride Free
-                </option>
-                <option value="Butylene Glycol Free">
-                  Butylene Glycol Frees
-                </option>
-                <option value="Butylparaben Free">Butylparaben Frees</option>
-                <option value="Chemical Free">Chemical Free</option>
-              </select>
-            </ng-template>
-            <ng-container
-              *ngIf="
-                updateProductData.variations.material_type_free &&
-                  updateProductData.variations.material_type_free.length &&
-                  updateProductData.variations.material_type_free[0];
-                else materialType3
-              "
-            >
-              <select
-                class="form-select mb-1"
-                name="material_type_free3"
-                [(ngModel)]="updateProductData.variations.material_type_free[2]"
-              >
-                <option value="" selected>Material Type FREE 3</option>
-                <option value="Alcohol Free">Alcohol Free</option>
-                <option value="Aluminium Free">Aluminium Frees</option>
-                <option value="Bismuth Oxychloride Free">
-                  Bismuth Oxychloride Free
-                </option>
-                <option value="Butylene Glycol Free">
-                  Butylene Glycol Frees
-                </option>
-                <option value="Butylparaben Free">Butylparaben Frees</option>
-                <option value="Chemical Free">Chemical Free</option>
-              </select>
-            </ng-container>
-            <ng-template #materialType3>
-              <select
-                class="form-select mb-1"
-                name="material_type_free3"
-                ngModel
-              >
-                <option value="" selected>Material Type FREE 3</option>
-                <option value="Alcohol Free">Alcohol Free</option>
-                <option value="Aluminium Free">Aluminium Frees</option>
-                <option value="Bismuth Oxychloride Free">
-                  Bismuth Oxychloride Free
-                </option>
-                <option value="Butylene Glycol Free">
-                  Butylene Glycol Frees
-                </option>
-                <option value="Butylparaben Free">Butylparaben Frees</option>
-                <option value="Chemical Free">Chemical Free</option>
-              </select>
-            </ng-template>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Material Composition
-            </label>
-            <input
-              type="text"
-              name="material_composition"
-              [(ngModel)]="updateProductData.variations.material_composition"
-              class="form-control"
-              placeholder="Material Composition"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name"
-              >Is Waterproof
-            </label>
-            <select
-              class="form-select mb-1"
-              id="is_waterproof"
-              name="is_waterproof"
-              [(ngModel)]="updateProductData.variations.is_waterproof"
-            >
-              <option value="" selected>Is Waterproof</option>
-              <option value="true">true</option>
-              <option value="false">false</option>
-            </select>
-          </div>
-          <div class="mb-1">
-            <ng-container *ngIf="!updateProductData.category; else updatedata1">
-              <label class="form-label">Relationship Type 1</label>
-              <select
-                class="form-select mb-1"
-                name="relationship_type1"
-                ngModel
-              >
-                <option value="" selected>Select Relationship Type</option>
-                <option value="Accessory">Accessory</option>
-                <option value="Variation">Variations</option>
-              </select>
-              <select class="form-select mb-1" name="variation_theme1" ngModel>
-                <option value="" selected>Variation Theme 1</option>
-                <option value="PPU Count">PPU Count</option>
-                <option value="Model Number">Model Numbers</option>
-                <option value="Ring Size">Ring Sizes</option>
-                <option value="Size Per Pearl">Size Per Pearls</option>
-                <option value="Lens Addition Power">
-                  Lens Addition Powers
-                </option>
-              </select>
               <input
                 type="text"
-                name="variation_Value1"
-                class="form-control mb-1"
-                placeholder="Variation Value1"
-                ngModel
+                name="external_product_id"
+                [(ngModel)]="updateProductData.variations.external_product_id"
+                class="form-control"
+                placeholder="External Product Id"
               />
-            </ng-container>
-            <ng-template #updatedata1>
-              <ng-container
-                *ngIf="
-                  updateProductData.variations1 &&
-                  updateProductData.variations1.var_type &&
-                  updateProductData.variations.variation1 &&
-                  updateProductData.variations.variation1.var_title
+            </div>
+            <div class="col-6 mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >Product ID Type</label
+              >
+              <select
+                class="form-select mb-1"
+                id="external_product_id_type"
+                name="external_product_id_type"
+                [(ngModel)]="
+                  updateProductData.variations.external_product_id_type
                 "
               >
+                <option value="" selected>Product ID Type</option>
+                <option value="GTIN">GTIN</option>
+                <option value="EAN">EANs</option>
+                <option value="PZN">PZNs</option>
+                <option value="GCID">GCIDs</option>
+                <option value="ISBN">ISBNs</option>
+                <option value="UPC">UPCs</option>
+              </select>
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Manufacturer Part Number
+              </label>
+              <input
+                type="text"
+                name="part_number"
+                [(ngModel)]="updateProductData.variations.part_number"
+                class="form-control"
+                placeholder="Manufacturer Part Number"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Packer Details
+              </label>
+              <input
+                type="text"
+                name="packer_details"
+                [(ngModel)]="updateProductData.variations.packer_details"
+                class="form-control"
+                placeholder="Packer Details"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Importer Details
+              </label>
+              <input
+                type="text"
+                name="importer_details"
+                [(ngModel)]="updateProductData.variations.importer_details"
+                class="form-control"
+                placeholder="Importer Details"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Number of Boxes
+              </label>
+              <input
+                type="text"
+                name="number_of_boxes"
+                [(ngModel)]="updateProductData.variations.number_of_boxes"
+                class="form-control"
+                placeholder="Number of Boxes"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="country_of_origin">
+                Country Of Origin
+              </label>
+              <select
+                class="form-select mb-1"
+                id="country_of_origin"
+                name="country_of_origin"
+                [(ngModel)]="updateProductData.variations.country_of_origin"
+              >
+                <option value="" selected>Country Of Origin</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="United States">United States</option>
+                <option value="Afghanistan">Afghanistans</option>
+                <option value="Algeria">Algerias</option>
+                <option value="South Africa">South Africa</option>
+              </select>
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name"> HSN Code </label>
+              <input
+                type="text"
+                name="product_information"
+                [(ngModel)]="updateProductData.variations.product_information"
+                class="form-control"
+                placeholder="HSN Code"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="fulfillment_latency">
+                Handling Time
+              </label>
+              <select
+                class="form-select mb-1"
+                id="fulfillment_latency"
+                name="fulfillment_latency"
+                [(ngModel)]="updateProductData.variations.fulfillment_latency"
+              >
+                <option value="" selected>Select Handling Time</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Max Order Quantity
+              </label>
+              <input
+                type="text"
+                name="max_order_quantity"
+                [(ngModel)]="updateProductData.variations.max_order_quantity"
+                class="form-control"
+                placeholder="Max Order Quantity"
+              />
+            </div>
+            <ng-container
+              *ngIf="
+                updateProductData.variations &&
+                  updateProductData.variations.bullet_point &&
+                  updateProductData.variations.bullet_point.length;
+                else BulletPoints
+              "
+            >
+              <div class="mb-1">
+                <label class="form-label" for="basic-addon-name"
+                  >Bullet Point
+                </label>
+                <input
+                  type="text"
+                  name="bullet_point1"
+                  [(ngModel)]="updateProductData.variations.bullet_point[0]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 1"
+                />
+                <input
+                  type="text"
+                  name="bullet_point2"
+                  [(ngModel)]="updateProductData.variations.bullet_point[1]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 2"
+                />
+                <input
+                  type="text"
+                  name="bullet_point3"
+                  [(ngModel)]="updateProductData.variations.bullet_point[2]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 3"
+                />
+                <input
+                  type="text"
+                  name="bullet_point4"
+                  [(ngModel)]="updateProductData.variations.bullet_point[3]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 4"
+                />
+                <input
+                  type="text"
+                  name="bullet_point5"
+                  [(ngModel)]="updateProductData.variations.bullet_point[4]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 5"
+                />
+                <input
+                  type="text"
+                  name="bullet_point6"
+                  [(ngModel)]="updateProductData.variations.bullet_point[5]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 6"
+                />
+                <input
+                  type="text"
+                  name="bullet_point7"
+                  [(ngModel)]="updateProductData.variations.bullet_point[6]"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 7"
+                />
+              </div>
+            </ng-container>
+            <ng-template #BulletPoints>
+              <div class="mb-1">
+                <label class="form-label" for="basic-addon-name"
+                  >Bullet Point
+                </label>
+                <input
+                  type="text"
+                  name="bullet_point1"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 1"
+                />
+                <input
+                  type="text"
+                  name="bullet_point2"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 2"
+                />
+                <input
+                  type="text"
+                  name="bullet_point3"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 3"
+                />
+                <input
+                  type="text"
+                  name="bullet_point4"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 4"
+                />
+                <input
+                  type="text"
+                  name="bullet_point5"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 5"
+                />
+                <input
+                  type="text"
+                  name="bullet_point6"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 6"
+                />
+                <input
+                  type="text"
+                  name="bullet_point7"
+                  class="form-control mb-1"
+                  placeholder="Bullet Point 7"
+                />
+              </div>
+            </ng-template>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >Maximum Shelf Life
+              </label>
+              <input
+                type="text"
+                name="max_shelf_life"
+                [(ngModel)]="updateProductData.variations.max_shelf_life"
+                class="form-control"
+                placeholder="Maximum Shelf Life"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Safety Information
+              </label>
+              <input
+                type="text"
+                name="safety_information"
+                [(ngModel)]="updateProductData.variations.safety_information"
+                class="form-control"
+                placeholder="Safety Information"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">Indications</label>
+              <input
+                type="text"
+                name="indications"
+                [(ngModel)]="updateProductData.variations.indications"
+                class="form-control"
+                placeholder="Indications"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">Directions </label>
+              <input
+                type="text"
+                name="directions"
+                [(ngModel)]="updateProductData.variations.directions"
+                class="form-control"
+                placeholder="Directions"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >Legal Disclaimer
+              </label>
+              <input
+                type="text"
+                name="legal_disclaimer"
+                [(ngModel)]="updateProductData.variations.legal_disclaimer"
+                class="form-control"
+                placeholder="Legal Disclaimer"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="material_type_free1"
+                >Material Type FREE
+              </label>
+              <ng-container
+                *ngIf="
+                  updateProductData.variations.material_type_free &&
+                    updateProductData.variations.material_type_free.length &&
+                    updateProductData.variations.material_type_free[0];
+                  else materialType1
+                "
+              >
+                <select
+                  class="form-select mb-1"
+                  name="material_type_free1"
+                  [(ngModel)]="updateProductData.variations.material_type_free[0]"
+                >
+                  <option value="" selected>Material Type FREE 1</option>
+                  <option value="Alcohol Free">Alcohol Free</option>
+                  <option value="Aluminium Free">Aluminium Frees</option>
+                  <option value="Bismuth Oxychloride Free">
+                    Bismuth Oxychloride Free
+                  </option>
+                  <option value="Butylene Glycol Free">
+                    Butylene Glycol Frees
+                  </option>
+                  <option value="Butylparaben Free">Butylparaben Frees</option>
+                  <option value="Chemical Free">Chemical Free</option>
+                </select>
+              </ng-container>
+              <ng-template #materialType1>
+                <select
+                  class="form-select mb-1"
+                  name="material_type_free1"
+                  ngModel
+                >
+                  <option value="" selected>Material Type FREE 1</option>
+                  <option value="Alcohol Free">Alcohol Free</option>
+                  <option value="Aluminium Free">Aluminium Frees</option>
+                  <option value="Bismuth Oxychloride Free">
+                    Bismuth Oxychloride Free
+                  </option>
+                  <option value="Butylene Glycol Free">
+                    Butylene Glycol Frees
+                  </option>
+                  <option value="Butylparaben Free">Butylparaben Frees</option>
+                  <option value="Chemical Free">Chemical Free</option>
+                </select>
+              </ng-template>
+              <ng-container
+                *ngIf="
+                  updateProductData.variations.material_type_free &&
+                    updateProductData.variations.material_type_free.length &&
+                    updateProductData.variations.material_type_free[0];
+                  else materialType2
+                "
+              >
+                <select
+                  class="form-select mb-1"
+                  name="material_type_free2"
+                  [(ngModel)]="updateProductData.variations.material_type_free[1]"
+                >
+                  <option value="" selected>Material Type FREE 2</option>
+                  <option value="Alcohol Free">Alcohol Free</option>
+                  <option value="Aluminium Free">Aluminium Frees</option>
+                  <option value="Bismuth Oxychloride Free">
+                    Bismuth Oxychloride Free
+                  </option>
+                  <option value="Butylene Glycol Free">
+                    Butylene Glycol Frees
+                  </option>
+                  <option value="Butylparaben Free">Butylparaben Frees</option>
+                  <option value="Chemical Free">Chemical Free</option>
+                </select>
+              </ng-container>
+              <ng-template #materialType2>
+                <select
+                  class="form-select mb-1"
+                  name="material_type_free2"
+                  ngModel
+                >
+                  <option value="" selected>Material Type FREE 2</option>
+                  <option value="Alcohol Free">Alcohol Free</option>
+                  <option value="Aluminium Free">Aluminium Frees</option>
+                  <option value="Bismuth Oxychloride Free">
+                    Bismuth Oxychloride Free
+                  </option>
+                  <option value="Butylene Glycol Free">
+                    Butylene Glycol Frees
+                  </option>
+                  <option value="Butylparaben Free">Butylparaben Frees</option>
+                  <option value="Chemical Free">Chemical Free</option>
+                </select>
+              </ng-template>
+              <ng-container
+                *ngIf="
+                  updateProductData.variations.material_type_free &&
+                    updateProductData.variations.material_type_free.length &&
+                    updateProductData.variations.material_type_free[0];
+                  else materialType3
+                "
+              >
+                <select
+                  class="form-select mb-1"
+                  name="material_type_free3"
+                  [(ngModel)]="updateProductData.variations.material_type_free[2]"
+                >
+                  <option value="" selected>Material Type FREE 3</option>
+                  <option value="Alcohol Free">Alcohol Free</option>
+                  <option value="Aluminium Free">Aluminium Frees</option>
+                  <option value="Bismuth Oxychloride Free">
+                    Bismuth Oxychloride Free
+                  </option>
+                  <option value="Butylene Glycol Free">
+                    Butylene Glycol Frees
+                  </option>
+                  <option value="Butylparaben Free">Butylparaben Frees</option>
+                  <option value="Chemical Free">Chemical Free</option>
+                </select>
+              </ng-container>
+              <ng-template #materialType3>
+                <select
+                  class="form-select mb-1"
+                  name="material_type_free3"
+                  ngModel
+                >
+                  <option value="" selected>Material Type FREE 3</option>
+                  <option value="Alcohol Free">Alcohol Free</option>
+                  <option value="Aluminium Free">Aluminium Frees</option>
+                  <option value="Bismuth Oxychloride Free">
+                    Bismuth Oxychloride Free
+                  </option>
+                  <option value="Butylene Glycol Free">
+                    Butylene Glycol Frees
+                  </option>
+                  <option value="Butylparaben Free">Butylparaben Frees</option>
+                  <option value="Chemical Free">Chemical Free</option>
+                </select>
+              </ng-template>
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Material Composition
+              </label>
+              <input
+                type="text"
+                name="material_composition"
+                [(ngModel)]="updateProductData.variations.material_composition"
+                class="form-control"
+                placeholder="Material Composition"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name"
+                >Is Waterproof
+              </label>
+              <select
+                class="form-select mb-1"
+                id="is_waterproof"
+                name="is_waterproof"
+                [(ngModel)]="updateProductData.variations.is_waterproof"
+              >
+                <option value="" selected>Is Waterproof</option>
+                <option value="true">true</option>
+                <option value="false">false</option>
+              </select>
+            </div>
+            <div class="mb-1">
+              <ng-container *ngIf="!updateProductData.category; else updatedata1">
                 <label class="form-label">Relationship Type 1</label>
-                <br />
-                <b>
-                  Relationship Type 1:-
-                  {{ updateProductData.variations1.var_type }}
-                </b>
-                <br />
-                <b>
-                  Variation Theme 1 :-
-                  {{ updateProductData.variations.variation1.var_title }}
-                </b>
                 <select
                   class="form-select mb-1"
                   name="relationship_type1"
-                  [(ngModel)]="updateProductData.variations1.var_type"
-                  hidden
+                  ngModel
                 >
                   <option value="" selected>Select Relationship Type</option>
                   <option value="Accessory">Accessory</option>
                   <option value="Variation">Variations</option>
                 </select>
-                <select
-                  class="form-select mb-1"
-                  name="variation_theme1"
-                  [(ngModel)]="
-                    updateProductData.variations.variation1.var_title
-                  "
-                  hidden
-                >
+                <select class="form-select mb-1" name="variation_theme1" ngModel>
                   <option value="" selected>Variation Theme 1</option>
                   <option value="PPU Count">PPU Count</option>
                   <option value="Model Number">Model Numbers</option>
@@ -777,101 +723,101 @@
                     Lens Addition Powers
                   </option>
                 </select>
+                <input
+                  type="text"
+                  name="variation_Value1"
+                  class="form-control mb-1"
+                  placeholder="Variation Value1"
+                  ngModel
+                />
+              </ng-container>
+              <ng-template #updatedata1>
                 <ng-container
                   *ngIf="
+                    updateProductData.variations1 &&
+                    updateProductData.variations1.var_type &&
                     updateProductData.variations.variation1 &&
-                      updateProductData.variations.variation1.value;
-                    else emptyInputvalue
+                    updateProductData.variations.variation1.var_title
                   "
                 >
-                  <input
-                    type="text"
-                    name="variation_Value1"
-                    [(ngModel)]="updateProductData.variations.variation1.value"
-                    class="form-control mb-1"
-                    placeholder="Variation Value1"
-                  />
+                  <label class="form-label">Relationship Type 1</label>
+                  <br />
+                  <b>
+                    Relationship Type 1:-
+                    {{ updateProductData.variations1.var_type }}
+                  </b>
+                  <br />
+                  <b>
+                    Variation Theme 1 :-
+                    {{ updateProductData.variations.variation1.var_title }}
+                  </b>
+                  <select
+                    class="form-select mb-1"
+                    name="relationship_type1"
+                    [(ngModel)]="updateProductData.variations1.var_type"
+                    hidden
+                  >
+                    <option value="" selected>Select Relationship Type</option>
+                    <option value="Accessory">Accessory</option>
+                    <option value="Variation">Variations</option>
+                  </select>
+                  <select
+                    class="form-select mb-1"
+                    name="variation_theme1"
+                    [(ngModel)]="
+                      updateProductData.variations.variation1.var_title
+                    "
+                    hidden
+                  >
+                    <option value="" selected>Variation Theme 1</option>
+                    <option value="PPU Count">PPU Count</option>
+                    <option value="Model Number">Model Numbers</option>
+                    <option value="Ring Size">Ring Sizes</option>
+                    <option value="Size Per Pearl">Size Per Pearls</option>
+                    <option value="Lens Addition Power">
+                      Lens Addition Powers
+                    </option>
+                  </select>
+                  <ng-container
+                    *ngIf="
+                      updateProductData.variations.variation1 &&
+                        updateProductData.variations.variation1.value;
+                      else emptyInputvalue
+                    "
+                  >
+                    <input
+                      type="text"
+                      name="variation_Value1"
+                      [(ngModel)]="updateProductData.variations.variation1.value"
+                      class="form-control mb-1"
+                      placeholder="Variation Value1"
+                    />
+                  </ng-container>
+                  <ng-template #emptyInputvalue>
+                    <input
+                      type="text"
+                      name="variation_Value1"
+                      class="form-control mb-1"
+                      placeholder="Variation Value1"
+                      ngModel
+                    />
+                  </ng-template>
                 </ng-container>
-                <ng-template #emptyInputvalue>
-                  <input
-                    type="text"
-                    name="variation_Value1"
-                    class="form-control mb-1"
-                    placeholder="Variation Value1"
-                    ngModel
-                  />
-                </ng-template>
-              </ng-container>
-            </ng-template>
-          </div>
-          <div class="mb-1">
-            <ng-container *ngIf="!updateProductData.category; else updatedata2">
-              <label class="form-label">Relationship Type 2</label>
-              <select
-                class="form-select mb-1"
-                name="relationship_type2"
-                ngModel
-              >
-                <option value="" selected>Select Relationship Type</option>
-                <option value="Accessory">Accessory</option>
-                <option value="Variation">Variations</option>
-              </select>
-              <select class="form-select mb-1" name="variation_theme2" ngModel>
-                <option value="" selected>Variation Theme 2</option>
-                <option value="PPU Count">PPU Count</option>
-                <option value="Model Number">Model Numbers</option>
-                <option value="Ring Size">Ring Sizes</option>
-                <option value="Size Per Pearl">Size Per Pearls</option>
-                <option value="Lens Addition Power">
-                  Lens Addition Powers
-                </option>
-              </select>
-              <input
-                type="text"
-                name="variation_Value2"
-                class="form-control mb-1"
-                ngModel
-                placeholder="Variation Value 2"
-              />
-            </ng-container>
-            <ng-template #updatedata2>
-              <ng-container
-                *ngIf="
-                  updateProductData.variations2 &&
-                  updateProductData.variations2.var_type &&
-                  updateProductData.variations.variation2 &&
-                  updateProductData.variations.variation2.var_title
-                "
-              >
+              </ng-template>
+            </div>
+            <div class="mb-1">
+              <ng-container *ngIf="!updateProductData.category; else updatedata2">
                 <label class="form-label">Relationship Type 2</label>
-                <br />
-                <b>
-                  Relationship Type 2:-
-                  {{ updateProductData.variations2.var_type }}
-                </b>
-                <br />
-                <b>
-                  Variation Theme 2 :-
-                  {{ updateProductData.variations.variation2.var_title }}
-                </b>
                 <select
                   class="form-select mb-1"
                   name="relationship_type2"
-                  [(ngModel)]="updateProductData.variations2.var_type"
-                  hidden
+                  ngModel
                 >
                   <option value="" selected>Select Relationship Type</option>
                   <option value="Accessory">Accessory</option>
                   <option value="Variation">Variations</option>
                 </select>
-                <select
-                  class="form-select mb-1"
-                  name="variation_theme2"
-                  [(ngModel)]="
-                    updateProductData.variations.variation2.var_title
-                  "
-                  hidden
-                >
+                <select class="form-select mb-1" name="variation_theme2" ngModel>
                   <option value="" selected>Variation Theme 2</option>
                   <option value="PPU Count">PPU Count</option>
                   <option value="Model Number">Model Numbers</option>
@@ -881,460 +827,516 @@
                     Lens Addition Powers
                   </option>
                 </select>
+                <input
+                  type="text"
+                  name="variation_Value2"
+                  class="form-control mb-1"
+                  ngModel
+                  placeholder="Variation Value 2"
+                />
+              </ng-container>
+              <ng-template #updatedata2>
                 <ng-container
                   *ngIf="
-                    updateProductData.variations.variations2 &&
-                      updateProductData.variations.variation2.value;
-                    else emptyInputvalue
+                    updateProductData.variations2 &&
+                    updateProductData.variations2.var_type &&
+                    updateProductData.variations.variation2 &&
+                    updateProductData.variations.variation2.var_title
                   "
                 >
-                  <input
-                    type="text"
-                    name="variation_Value2"
-                    [(ngModel)]="updateProductData.variations.variation2.value"
-                    class="form-control mb-1"
-                    placeholder="Variation Value 2"
-                  />
+                  <label class="form-label">Relationship Type 2</label>
+                  <br />
+                  <b>
+                    Relationship Type 2:-
+                    {{ updateProductData.variations2.var_type }}
+                  </b>
+                  <br />
+                  <b>
+                    Variation Theme 2 :-
+                    {{ updateProductData.variations.variation2.var_title }}
+                  </b>
+                  <select
+                    class="form-select mb-1"
+                    name="relationship_type2"
+                    [(ngModel)]="updateProductData.variations2.var_type"
+                    hidden
+                  >
+                    <option value="" selected>Select Relationship Type</option>
+                    <option value="Accessory">Accessory</option>
+                    <option value="Variation">Variations</option>
+                  </select>
+                  <select
+                    class="form-select mb-1"
+                    name="variation_theme2"
+                    [(ngModel)]="
+                      updateProductData.variations.variation2.var_title
+                    "
+                    hidden
+                  >
+                    <option value="" selected>Variation Theme 2</option>
+                    <option value="PPU Count">PPU Count</option>
+                    <option value="Model Number">Model Numbers</option>
+                    <option value="Ring Size">Ring Sizes</option>
+                    <option value="Size Per Pearl">Size Per Pearls</option>
+                    <option value="Lens Addition Power">
+                      Lens Addition Powers
+                    </option>
+                  </select>
+                  <ng-container
+                    *ngIf="
+                      updateProductData.variations.variations2 &&
+                        updateProductData.variations.variation2.value;
+                      else emptyInputvalue
+                    "
+                  >
+                    <input
+                      type="text"
+                      name="variation_Value2"
+                      [(ngModel)]="updateProductData.variations.variation2.value"
+                      class="form-control mb-1"
+                      placeholder="Variation Value 2"
+                    />
+                  </ng-container>
+                  <ng-template #emptyInputvalue>
+                    <input
+                      type="text"
+                      name="variation_Value2"
+                      ngModel
+                      class="form-control mb-1"
+                      placeholder="Variation Value2"
+                    />
+                  </ng-template>
                 </ng-container>
-                <ng-template #emptyInputvalue>
-                  <input
-                    type="text"
-                    name="variation_Value2"
-                    ngModel
-                    class="form-control mb-1"
-                    placeholder="Variation Value2"
-                  />
-                </ng-template>
-              </ng-container>
-            </ng-template>
-          </div>
-          <div class="mb-2">
-            <div class="form-label">
-              <label class="form-label" for="basic-addon-name"
-                >Product Banner</label
-              >
+              </ng-template>
             </div>
-            <input
-              type="file"
-              #b_image
-              name="banner"
-              class="dropzone dropzone-area"
-              (change)="bannerImage($event)"
-            />
-          </div>
-          <div class="mb-2">
-            <div class="form-label">
+            <div class="mb-2">
+              <div class="form-label">
+                <label class="form-label" for="basic-addon-name"
+                  >Product Banner</label
+                >
+              </div>
+              <input
+                type="file"
+                #b_image
+                name="banner"
+                class="dropzone dropzone-area"
+                (change)="bannerImage($event)"
+              />
+            </div>
+            <div class="mb-2">
+              <div class="form-label">
+                <label class="form-label" for="basic-addon-name">
+                  Product Images
+                </label>
+              </div>
+              <input
+                type="file"
+                #p_image
+                name="images"
+                class="dropzone dropzone-area"
+                multiple
+                (change)="productImg($event)"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">Colour</label>
+              <input
+                type="text"
+                name="Colour"
+                [(ngModel)]="updateProductData.variations.Colour"
+                class="form-control"
+                placeholder="Colour"
+              />
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In India</label
+                >
+                <input
+                  type="text"
+                  name="price_in_india"
+                  [(ngModel)]="updateProductData.variations.price.price_in_india"
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In India</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_india"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_india
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In United Kingdom</label
+                >
+                <input
+                  type="text"
+                  name="price_in_unitedkingdom"
+                  [(ngModel)]="
+                    updateProductData.variations.price.price_in_unitedkingdom
+                  "
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In United Kingdom</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_unitedkingdom"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_unitedkingdom
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In France</label
+                >
+                <input
+                  type="text"
+                  name="price_in_france"
+                  [(ngModel)]="updateProductData.variations.price.price_in_france"
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In France</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_france"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_france
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In Germany</label
+                >
+                <input
+                  type="text"
+                  name="price_in_germany"
+                  [(ngModel)]="
+                    updateProductData.variations.price.price_in_germany
+                  "
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In Germany</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_germany"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_germany
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In Netherland</label
+                >
+                <input
+                  type="text"
+                  name="price_in_netherland"
+                  [(ngModel)]="
+                    updateProductData.variations.price.price_in_netherland
+                  "
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In Netherland</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_netherland"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_netherland
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In Switzerland</label
+                >
+                <input
+                  type="text"
+                  name="price_in_switzerland"
+                  [(ngModel)]="
+                    updateProductData.variations.price.price_in_switzerland
+                  "
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In Switzerland</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_switzerland"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_switzerland
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In Italy</label
+                >
+                <input
+                  type="text"
+                  name="price_in_italy"
+                  [(ngModel)]="updateProductData.variations.price.price_in_italy"
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In Italy</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_italy"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_italy
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Price In Canada</label
+                >
+                <input
+                  type="text"
+                  name="price_in_canada"
+                  [(ngModel)]="updateProductData.variations.price.price_in_canada"
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In Canada</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_canada"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_canada
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1 priceBox">
+              <div>
+                <label class="form-label" for="basic-addon-name">
+                  Price In United State
+                </label>
+                {{ updateProductData.variations.price.price_in_unitedstate }}
+                <input
+                  type="text"
+                  name="price_in_unitedstate"
+                  [(ngModel)]="
+                    updateProductData.variations.price.price_in_unitedstate
+                  "
+                  class="form-control"
+                  placeholder="Price"
+                />
+              </div>
+              <div>
+                <label class="form-label" for="basic-addon-name"
+                  >Selling Price In United State</label
+                >
+                <input
+                  type="text"
+                  name="selling_price_in_unitedstate"
+                  [(ngModel)]="
+                    updateProductData.variations.sellingPrice
+                      .selling_price_in_unitedstate
+                  "
+                  class="form-control"
+                  placeholder="Selling Price"
+                />
+              </div>
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">Sku</label>
+              <input
+                type="text"
+                name="sku"
+                [(ngModel)]="updateProductData.variations.sku"
+                class="form-control"
+                placeholder="Enter Sku"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">Quantity</label>
+              <input
+                type="text"
+                name="quantity"
+                [(ngModel)]="updateProductData.variations.quantity"
+                class="form-control"
+                placeholder="Quantity"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">Description</label>
+              <textarea
+                name="description"
+                class="form-control"
+                id=""
+                cols="30"
+                rows="4"
+                placeholder="Description"
+                name="description"
+                [(ngModel)]="updateProductData.variations.description"
+              ></textarea>
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="selectDefault">Stocks Status</label>
+              <select
+                class="form-select"
+                id="selectDefault"
+                name="status"
+                [(ngModel)]="updateProductData.variations.status"
+              >
+                <option selected>Select Stocks Status</option>
+                <option value="In stock">In Stocks</option>
+                <option value="Out of stock">Out of Stocks</option>
+              </select>
+            </div>
+            <div class="mb-1">
               <label class="form-label" for="basic-addon-name">
-                Product Images
+                Item Length(In CM)
               </label>
-            </div>
-            <input
-              type="file"
-              #p_image
-              name="images"
-              class="dropzone dropzone-area"
-              multiple
-              (change)="productImg($event)"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Colour</label>
-            <input
-              type="text"
-              name="Colour"
-              [(ngModel)]="updateProductData.variations.Colour"
-              class="form-control"
-              placeholder="Colour"
-            />
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In India</label
-              >
               <input
                 type="text"
-                name="price_in_india"
-                [(ngModel)]="updateProductData.variations.price.price_in_india"
+                name="item_length"
+                [(ngModel)]="updateProductData.variations.dimensions.item_length"
                 class="form-control"
-                placeholder="Price"
+                placeholder="Item Length"
               />
             </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In India</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_india"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_india
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In United Kingdom</label
-              >
-              <input
-                type="text"
-                name="price_in_unitedkingdom"
-                [(ngModel)]="
-                  updateProductData.variations.price.price_in_unitedkingdom
-                "
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In United Kingdom</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_unitedkingdom"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_unitedkingdom
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In France</label
-              >
-              <input
-                type="text"
-                name="price_in_france"
-                [(ngModel)]="updateProductData.variations.price.price_in_france"
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In France</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_france"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_france
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In Germany</label
-              >
-              <input
-                type="text"
-                name="price_in_germany"
-                [(ngModel)]="
-                  updateProductData.variations.price.price_in_germany
-                "
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In Germany</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_germany"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_germany
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In Netherland</label
-              >
-              <input
-                type="text"
-                name="price_in_netherland"
-                [(ngModel)]="
-                  updateProductData.variations.price.price_in_netherland
-                "
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In Netherland</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_netherland"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_netherland
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In Switzerland</label
-              >
-              <input
-                type="text"
-                name="price_in_switzerland"
-                [(ngModel)]="
-                  updateProductData.variations.price.price_in_switzerland
-                "
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In Switzerland</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_switzerland"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_switzerland
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In Italy</label
-              >
-              <input
-                type="text"
-                name="price_in_italy"
-                [(ngModel)]="updateProductData.variations.price.price_in_italy"
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In Italy</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_italy"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_italy
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Price In Canada</label
-              >
-              <input
-                type="text"
-                name="price_in_canada"
-                [(ngModel)]="updateProductData.variations.price.price_in_canada"
-                class="form-control"
-                placeholder="Price"
-              />
-            </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In Canada</label
-              >
-              <input
-                type="text"
-                name="selling_price_in_canada"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_canada
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
-            </div>
-          </div>
-          <div class="mb-1 priceBox">
-            <div>
+            <div class="mb-1">
               <label class="form-label" for="basic-addon-name">
-                Price In United State
+                Item Width(In CM)
               </label>
-              {{ updateProductData.variations.price.price_in_unitedstate }}
               <input
                 type="text"
-                name="price_in_unitedstate"
-                [(ngModel)]="
-                  updateProductData.variations.price.price_in_unitedstate
-                "
+                name="item_width"
+                [(ngModel)]="updateProductData.variations.dimensions.item_width"
                 class="form-control"
-                placeholder="Price"
+                placeholder="Item Width"
               />
             </div>
-            <div>
-              <label class="form-label" for="basic-addon-name"
-                >Selling Price In United State</label
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Item Height(In CM)
+              </label>
+              <input
+                type="text"
+                name="item_height"
+                [(ngModel)]="updateProductData.variations.dimensions.item_height"
+                class="form-control"
+                placeholder="Item Height"
+              />
+            </div>
+            <div class="mb-1">
+              <label class="form-label" for="basic-addon-name">
+                Item Weight(In Gram)
+              </label>
+              <input
+                type="text"
+                name="item_weight"
+                [(ngModel)]="updateProductData.variations.dimensions.item_weight"
+                class="form-control"
+                placeholder="Item Weight(In Gram)"
+              />
+            </div>
+            <div class="mb-1 text-center">
+              <input
+                type="submit"
+                class="btn btn-primary"
+                value=" Update Product"
+                *ngIf="updateProductData.category"
+              />
+              <input
+                type="submit"
+                class="btn btn-primary"
+                value=" Add Product"
+                *ngIf="!updateProductData.category"
+              />
+              <a
+                type="button"
+                class="btn btn-danger mx-2"
+                *ngIf="updateProductData.category"
+                [routerLink]="['/inventory/manage/inventory']"
               >
-              <input
-                type="text"
-                name="selling_price_in_unitedstate"
-                [(ngModel)]="
-                  updateProductData.variations.sellingPrice
-                    .selling_price_in_unitedstate
-                "
-                class="form-control"
-                placeholder="Selling Price"
-              />
+                <i class="fa fa-times" aria-hidden="true"></i>
+                Cancel
+              </a>
             </div>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Sku</label>
-            <input
-              type="text"
-              name="sku"
-              [(ngModel)]="updateProductData.variations.sku"
-              class="form-control"
-              placeholder="Enter Sku"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Quantity</label>
-            <input
-              type="text"
-              name="quantity"
-              [(ngModel)]="updateProductData.variations.quantity"
-              class="form-control"
-              placeholder="Quantity"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">Description</label>
-            <textarea
-              name="description"
-              class="form-control"
-              id=""
-              cols="30"
-              rows="4"
-              placeholder="Description"
-              name="description"
-              [(ngModel)]="updateProductData.variations.description"
-            ></textarea>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="selectDefault">Stocks Status</label>
-            <select
-              class="form-select"
-              id="selectDefault"
-              name="status"
-              [(ngModel)]="updateProductData.variations.status"
-            >
-              <option selected>Select Stocks Status</option>
-              <option value="In stock">In Stocks</option>
-              <option value="Out of stock">Out of Stocks</option>
-            </select>
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Item Length(In CM)
-            </label>
-            <input
-              type="text"
-              name="item_length"
-              [(ngModel)]="updateProductData.variations.dimensions.item_length"
-              class="form-control"
-              placeholder="Item Length"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Item Width(In CM)
-            </label>
-            <input
-              type="text"
-              name="item_width"
-              [(ngModel)]="updateProductData.variations.dimensions.item_width"
-              class="form-control"
-              placeholder="Item Width"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Item Height(In CM)
-            </label>
-            <input
-              type="text"
-              name="item_height"
-              [(ngModel)]="updateProductData.variations.dimensions.item_height"
-              class="form-control"
-              placeholder="Item Height"
-            />
-          </div>
-          <div class="mb-1">
-            <label class="form-label" for="basic-addon-name">
-              Item Weight(In Gram)
-            </label>
-            <input
-              type="text"
-              name="item_weight"
-              [(ngModel)]="updateProductData.variations.dimensions.item_weight"
-              class="form-control"
-              placeholder="Item Weight(In Gram)"
-            />
-          </div>
-          <div class="mb-1 text-center">
-            <input
-              type="submit"
-              class="btn btn-primary"
-              value=" Update Product"
-              *ngIf="updateProductData.category"
-            />
-            <input
-              type="submit"
-              class="btn btn-primary"
-              value=" Add Product"
-              *ngIf="!updateProductData.category"
-            />
-            <a
-              type="button"
-              class="btn btn-danger mx-2"
-              *ngIf="updateProductData.category"
-              [routerLink]="['/inventory/manage/inventory']"
-            >
-              <i class="fa fa-times" aria-hidden="true"></i>
-              Cancel
-            </a>
           </div>
         </form>
       </div>

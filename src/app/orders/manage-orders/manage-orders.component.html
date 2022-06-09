@@ -17,44 +17,104 @@
       </div>
     </div>
   </div>
-  <div class="row" id="table-responsive">
+  <div class="row align-items-center" id="table-responsive">
     <div class="col-12">
       <div class="card">
         <div class="d-md-flex justify-content-between align-items-center">
-          <div class="card-header col-md-8 col-12">
-            <h4 class="card-title">Orders</h4>
+          <div class="col-md-5 col-12">
+            <div class="p-1">
+              <span>Action : </span>
+                <input type="submit" class="btn btn-sm action_btn" value="Confirm Shipment">
+                <input type="submit" class="btn btn-sm action_btn" value="Print Packaging Slip">
+                <input type="submit" class="btn btn-sm action_btn" value="Cancel Order">
+            </div>
           </div>
-          <div class="col-sm-12 mx-md-2 mx-1 col-11 col-md-3">
-            <div class="input-group input-group-merge">
-              <span class="input-group-text" id="basic-addon-search2"
-                ><i class="fa fa-search" aria-hidden="true"></i>
-              </span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search..."
-                aria-label="Search..."
-                aria-describedby="basic-addon-search2"
-              />
+          <div class="col-sm-12 mx-1 col-11 col-md-6">
+            <div class="row justify-content-end">
+              <div class="col-3">
+                <select class="form-select form-select-sm search_range">
+                  <option selected>Date Range</option>
+                  <option value="">Last Day</option>
+                  <option value="">Last 7 Day</option>
+                  <option value="">Last 14 Day</option>
+                  <option value="">Last 30 Day</option>
+                  <option value="">Last 90 Day</option>
+                  <option value="">Last 180 Day</option>
+                  <option value="">Last 365 Day</option>
+                </select>
+              </div>
+              <div class="col-7 justify-items-end">
+                <div class="input-group input-group-merge">
+                  <span class="input-group-text" id="basic-addon-search2"
+                    >
+                    <select class="form-select form-select-sm search_select">
+                      <option selected>Order ID</option>
+                      <option value="">Buyer Email</option>
+                      <option value="">Listing ID</option>
+                      <option value="">SKU</option>
+                      <option value="">Product Name</option>
+                      <option value="">Tracking ID</option>
+                    </select>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm search_box"
+                    placeholder="Search..."
+                    aria-label="Search..."
+                    aria-describedby="basic-addon-search2"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="card-body">
+        <div class="card-body pt-0">
           <div class="table-responsive">
             <table class="table mb-0 ordersTable table-sm">
               <thead>
                 <tr>
+                  <th><input type="checkbox" name="" id=""></th>
                   <th scope="col" class="text-nowrap">Order Date</th>
                   <th scope="col" class="text-nowrap">Order Details</th>
                   <th scope="col" class="text-nowrap">Image</th>
                   <th scope="col" class="text-nowrap">Product name</th>
                   <th scope="col" class="text-nowrap">Status</th>
                   <th scope="col" class="text-nowrap">Courior Details</th>
+                  <th scope="col" class="text-nowrap">Action</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td><input type="checkbox" name="" id=""></td>
+                  <td>2022-06-06T10:58:52.612Z</td>
+                  <td>
+                    629dddec432e632c90dcf8fa
+                    Buyer name: test
+                    Payment Id: 629dddec432e632c90dcf8f8
+                  </td>
+                  <td>Image</td>
+                  <td>
+                    Maybelline New York Super Stay Matte Ink Liquid Lipstick, Matte Finish, 5g - 20 Pioneer SKU: May-20 Pioneer
+Quantity: 1
+Total: ₹ 549
+                  </td>
+                  <td>Pending</td>
+                  <td>
+                    Select Couriour: <br>
+                    Tracking Id: <br>
+                    <button class="btn btn-sm">Submit</button>
+                  </td>
+                  <td>
+                    <input type="submit" class="btn btn-sm action_btn" value="Confirm Shipment">
+                    <input type="submit" class="btn btn-sm action_btn" value="Print Packaging Slip">
+                    <input type="submit" class="btn btn-sm action_btn" value="Cancel Order">
+                  </td>
+                </tr>
                 <tr *ngFor="let order of ordersdata">
+                  <td>
+                    <input type="checkbox" name="" id="">
+                  </td>
                   <td>
                     {{ order.createdAt }}
                   </td>
@@ -68,7 +128,7 @@
                     <img src="{{order.currentProduct.banner}}" alt="" width="100">
                   </td>
                   <td>
-                    {{ order.currentProduct.title }}
+                    {{ order.currentProduct.title }}<br>
                     <b>SKU: </b>{{order.currentProduct.sku}} <br>
                     <b>Quantity: </b>{{ order.product.quantity }} <br>
                     <b>Total: </b>₹ {{ order.sellingAmount }}
