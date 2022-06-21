@@ -1,0 +1,15 @@
+
+.top_table_view{
+     border-collapse: separate;
+     border-spacing: 1em 0;
+}
+table tr td,
+table thead tr th{
+     text-align: center;
+}
+.table > :not(caption) > * > *{
+     padding: 7px !important;
+}
+table tr th{
+     font-size: 12px !important;
+}

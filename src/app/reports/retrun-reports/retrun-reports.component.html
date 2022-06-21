@@ -1,1 +1,75 @@
-<p>retrun-reports works!</p>
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+      <div class="row breadcrumbs-top">
+        <div class="col-12">
+          <h2 class="content-header-title float-start mb-0">Return Reports</h2>
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+
+              <li class="breadcrumb-item active">Return Reports</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-center" id="table-responsive">
+    <div class="col-12">
+      <div class="card p-2">
+          
+          <div class="border p-2">
+               <div class="row">
+                    <h3 class="fw-bold">Generate one-time report</h3>
+                    <div class="col-md-6 col-12 mb-1 d-flex align-items-center">
+                         <select class="form-select" aria-label="Default select example">
+                              <option selected>All Returns</option>
+                              <option value="1">Option 1</option>
+                              <option value="1">Option 2</option>
+                              <option value="1">Option 3</option>
+                         </select>
+                         <span class="mx-1">For</span>
+                         <select class="form-select" aria-label="Default select example">
+                              <option selected>Last Day</option>
+                              <option value="1">Last 7 Days</option>
+                              <option value="1">Last 30 Days</option>
+                              <option value="1">Exact Dates</option>
+                         </select>
+                         <button class="btn btn-primary ms-1" type="button">Request</button>
+                    </div>
+               </div>
+               
+          </div>
+
+          <div class="card mt-1">
+               <div class="card-header p-1 bg-light d-flex justify-content-between">
+                    <h3 class="m-0 fw-bold">Generated Reports</h3>
+                    <button class="btn btn-primary btn-sm">Refresh</button>
+               </div>
+               <div class="card-body p-1">
+                    <table class="table">
+                         <thead>
+                              <tr>
+                                   <th scope="col">Type</th>
+                                   <th scope="col">Date Range Covered</th>
+                                   <th scope="col">Request on</th>
+                                   <th scope="col">XML</th>
+                                   <th scope="col">TSV</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   
+                              </tr>
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>

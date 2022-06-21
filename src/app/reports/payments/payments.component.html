@@ -1,1 +1,302 @@
-<p>payments works!</p>
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+      <div class="row breadcrumbs-top">
+        <div class="col-12">
+          <h2 class="content-header-title float-start mb-0">Reports</h2>
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+
+              <li class="breadcrumb-item active">Payments</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-center" id="table-responsive">
+    <div class="col-12">
+      <div class="card p-2">
+          <nav>
+               <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#statement" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Statement View</button>
+                 <button class="nav-link " id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#transaction" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Transaction View</button>
+                 <button class="nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">All Statements</button>
+               </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+               <div class="tab-pane fade show active" id="statement" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="p-1 mb-2 bg-light table-responsive">
+                         <table class="table top_table_view">
+                              <thead>
+                                   <tr>
+                                        <th class="bg-transparent"></th>
+                                        <th class="bg-white" scope="col">Total Balance</th>
+                                        <th class="bg-white" scope="col">
+                                             Funds Available :
+                                             <select class="form-select form-select-sm w-50 d-inline-block">
+                                                  <option selected>Now</option>
+                                                  <option value="1">One</option>
+                                                  <option value="2">Two</option>
+                                                  <option value="3">Three</option>
+                                             </select> 
+                                        </th>
+                                        <th class="bg-white" scope="col">Recent Payouts</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                        <th scope="row">Electronic Transactions(Credit Card/Net Banking/GC)</th>
+                                        <td class="bg-white mr-3">&#8377;0.00</td>
+                                        <td class="bg-white">&#8377;0.00<button class="ms-1 btn btn-sm btn-primary">Request Payment</button></td>
+                                        <td class="bg-white">No recent funds transfers.</td>
+                                   </tr>
+                                   <tr>
+                                        <th scope="row">COD Transactions and Non-Transactional Fes</th>
+                                        <td class="bg-white">&#8377;0.00</td>
+                                        <td class="bg-white">&#8377;0.00<button class="ms-1 btn btn-sm btn-primary">Repay Balance</button></td>
+                                        <td class="bg-white">No recent funds transfers.</td>
+                                   </tr>
+                                   <tr>
+                                        <th scope="row">All Accounts</th>
+                                        <td class="bg-white">&#8377;0.00</td>
+                                        <td class="bg-white">&#8377;0.00</td>
+                                        <td class="bg-white">No recent funds transfers.</td>
+                                   </tr>
+                              </tbody>
+                         </table>
+                    </div>
+                    <div class="border p-2">
+                         <div class="row">
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Account Type</label>
+                                   <select class="form-select" aria-label="Default select example">
+                                        <option selected>COD Transactions and Non-Transactional Fes</option>
+                                        <option value="1">Electronic Transactions(Credit Card/Net Banking/GC)</option>
+                                   </select>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Settlement Period</label>
+                                   <select class="form-select" aria-label="Default select example">
+                                        <option selected>01/03/2022 - Present(Open)</option>
+                                        <option value="1">03/12/2021 - 11/12/2021</option>
+                                        <option value="1">03/12/2021 - 11/12/2021</option>
+                                        <option value="1">03/12/2021 - 11/12/2021</option>
+                                        <option value="1">03/12/2021 - 11/12/2021</option>
+                                   </select>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Find a transaction</label>
+                                   <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Enter order number">
+                                        <button class="btn btn-primary" type="button">Search</button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-lg-4 col-md-6 col-12">
+                                   <div class="card text-center">
+                                        <div class="card-body">
+                                             <h5 class="card-title mb-0">Net Proceeds</h5>
+                                             <p class="card-text">11/3/2022 - Present</p>
+                                             <h5 class="card-title mb-0 text-primary">&#8377;3.75</h5>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                             <li class="list-group-item bg-light">
+                                                  <h3 class="mb-0">Opening Balance</h3>
+                                                  <p class="card-text text-primary">&#8377;3.75</p>
+                                             </li>
+                                             <li class="list-group-item bg-light">
+                                                  <h3 class="mb-0">Account Level Reserved</h3>
+                                                  <p class="card-text">&#8377;3.75</p>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="tab-pane fade " id="transaction" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <div class="border p-2">
+                         <div class="row">
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Account Type</label>
+                                   <select class="form-select" aria-label="Default select example">
+                                        <option selected>COD Transactions and Non-Transactional Fes</option>
+                                        <option value="1">Electronic Transactions(Credit Card/Net Banking/GC)</option>
+                                   </select>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Within</label>
+                                   <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                             id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                             Settlement Period
+                                        </label>
+                                   </div>
+                                   <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                             id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                             Past Number of Days
+                                        </label>
+                                   </div>
+                                   <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                             id="exampleRadios3" value="option3">
+                                        <label class="form-check-label" for="exampleRadios3">
+                                             Custom Date Range
+                                        </label>
+                                   </div>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Settlement Period</label>
+                                   <div class="input-group mb-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                             <option selected>01/03/2022 - Present(Open)</option>
+                                             <option value="1">03/12/2021 - 11/12/2021</option>
+                                             <option value="1">03/12/2021 - 11/12/2021</option>
+                                             <option value="1">03/12/2021 - 11/12/2021</option>
+                                             <option value="1">03/12/2021 - 11/12/2021</option>
+                                        </select>
+                                        <button class="btn btn-primary" type="button">Update</button>
+                                   </div>                                   
+                              </div>
+                         </div>
+
+                         <div class="display_data">
+                              <div class="d-md-flex justify-content-between align-items-center">
+                                   <div class="card-header ps-0 col-md-8 col-12">
+                                     <h4 class="card-title">Transactions</h4>
+                                   </div>
+                                   <div class="col-auto">
+                                     <button class="btn btn-primary">Download</button>
+                                   </div>
+                                 </div>
+                              <div class="table-responsive">
+                                   <table class="table">
+                                        <thead>
+                                             <tr>
+                                                  <th scope="col">Date</th>
+                                                  <th scope="col">Transaction Type</th>
+                                                  <th scope="col">Order ID</th>
+                                                  <th scope="col">Product Details</th>
+                                                  <th scope="col">Total Product Charges</th>
+                                                  <th scope="col">Just CliQ Fees</th>
+                                                  <th scope="col">Total</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <th scope="row">6/03/2022</th>
+                                                  <td>Cancellation</td>
+                                                  <td>40236-5698-6123</td>
+                                                  <td>@Order Cancelation Charge</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td class="text-danger">&#8377;0.00</td>
+                                                  <td class="text-success">&#8377;0.00</td>
+                                             </tr>
+                                             <tr>
+                                                  <th scope="row">6/03/2022</th>
+                                                  <td>Cancellation</td>
+                                                  <td>40236-5698-6123</td>
+                                                  <td>@Order Cancelation Charge</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td class="text-danger">&#8377;0.00</td>
+                                                  <td class="text-success">&#8377;0.00</td>
+                                             </tr>
+                                             <tr>
+                                                  <th scope="row">6/03/2022</th>
+                                                  <td>Cancellation</td>
+                                                  <td>40236-5698-6123</td>
+                                                  <td>@Order Cancelation Charge</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td class="text-danger">&#8377;0.00</td>
+                                                  <td class="text-success">&#8377;0.00</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                         
+                    </div>
+
+               </div>
+               <div class="tab-pane fade " id="all" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="border p-2">
+                         <div class="row">
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">Account Type</label>
+                                   <select class="form-select" aria-label="Default select example">
+                                        <option selected>COD Transactions and Non-Transactional Fes</option>
+                                        <option value="1">Electronic Transactions(Credit Card/Net Banking/GC)</option>
+                                   </select>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">From - To</label>
+                                   <div class="input-group">
+                                        <input type="date" aria-label="First name" class="form-control">
+                                        <input type="date" aria-label="Last name" class="form-control">
+                                        <button class="btn btn-primary" type="button">Search</button>
+                                   </div>                                   
+                              </div>
+                         </div>
+
+                         <div class="display_data">
+                              <div class="d-md-flex justify-content-between align-items-center">
+                                   <div class="card-header ps-0 col-md-8 col-12">
+                                     <h4 class="card-title">All Statements</h4>
+                                   </div>
+                                 </div>
+                              <div class="table-responsive">
+                                   <table class="table">
+                                        <thead>
+                                             <tr>
+                                                  <th scope="col">Statement Period</th>
+                                                  <th scope="col">Biginning Balance</th>
+                                                  <th scope="col">Sales</th>
+                                                  <th scope="col">Refunds</th>
+                                                  <th scope="col">Just CliQ Fees</th>
+                                                  <th scope="col">Payout Amount</th>
+                                                  <th scope="col">Download</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <td>6/03/2022</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>6/03/2022</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>&#8377;0.00</td>
+                                             </tr>
+                                            
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                         
+                    </div>
+               </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
