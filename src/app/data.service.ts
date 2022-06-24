@@ -21,8 +21,8 @@ export class DataService {
     private toastr: ToastrService
   ) {}
 
-  // currentLiveUrl = "https://api.admincliq.com"
-  currentLiveUrl = "http://localhost:5000";
+  currentLiveUrl = "https://api.admincliq.com"
+  // currentLiveUrl = "http://localhost:5000";
 
   liveUrl: string = `${this.currentLiveUrl}/api/v1`;
   addproduct_url = `${this.currentLiveUrl}/api/v1/seller/product/add`;
