@@ -1,0 +1,52 @@
+
+.top_table_view{
+     border-collapse: separate;
+     border-spacing: 1em 0;
+}
+table tr td,
+table thead tr th{
+     text-align: center;
+}
+.table > :not(caption) > * > *{
+     padding: 7px !important;
+}
+table tr th{
+     font-size: 12px !important;
+}
+
+.ordersTable tr th,
+.ordersTable tr td{
+    max-width: 200px;
+}
+
+.ordersTable tr .addressColumn{
+    min-width: 300px;
+}
+.action_btn{
+    background-color: #f3f2f7;
+    margin: 5px;
+}
+.search_range{
+    padding: 0.486rem 1rem;
+}
+.search_select{
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 110px !important;
+    z-index: 50;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 9px 8px;
+}
+.input-group-text{
+     border-right: none;
+}
+.input-group-merge .form-control:not(:first-child){
+    padding-left: 90px;
+    margin-left: 0 !important;
+}
+.search_box{
+    padding-left: 100px;
+}

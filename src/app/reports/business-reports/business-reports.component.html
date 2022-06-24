@@ -1,1 +1,384 @@
-<p>business-reports works!</p>
+<div class="content-overlay"></div>
+<div class="header-navbar-shadow"></div>
+<div class="content-wrapper p-0">
+  <div class="content-header row align-items-baseline">
+    <div class="content-header-left col-md-9 col-4 mb-2">
+      <div class="row breadcrumbs-top">
+        <div class="col-12">
+          <h2 class="content-header-title float-start mb-0">Reports</h2>
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+
+              <li class="breadcrumb-item active">Business Reports</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-center" id="table-responsive">
+    <div class="col-12">
+      <div class="card p-2">
+          <nav>
+               <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#dashboard" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sales Dashboard</button>
+                 <button class="nav-link " id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#sales_traffic" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sales and Traffic</button>
+                 <button class="nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#performance" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Seller Performance</button>
+                 <button class="nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#detail" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Detail Page Sales and Traffic</button>
+               </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+               <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="border p-2">
+                         <div class="row">
+                              <div class="col-lg-4 col-md-6 col-12 mb-1">
+                                   <label class="form-label">Date</label>
+                                   <select class="form-select" aria-label="Default select example">
+                                        <option selected>Today - 23/06/2022</option>
+                                        <option value="1">Custom</option>
+                                   </select>
+                              </div>
+                              <div class="col-lg-4 col-md-6 col-12 mb-1">
+                                   <label class="form-label">Custom</label>
+                                   <div class="input-group">
+                                        <input type="date" aria-label="First name" class="form-control">
+                                        <input type="date" aria-label="Last name" class="form-control">
+                                        <button class="btn btn-primary" type="button">Apply</button>
+                                   </div>                                   
+                              </div>
+                         </div>
+
+                         <div class="row justify-content-between">
+                              <div class="col-12">
+                                   <h2 class="my-1 d-inline-block">Sales Snapshot</h2>
+                                   <span class="ms-2 text-muted">Taken at 23/6/2022, 7:28:25 pm IST</span>
+                              </div>
+                              <div class="col-lg-auto col-md-6 col-12">
+                                   <div class="card">
+                                        <div class="card-body">
+                                             <h5 class="card-title mb-1">Total Order Items</h5>
+                                             <h5 class="card-title mb-0 text-primary">&#8377;0</h5>
+                                        </div>                                        
+                                   </div>
+                              </div>
+                              <div class="col-lg-auto col-md-6 col-12">
+                                   <div class="card">
+                                        <div class="card-body">
+                                             <h5 class="card-title mb-1">Unit Ordered</h5>
+                                             <h5 class="card-title mb-0 text-primary">&#8377;0</h5>
+                                        </div>                                        
+                                   </div>
+                              </div>
+                              <div class="col-lg-auto col-md-6 col-12">
+                                   <div class="card">
+                                        <div class="card-body">
+                                             <h5 class="card-title mb-1">Ordered Product Sales</h5>
+                                             <h5 class="card-title mb-0 text-primary">&#8377;&#8377;0.00</h5>
+                                        </div>                                        
+                                   </div>
+                              </div>
+                              <div class="col-lg-auto col-md-6 col-12">
+                                   <div class="card">
+                                        <div class="card-body">
+                                             <h5 class="card-title mb-1">Avg. units/order Item</h5>
+                                             <h5 class="card-title mb-0 text-primary">&#8377;0</h5>
+                                        </div>                                        
+                                   </div>
+                              </div>
+                              <div class="col-lg-auto col-md-6 col-12">
+                                   <div class="card">
+                                        <div class="card-body">
+                                             <h5 class="card-title mb-1">Avg. sales/order Item</h5>
+                                             <h5 class="card-title mb-0 text-primary">&#8377;&#8377;0.00</h5>
+                                        </div>                                        
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="display_data">
+                              <div class="d-md-flex justify-content-between align-items-center">
+                                   <div class="card-header ps-0 col-md-8 col-12">
+                                     <h4 class="card-title">Compare Sales</h4>
+                                   </div>
+                                 </div>
+                              <div class="table-responsive">
+                                   <table class="table">
+                                        <thead>
+                                             <tr>
+                                                  <th scope="col"></th>
+                                                  <th scope="col">Total Order Items</th>
+                                                  <th scope="col">Unit Ordered</th>
+                                                  <th scope="col">Ordered Product Sales</th>
+                                                  <th scope="col">Avg. Units/Order Item</th>
+                                                  <th scope="col">Avg. Sale/Order Item</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="tab-pane fade " id="sales_traffic" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <div class="border p-2">
+                         <div class="row">
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label d-block">View By</label>
+                                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="btnradio1">By Day</label>
+                                      
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio2">By Week</label>
+                                      
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio3">By Month</label>
+                                   </div>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label d-block">Zoom</label>
+                                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="zoom1">7D</label>
+                                      
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom2">1M</label>
+                                      
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom3" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom3">3M</label>
+
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom4" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom4">6M</label>
+
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom5" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom5">1Y</label>
+                                   </div>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">From - To</label>
+                                   <div class="input-group">
+                                        <input type="date" aria-label="First name" class="form-control">
+                                        <input type="date" aria-label="Last name" class="form-control">
+                                        <!-- <button class="btn btn-primary" type="button">Search</button> -->
+                                   </div>                                   
+                              </div>
+                         </div>
+
+                         <div class="display_data">
+                              <div class="d-md-flex justify-content-between align-items-center">
+                                   <div class="card-header ps-0 col-md-8 col-12">
+                                        <button class="btn btn-primary">Download(.csv)</button>
+                                   </div>
+                                 </div>
+                              <div class="table-responsive">
+                                   <table class="table">
+                                        <thead>
+                                             <tr>
+                                                  <th><input type="checkbox" name="" id=""></th>
+                                                  <th scope="col">Date</th>
+                                                  <th scope="col">Ordered Product Sales</th>
+                                                  <th scope="col">Units Ordered</th>
+                                                  <th scope="col">Total Order Item</th>
+                                                  <th scope="col">Avg. Sales Per Order Item</th>
+                                                  <th scope="col">Avg. Unit Per Order Item</th>
+                                                  <th scope="col">Avg. Selling Price</th>
+                                                  <th scope="col">Sessions - Total</th>
+                                                  <th scope="col">Order Item Session Percentage</th>
+                                                  <th scope="col">Page Views Total</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <td><input type="checkbox" name="" id=""></td>
+                                                  <th scope="row">6/03/2022</th>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>0</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>0</td>
+                                                  <td>0%</td>
+                                                  <td>0</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                         
+                    </div>
+
+               </div>
+               <div class="tab-pane fade " id="performance" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="border p-2">
+                         <div class="row">
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label d-block">View By</label>
+                                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="btnradio1">By Day</label>
+                                      
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio2">By Week</label>
+                                      
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio3">By Month</label>
+                                   </div>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label d-block">Zoom</label>
+                                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="zoom1">7D</label>
+                                      
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom2">1M</label>
+                                      
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom3" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom3">3M</label>
+
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom4" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom4">6M</label>
+
+                                        <input type="radio" class="btn-check" name="zoom" id="zoom5" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="zoom5">1Y</label>
+                                   </div>
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">From - To</label>
+                                   <div class="input-group">
+                                        <input type="date" aria-label="First name" class="form-control">
+                                        <input type="date" aria-label="Last name" class="form-control">
+                                        <!-- <button class="btn btn-primary" type="button">Search</button> -->
+                                   </div>                                   
+                              </div>
+                         </div>
+
+                         <div class="display_data">
+                              <div class="d-md-flex justify-content-between align-items-center">
+                                   <div class="card-header ps-0 col-md-8 col-12">
+                                        <button class="btn btn-primary">Download(.csv)</button>
+                                   </div>
+                                   <a href="" class="ms-1">View SKU Performance</a>
+                              </div>
+                              <div class="table-responsive">
+                                   <table class="table">
+                                        <thead>
+                                             <tr>
+                                                  <th><input type="checkbox" name="" id=""></th>
+                                                  <th scope="col">Date</th>
+                                                  <th scope="col">Ordered Product Sales</th>
+                                                  <th scope="col">Units Ordered</th>
+                                                  <th scope="col">Total Order Item</th>
+                                                  <th scope="col">Refund Rate</th>
+                                                  <th scope="col">Feedback Recieved!</th>
+                                                  <th scope="col">Negative Feedback Recieved!</th>
+                                                  <th scope="col">Recieved Negative Feedback Rate</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <td><input type="checkbox" name="" id=""></td>
+                                                  <th scope="row">6/03/2022</th>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>0</td>
+                                                  <td>&#8377;0.00</td>
+                                                  <td>0</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                         
+                    </div>
+               </div>
+               <div class="tab-pane fade " id="detail" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="border p-2">
+                         <div class="row align-items-end justify-content-between">                              
+                              <div class="col-md-4 col-12 mb-1">
+                                   <label class="form-label">From - To</label>
+                                   <div class="input-group">
+                                        <input type="date" aria-label="First name" class="form-control">
+                                        <input type="date" aria-label="Last name" class="form-control">
+                                        <button class="btn btn-primary" type="button">Search</button>
+                                   </div>                                   
+                              </div>
+                              <div class="col-md-4 col-12 mb-1">
+                                   <div class="input-group input-group-merge">
+                                        <span class="input-group-text"
+                                          >
+                                          <select class="form-select form-select-sm search_select">
+                                            <option selected>Product ID</option>
+                                            <option value="">SKU</option>
+                                          </select>
+                                        </span>
+                                        <input
+                                          type="text"
+                                          class="form-control search_box"
+                                          placeholder="Search..."
+                                          aria-label="Search..."
+                                          aria-describedby="basic-addon-search2"
+                                        />
+                                      </div>                                  
+                              </div>
+                         </div>
+
+                         <div class="display_data">
+                              <div class="d-md-flex justify-content-between align-items-center">
+                                   <div class="card-header ps-0 col-md-8 col-12">
+                                        <button class="btn btn-primary">Download(.csv)</button>
+                                   </div>
+                              </div>
+                              <div class="table-responsive">
+                                   <table class="table">
+                                        <thead>
+                                             <tr>
+                                                  <th><input type="checkbox" name="" id=""></th>
+                                                  <th scope="col">(Parent)ASIN</th>
+                                                  <th scope="col">Title</th>
+                                                  <th scope="col">SKU</th>
+                                                  <th scope="col">Sessions Total</th>
+                                                  <th scope="col">Sessions Percentage Total</th>
+                                                  <th scope="col">Page View Total</th>
+                                                  <th scope="col">Units Ordered</th>
+                                                  <th scope="col">Unit Session Percentage</th>
+                                                  <th scope="col">Ordered Product Sales</th>
+                                                  <th scope="col">Total Order Items</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <td><input type="checkbox" name="" id=""></td>
+                                                  <td>B036456</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                                  <td>0</td>
+                                             </tr>
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                         
+                    </div>
+               </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
