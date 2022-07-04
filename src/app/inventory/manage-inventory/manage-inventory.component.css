@@ -27,3 +27,7 @@
 .manage_inventory{
     font-size: 12px;
 }
+
+.inventoryTable{
+    overflow-y: hidden;
+}

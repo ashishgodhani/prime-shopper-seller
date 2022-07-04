@@ -32,7 +32,8 @@ export class DataService {
   orders_url = `${this.currentLiveUrl}/api/v1/seller/orders`;
   updateOrder_url = `${this.currentLiveUrl}/api/v1/seller/order/update`;
   couriers_url = `${this.currentLiveUrl}/api/v1/seller/couriers`;
-  getsproduct = `${this.currentLiveUrl}/api/v1/product`;
+  getsproduct = `${this.currentLiveUrl}/api/v1/seller/product`;
+  getsproducts = `${this.currentLiveUrl}/api/v1/seller/products`;
   sellerProfile = `${this.currentLiveUrl}/api/v1/seller/profile`;
   updateDataUser = `${this.currentLiveUrl}/api/v1/seller/update/profile`;
   UpdatePassword = `${this.currentLiveUrl}/api/v1/seller/change/password`;
@@ -182,8 +183,14 @@ export class DataService {
   }
 
   product(data: any) {
+    var options: any = { headers: this._getHeaders() };
     let product_id = { product: data ? data : "unAuth" };
-    return this._http.post(this.getsproduct, product_id);
+    return this._http.post(this.getsproduct, product_id, options);
+  }
+
+  products() {
+    var options: any = { headers: this._getHeaders() };
+    return this._http.post(this.getsproducts, '', options);
   }
 
   update_profile(data:any)

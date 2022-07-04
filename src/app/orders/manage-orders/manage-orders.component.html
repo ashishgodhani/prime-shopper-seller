@@ -24,9 +24,21 @@
           <div class="col-md-5 col-12">
             <div class="p-1">
               <span>Action : </span>
-                <input type="submit" class="btn btn-sm action_btn" value="Confirm Shipment">
-                <input type="submit" class="btn btn-sm action_btn" value="Print Packaging Slip">
-                <input type="submit" class="btn btn-sm action_btn" value="Cancel Order">
+              <input
+                type="submit"
+                class="btn btn-sm action_btn"
+                value="Confirm Shipment"
+              />
+              <input
+                type="submit"
+                class="btn btn-sm action_btn"
+                value="Print Packaging Slip"
+              />
+              <input
+                type="submit"
+                class="btn btn-sm action_btn"
+                value="Cancel Order"
+              />
             </div>
           </div>
           <div class="col-sm-12 mx-1 col-11 col-md-6">
@@ -45,8 +57,7 @@
               </div>
               <div class="col-7 justify-items-end">
                 <div class="input-group input-group-merge">
-                  <span class="input-group-text" id="basic-addon-search2"
-                    >
+                  <span class="input-group-text" id="basic-addon-search2">
                     <select class="form-select form-select-sm search_select">
                       <option selected>Order ID</option>
                       <option value="">Buyer Email</option>
@@ -74,7 +85,7 @@
             <table class="table mb-0 ordersTable table-sm">
               <thead>
                 <tr>
-                  <th><input type="checkbox" name="" id=""></th>
+                  <th><input type="checkbox" name="" id="" /></th>
                   <th scope="col" class="text-nowrap">Order Date</th>
                   <th scope="col" class="text-nowrap">Order Details</th>
                   <th scope="col" class="text-nowrap">Image</th>
@@ -85,35 +96,46 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><input type="checkbox" name="" id=""></td>
+                <!-- <tr>
+                  <td><input type="checkbox" name="" id="" /></td>
                   <td>2022-06-06T10:58:52.612Z</td>
                   <td>
-                    629dddec432e632c90dcf8fa
-                    Buyer name: test
-                    Payment Id: 629dddec432e632c90dcf8f8
+                    629dddec432e632c90dcf8fa Buyer name: test Payment Id:
+                    629dddec432e632c90dcf8f8
                   </td>
                   <td>Image</td>
                   <td>
-                    Maybelline New York Super Stay Matte Ink Liquid Lipstick, Matte Finish, 5g - 20 Pioneer SKU: May-20 Pioneer
-Quantity: 1
-Total: ₹ 549
+                    Maybelline New York Super Stay Matte Ink Liquid Lipstick,
+                    Matte Finish, 5g - 20 Pioneer SKU: May-20 Pioneer Quantity:
+                    1 Total: ₹ 549
                   </td>
                   <td>Pending</td>
                   <td>
-                    Select Couriour: <br>
-                    Tracking Id: <br>
+                    Select Couriour: <br />
+                    Tracking Id: <br />
                     <button class="btn btn-sm">Submit</button>
                   </td>
                   <td>
-                    <input type="submit" class="btn btn-sm action_btn" value="Confirm Shipment">
-                    <input type="submit" class="btn btn-sm action_btn" value="Print Packaging Slip">
-                    <input type="submit" class="btn btn-sm action_btn" value="Cancel Order">
+                    <input
+                      type="submit"
+                      class="btn btn-sm action_btn"
+                      value="Confirm Shipment"
+                    />
+                    <input
+                      type="submit"
+                      class="btn btn-sm action_btn"
+                      value="Print Packaging Slip"
+                    />
+                    <input
+                      type="submit"
+                      class="btn btn-sm action_btn"
+                      value="Cancel Order"
+                    />
                   </td>
-                </tr>
+                </tr> -->
                 <tr *ngFor="let order of ordersdata">
                   <td>
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" />
                   </td>
                   <td>
                     {{ order.createdAt }}
@@ -121,16 +143,20 @@ Total: ₹ 549
                   <td>
                     {{ order._id }}
                     <br />
-                    <b>Buyer name:</b> {{ order.user.name }} <br>
+                    <b>Buyer name:</b> {{ order.user.name }} <br />
                     <b>Payment Id:</b> {{ order.payment_id }}
                   </td>
                   <td>
-                    <img src="{{order.currentProduct.banner}}" alt="" width="100">
+                    <img
+                      src="{{ order.currentProduct.banner }}"
+                      alt=""
+                      width="100"
+                    />
                   </td>
                   <td>
-                    {{ order.currentProduct.title }}<br>
-                    <b>SKU: </b>{{order.currentProduct.sku}} <br>
-                    <b>Quantity: </b>{{ order.product.quantity }} <br>
+                    {{ order.currentProduct.title }}<br />
+                    <b>SKU: </b>{{ order.currentProduct.sku }} <br />
+                    <b>Quantity: </b>{{ order.product.quantity }} <br />
                     <b>Total: </b>₹ {{ order.sellingAmount }}
                   </td>
                   <td>
@@ -183,7 +209,23 @@ Total: ₹ 549
                       <b>Tracking Id:</b> {{ order.courier.trackingId }} <br />
                       <b>Courior Name:</b> {{ order.courier.id.name }}
                     </ng-template>
-                    <!-- {{order.createdAt}} -->
+                  </td>
+                  <td>
+                    <input
+                      type="submit"
+                      class="btn btn-sm action_btn"
+                      value="Confirm Shipment"
+                    />
+                    <input
+                      type="submit"
+                      class="btn btn-sm action_btn"
+                      value="Print Packaging Slip"
+                    />
+                    <input
+                      type="submit"
+                      class="btn btn-sm action_btn"
+                      value="Cancel Order"
+                    />
                   </td>
                 </tr>
               </tbody>
